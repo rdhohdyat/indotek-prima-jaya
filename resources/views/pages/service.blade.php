@@ -180,7 +180,7 @@
                     <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative inline-block">
                             <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-500">
-                                <iconify-icon icon="solar:handshake-linear" class="text-4xl"></iconify-icon>
+                                <iconify-icon icon="solar:hand-shake-linear" class="text-4xl"></iconify-icon>
                             </div>
                             <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-600 text-white font-black flex items-center justify-center border-4 border-slate-50">4</div>
                         </div>

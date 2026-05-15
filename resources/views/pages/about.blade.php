@@ -146,7 +146,6 @@
                                 <iconify-icon icon="solar:flag-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-sky-600 font-black text-sm uppercase tracking-widest">2020</span>
                                 <h4 class="text-lg font-bold text-slate-900 uppercase">Company Established</h4>
                                 <p class="text-slate-500 text-sm leading-relaxed">
                                     PT. INDOTEK PRIMA JAYA was founded with a vision to become a trusted general supplier in Indonesia.
@@ -160,7 +159,6 @@
                                 <iconify-icon icon="solar:chart-2-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-sky-600 font-black text-sm uppercase tracking-widest">2021</span>
                                 <h4 class="text-lg font-bold text-slate-900 uppercase">Expanding Solutions</h4>
                                 <p class="text-slate-500 text-sm leading-relaxed">
                                     We expanded our product range and built strong partnerships with reputable brands and clients.
@@ -174,7 +172,6 @@
                                 <iconify-icon icon="solar:users-group-rounded-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-sky-600 font-black text-sm uppercase tracking-widest">2022 – 2023</span>
                                 <h4 class="text-lg font-bold text-slate-900 uppercase">Growing Together</h4>
                                 <p class="text-slate-500 text-sm leading-relaxed">
                                     We continue to improve our services and support various industries with reliable supply solutions.
@@ -188,7 +185,6 @@
                                 <iconify-icon icon="solar:graph-up-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-sky-600 font-black text-sm uppercase tracking-widest">2024 & Beyond</span>
                                 <h4 class="text-lg font-bold text-slate-900 uppercase">Building the Future</h4>
                                 <p class="text-slate-500 text-sm leading-relaxed">
                                     We are committed to innovation, quality, and long-term partnerships for sustainable growth.

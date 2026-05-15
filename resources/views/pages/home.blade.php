@@ -45,7 +45,7 @@
                                 class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
 
-                        <a href="#"
+                        <a href="{{ route('contact') }}"
                             class="bg-white hover:bg-slate-50 text-sky-500 border-2 border-sky-500 px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-sm group">
                             Contact Us
                             <iconify-icon icon="solar:alt-arrow-right-linear"
@@ -157,7 +157,7 @@
                             <div class="flex gap-4">
                                 <div
                                     class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-sky-100">
-                                    <iconify-icon icon="solar:handshake-linear" class="text-2xl"></iconify-icon>
+                                    <iconify-icon icon="solar:hand-shake-linear" class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Integrity</h4>

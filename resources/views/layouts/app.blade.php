@@ -25,14 +25,14 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="shrink-0">
-                    <a href="{{ url('/') }}" class="flex items-center gap-3 group">
-                        <div class="flex items-center">
-                            <img class="h-10 w-auto object-contain" src="{{ asset('assets/logo-indotek-prima.png') }}"
-                                alt="PT. Indotek Prima Jaya Logo">
-                        </div>
-                        <div class="flex flex-col border-l-2 border-yellow-500 pl-3">
-                            <span class="font-bold text-base text-slate-900 tracking-tight leading-none uppercase">PT.
-                                INDOTEK PRIMA JAYA</span>
+                    <a href="{{ url('/') }}" class="flex items-center group">
+                        <div class="flex items-center gap-2">
+                            <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-10 w-auto"
+                                alt="Indotek Logo">
+                            <div class="h-8 w-[2px] bg-yellow-400 rounded-full"></div>
+                            <span
+                                class="font-black text-slate-900 text-sm tracking-tighter leading-none uppercase">PT. Indotek<br>Prima
+                                Jaya</span>
                         </div>
                     </a>
                 </div>
@@ -40,17 +40,27 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex space-x-7 items-center">
                     <a href="{{ url('/') }}"
-                        class="{{ Request::is('/') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Home</a>
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('/') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        Home
+                        <span
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                    </a>
                     <a href="{{ url('/about') }}"
-                        class="{{ Request::is('about') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">About</a>
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        About
+                        <span
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                    </a>
 
                     <!-- Products Dropdown -->
                     <div class="relative group">
                         <button
-                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">
+                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn">
                             Products
                             <iconify-icon icon="solar:alt-arrow-down-linear"
                                 class="text-xs text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                            <span
+                                class="absolute -bottom-2 left-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover/btn:w-full"></span>
                         </button>
                         <!-- Dropdown Menu -->
                         <div
@@ -63,16 +73,17 @@
                                         Product Categories</h4>
                                     <div class="grid grid-cols-1 gap-1">
                                         <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
+                                            class="group/item flex items-center gap-4 p-3 rounded-lg hover:bg-slate-50 transition-all">
                                             <div
-                                                class="w-11 h-11 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors shadow-sm">
-                                                <iconify-icon icon="solar:ruler-linear" class="text-xl"></iconify-icon>
+                                                class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                                <iconify-icon icon="solar:reorder-linear"
+                                                    class="text-xl"></iconify-icon>
                                             </div>
                                             <div>
-                                                <span class="block font-bold text-[14px] text-slate-800">Measuring
-                                                    Instruments</span>
-                                                <span class="block text-[11px] text-slate-500 font-medium">Precision
-                                                    tools for analysis</span>
+                                                <span class="block text-[13px] font-bold text-slate-700">Spare
+                                                    Parts</span>
+                                                <span class="block text-[11px] text-slate-500 font-medium">Durable
+                                                    industrial components</span>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -145,14 +156,25 @@
                     </div>
 
                     <a href="{{ url('/service') }}"
-                        class="{{ Request::is('service') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Service</a>
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('service') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        Service
+                        <span
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('service') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                    </a>
 
                     <a href="{{ url('/news') }}"
-                        class="{{ Request::is('news') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">News</a>
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        News
+                        <span
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('news') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                    </a>
 
                     <a href="{{ url('/contact') }}"
-                        class="{{ Request::is('contact') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Contact
-                        Us</a>
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('contact') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        Contact
+                        <span
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('contact') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                    </a>
                 </nav>
 
                 <div class="hidden md:flex items-center gap-6">
@@ -170,10 +192,10 @@
                     </div>
 
                     <a href="{{ url('/contact') }}"
-                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-3 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all  shadow-yellow-500/20 flex items-center gap-3">
+                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all  shadow-yellow-500/20 flex items-center">
                         Get a Quote
                         <iconify-icon icon="solar:alt-arrow-right-linear"
-                            class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
+                            class="text-lg transition-transform group-hover:translate-x-1"></iconify-icon>
                     </a>
                 </div>
 
@@ -206,11 +228,11 @@
                 <div class="lg:col-span-4 space-y-8">
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
-                            <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-12 w-auto"
+                            <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-12 w-auto"
                                 alt="Indotek Logo">
                             <div class="h-8 w-[2px] bg-yellow-400 rounded-full"></div>
                             <span
-                                class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">Indotek<br>Prima
+                                class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">PT. Indotek<br>Prima
                                 Jaya</span>
                         </div>
                         <p class="text-slate-500 text-[14px] leading-relaxed max-w-sm font-medium">
@@ -221,22 +243,22 @@
 
                     <div class="flex gap-3">
                         <a href="#"
-                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
                             <iconify-icon icon="ri:facebook-fill" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
                             <iconify-icon icon="ri:instagram-line" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
                             <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                         </a>
                     </div>
                 </div>
 
                 <!-- Column 2: Quick Links -->
-                <div class="lg:col-span-5 grid grid-cols-2 gap-8">
+                <div class="lg:col-span-4 grid grid-cols-2 gap-8">
                     <div class="space-y-6">
                         <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h4>
                         <ul class="space-y-4">
@@ -298,18 +320,18 @@
                 </div>
 
                 <!-- Column 3: Contact Summary -->
-                <div class="lg:col-span-3 space-y-8">
+                <div class="lg:col-span-4 space-y-8">
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-5">
                         <h4 class="text-[11px] font-black text-slate-400 tracking-[0.2em] uppercase">Quick Contact</h4>
                         <div class="space-y-4">
-                            <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="flex items-center gap-2 group cursor-pointer">
                                 <div
                                     class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-600 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition-all">
                                     <iconify-icon icon="solar:phone-linear" class="text-xl"></iconify-icon>
                                 </div>
                                 <span class="text-[13px] font-bold text-slate-700">0761 8046829</span>
                             </div>
-                            <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="flex items-center gap-2 group cursor-pointer">
                                 <div
                                     class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-600 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition-all">
                                     <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
@@ -319,7 +341,7 @@
                         </div>
                         <div class="pt-2">
                             <a href="#"
-                                class="block text-center bg-sky-600 text-white py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest hover:bg-sky-700 transition-all shadow-lg shadow-sky-600/20">
+                                class="block text-center bg-sky-600 text-white py-3 rounded-lg font-bold text-[12px] uppercase tracking-widest hover:bg-sky-700 transition-all">
                                 Contact Our Team
                             </a>
                         </div>
@@ -336,10 +358,8 @@
                 <div class="text-slate-400 text-[11px] font-bold tracking-wider uppercase">
                     &copy; {{ date('Y') }} PT. Indotek Prima Jaya. All Rights Reserved.
                 </div>
-                <div class="flex items-center gap-6">
-                    <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-6 w-auto"
-                        alt="">
-                    <div class="h-4 w-px bg-slate-200"></div>
+                <div class="flex items-center gap-4">
+                    <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-6 w-auto" alt="">
                     <span class="text-[10px] text-slate-400 font-black tracking-[0.3em] uppercase">Pekanbaru,
                         Riau</span>
                 </div>
