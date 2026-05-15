@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -7,20 +7,27 @@
 
 @layer base {
     body {
-        font-family: 'Fira Sans', sans-serif;
+        font-family: "Barlow", sans-serif;
     }
 
     h1,
     h2,
     h3,
     h4 {
-        font-family: 'Barlow Condensed', sans-serif;
+        font-family: "Barlow Condensed", sans-serif;
     }
 }
 
 .hero-bg {
     position: relative;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(224, 247, 246, 0.4) 100%), url('../../public/assets/hero.png');
+    background: url("../../public/assets/hero.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.background-footer {
+    position: relative;
+    background: url("../../public/assets/bg-footer.png");
     background-size: cover;
     background-position: center;
 }

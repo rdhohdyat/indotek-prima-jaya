@@ -21,51 +21,51 @@
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="shrink-0">
-                    <a href="{{ url('/') }}" class="flex items-center gap-4 group">
-                        <div class="bg-slate-50 rounded-xl group-hover:bg-blue-50 transition-colors">
-                            <img class="h-10 w-auto object-contain" src="{{ asset('assets/logo-indotek.png') }}"
-                                alt="PT. Indotek Prima Jaya Logo"
-                                onerror="this.src='https://placehold.co/150x40?text=Logo'">
+                    <a href="{{ url('/') }}" class="flex items-center gap-3 group">
+                        <div class="flex items-center">
+                            <img class="h-10 w-auto object-contain" src="{{ asset('assets/logo-indotek-prima.png') }}"
+                                alt="PT. Indotek Prima Jaya Logo">
                         </div>
-                        <div class="flex flex-col">
-                            <span class="font-black text-xl text-slate-900 tracking-tighter leading-none">PT INDOTEK PRIMA JAYA</span>
+                        <div class="flex flex-col border-l-2 border-yellow-500 pl-3">
+                            <span class="font-bold text-base text-slate-900 tracking-tight leading-none uppercase">PT.
+                                INDOTEK PRIMA JAYA</span>
                         </div>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden lg:flex space-x-10 items-center">
+                <nav class="hidden lg:flex space-x-7 items-center">
                     <a href="{{ url('/') }}"
-                        class="text-blue-600 font-bold text-[14px] tracking-wide relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600">Home</a>
+                        class="text-sky-600 font-bold text-[11px] tracking-widest uppercase relative after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600 transition-colors">Home</a>
                     <a href="#"
-                        class="text-slate-600 hover:text-blue-600 font-bold text-[14px] tracking-wide transition-colors">About
-                        Us</a>
+                        class="text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">About</a>
 
-                    <!-- Products Mega Menu -->
+                    <!-- Products Dropdown -->
                     <div class="relative group">
                         <button
-                            class="flex items-center text-slate-600 hover:text-blue-600 font-bold text-[14px] tracking-wide transition-colors">
+                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">
                             Products
-                            <iconify-icon icon="solar:alt-arrow-down-linear" class="w-4 h-4 ml-1.5 text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                            <iconify-icon icon="solar:alt-arrow-down-linear"
+                                class="text-xs text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
                         </button>
                         <!-- Dropdown Menu -->
                         <div
                             class="absolute -left-32 mt-0 pt-6 w-[700px] opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
                             <div
-                                class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-slate-100 grid grid-cols-12 shadow-blue-900/10">
+                                class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-slate-100 grid grid-cols-12 shadow-sky-900/10">
                                 <!-- Left: Categories -->
                                 <div class="col-span-7 p-8 border-r border-slate-100">
                                     <h4 class="text-[11px] font-black text-slate-400 tracking-widest uppercase mb-6">
                                         Product Categories</h4>
                                     <div class="grid grid-cols-1 gap-1">
                                         <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-blue-50/50 group/item transition-all">
+                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
                                             <div
-                                                class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors shadow-sm">
+                                                class="w-11 h-11 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors shadow-sm">
                                                 <iconify-icon icon="solar:ruler-linear" class="text-xl"></iconify-icon>
                                             </div>
                                             <div>
@@ -76,9 +76,9 @@
                                             </div>
                                         </a>
                                         <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-blue-50/50 group/item transition-all">
+                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
                                             <div
-                                                class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 border border-orange-100 group-hover/item:bg-orange-600 group-hover/item:text-white transition-colors shadow-sm">
+                                                class="w-11 h-11 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600 border border-yellow-100 group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors shadow-sm">
                                                 <iconify-icon icon="solar:bolt-linear" class="text-xl"></iconify-icon>
                                             </div>
                                             <div>
@@ -89,10 +89,11 @@
                                             </div>
                                         </a>
                                         <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-blue-50/50 group/item transition-all">
+                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
                                             <div
-                                                class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shadow-sm">
-                                                <iconify-icon icon="solar:settings-linear" class="text-xl"></iconify-icon>
+                                                class="w-11 h-11 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shadow-sm">
+                                                <iconify-icon icon="solar:settings-linear"
+                                                    class="text-xl"></iconify-icon>
                                             </div>
                                             <div>
                                                 <span class="block font-bold text-[14px] text-slate-800">Mechanical
@@ -115,7 +116,7 @@
                                             </div>
                                             <div
                                                 class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm">
-                                                <span class="text-[10px] font-black text-blue-700">FineTek</span>
+                                                <span class="text-[10px] font-black text-sky-700">FineTek</span>
                                             </div>
                                             <div
                                                 class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm text-center">
@@ -131,9 +132,10 @@
 
                                         <div class="pt-6 mt-6 border-t border-slate-200">
                                             <a href="#"
-                                                class="group/btn inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-2.5 rounded-xl font-bold text-[12px] hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 w-full justify-center">
+                                                class="group/btn inline-flex items-center gap-3 bg-sky-600 text-white px-6 py-2.5 rounded-lg font-bold text-[12px] hover:bg-sky-700 transition-all shadow-lg shadow-sky-600/20 w-full justify-center">
                                                 Explorer Full Catalog
-                                                <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
+                                                <iconify-icon icon="solar:alt-arrow-right-linear"
+                                                    class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
                                             </a>
                                         </div>
                                     </div>
@@ -142,28 +144,47 @@
                         </div>
                     </div>
 
+                    <!-- Service Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">
+                            Service
+                            <iconify-icon icon="solar:alt-arrow-down-linear"
+                                class="text-xs text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                        </button>
+                    </div>
+
                     <a href="#"
-                        class="text-slate-600 hover:text-blue-600 font-bold text-[14px] tracking-wide transition-colors">Services</a>
-                    <a href="#"
-                        class="text-slate-600 hover:text-blue-600 font-bold text-[14px] tracking-wide transition-colors">Contact</a>
+                        class="text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">Contact
+                        Us</a>
                 </nav>
 
-                <!-- CTA Button -->
-                <div class="hidden md:flex items-center">
+                <div class="hidden md:flex items-center gap-6">
+                    <!-- Language Switcher Pill (Flags) -->
+                    <div
+                        class="flex items-center bg-slate-100/80 p-0.5 rounded-full border border-slate-200/50 backdrop-blur-sm">
+                        <button
+                            class="flex items-center justify-center p-1 rounded-full bg-white shadow-sm shadow-sky-900/5 transition-all">
+                            <iconify-icon icon="circle-flags:id" class="text-[14px]"></iconify-icon>
+                        </button>
+                        <button
+                            class="flex items-center justify-center p-1 rounded-full opacity-40 hover:opacity-100 transition-all">
+                            <iconify-icon icon="circle-flags:uk" class="text-[14px]"></iconify-icon>
+                        </button>
+                    </div>
+
                     <a href="#"
-                        class="group/cta bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold text-[14px] transition-all hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-600/30 flex items-center gap-3">
+                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-3 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all  shadow-yellow-500/20 flex items-center gap-3">
                         Get a Quote
-                        <div
-                            class="w-6 h-6 bg-white/10 rounded-lg flex items-center justify-center group-hover/cta:bg-white/20 transition-colors">
-                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
-                        </div>
+                        <iconify-icon icon="solar:alt-arrow-right-linear"
+                            class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                     </a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden items-center">
                     <button type="button"
-                        class="text-slate-900 bg-slate-100 p-3 rounded-xl hover:bg-slate-200 transition-colors">
+                        class="text-slate-900 bg-slate-100 p-3 rounded-lg hover:bg-slate-200 transition-colors">
                         <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
                     </button>
                 </div>
@@ -171,126 +192,154 @@
         </div>
     </header>
 
-
-    <main class="flex-grow">
+    <main class="grow">
         @yield('content')
     </main>
 
-    <footer class="bg-slate-950 text-white mt-16 overflow-hidden relative">
-        <!-- Abstract background decoration -->
+    <footer class="bg-white text-slate-900 relative overflow-hidden">
+        <!-- Decoration: Soft Blob -->
         <div
-            class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl">
+            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[400px] bg-sky-50/50 rounded-[100%] blur-[120px] -z-10">
         </div>
 
-        <!-- Top Footer -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-                <!-- Get in touch section -->
-                <div class="lg:col-span-4 space-y-6">
-                    <div class="space-y-3">
-                        <h3 class="text-blue-500 font-bold tracking-widest text-xs uppercase">GET IN TOUCH</h3>
-                        <h2 class="text-3xl lg:text-4xl font-extrabold text-white leading-tight">Let's Build Something
-                            Great Together</h2>
+        <!-- Top Footer: CTA & Brand -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:items-start">
+
+                <!-- Column 1: Brand Identity -->
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-12 w-auto"
+                                alt="Indotek Logo">
+                            <div class="h-8 w-[2px] bg-amber-400 rounded-full"></div>
+                            <span
+                                class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">Indotek<br>Prima
+                                Jaya</span>
+                        </div>
+                        <p class="text-slate-500 text-[14px] leading-relaxed max-w-sm font-medium">
+                            Premium industrial supplier specializing in high-precision measuring instruments, mechanical
+                            engineering, and electrical solutions for Indonesia's growing industries.
+                        </p>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
-                        We are ready to support your business with the best products and services. Contact our team for
-                        consultations and inquiries.
-                    </p>
-                    <div class="flex gap-4 pt-4">
+
+                    <div class="flex gap-3">
                         <a href="#"
-                            class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors border border-slate-800">
-                            <iconify-icon icon="solar:facebook-linear" class="text-2xl"></iconify-icon>
+                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
+                            <iconify-icon icon="ri:facebook-fill" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors border border-slate-800">
-                            <iconify-icon icon="solar:twitter-linear" class="text-2xl"></iconify-icon>
+                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
+                            <iconify-icon icon="ri:instagram-line" class="text-xl"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
+                            <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                         </a>
                     </div>
                 </div>
 
-                <!-- Contact Info Grid -->
-                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-                    <!-- Email -->
-                    <div class="flex items-start gap-5 group">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                            <iconify-icon icon="solar:letter-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold mb-1 tracking-wide">Email Us</h4>
-                            <a href="mailto:sales@indotek-pj.com"
-                                class="text-slate-400 hover:text-blue-500 transition text-[13px]">sales@indotek-pj.com</a>
-                        </div>
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h4>
+                        <ul class="space-y-4">
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Home
+                                </a></li>
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    About Us
+                                </a></li>
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Products
+                                </a></li>
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Service
+                                </a></li>
+                        </ul>
                     </div>
-
-                    <!-- Phone -->
-                    <div class="flex items-start gap-5 group">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                            <iconify-icon icon="solar:phone-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold mb-1 tracking-wide">Call Support</h4>
-                            <a href="tel:07618046829"
-                                class="text-slate-400 hover:text-blue-500 transition text-[13px]">0761 8046829</a>
-                        </div>
+                    <div class="space-y-6">
+                        <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h4>
+                        <ul class="space-y-4">
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Contact
+                                </a></li>
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Get a Quote
+                                </a></li>
+                            <li><a href="#"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    Privacy Policy
+                                </a></li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- Address -->
-                    <div class="flex items-start gap-5 group">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                            <iconify-icon icon="solar:map-point-linear" class="text-2xl"></iconify-icon>
+                <!-- Column 3: Contact Summary -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-5">
+                        <h4 class="text-[11px] font-black text-slate-400 tracking-[0.2em] uppercase">Quick Contact</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 group cursor-pointer">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-600 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                    <iconify-icon icon="solar:phone-linear" class="text-xl"></iconify-icon>
+                                </div>
+                                <span class="text-[13px] font-bold text-slate-700">0761 8046829</span>
+                            </div>
+                            <div class="flex items-center gap-4 group cursor-pointer">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-600 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                    <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
+                                </div>
+                                <span class="text-[13px] font-bold text-slate-700">sales@indotek-pj.com</span>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="text-white font-bold mb-1 tracking-wide">Headquarters</h4>
-                            <p class="text-slate-400 text-[13px] leading-relaxed max-w-xs">Jl. Arifin Ahmad No. 70 C,
-                                Sidomulyo Timur, Marpoyan Damai, Pekanbaru, Riau 28289</p>
-                        </div>
-                    </div>
-
-                    <!-- Website -->
-                    <div class="flex items-start gap-5 group">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                            <iconify-icon icon="solar:globus-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold mb-1 tracking-wide">Official Website</h4>
-                            <a href="https://www.indotek-pj.com" target="_blank"
-                                class="text-slate-400 hover:text-blue-500 transition text-[13px]">www.indotek-pj.com</a>
+                        <div class="pt-2">
+                            <a href="#"
+                                class="block text-center bg-sky-600 text-white py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest hover:bg-sky-700 transition-all shadow-lg shadow-sky-600/20">
+                                Contact Our Team
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
-        <!-- Bottom Footer -->
-        <div class="border-t border-slate-900 bg-black/20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <!-- Logo Bottom -->
-                    <div class="flex items-center gap-3">
-                        <img src="{{ asset('assets/logo-indotek.png') }}" class="h-9 w-auto brightness-0 invert"
-                            alt="Logo">
-                        <div class="flex flex-col">
-                            <span class="font-black text-white text-base tracking-tighter leading-none">PT. INDOTEK
-                                PRIMA JAYA</span>
-                            <span class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">General
-                                Supplier Company</span>
-                        </div>
-                    </div>
-
-                    <!-- Copyright -->
-                    <div class="text-slate-500 text-xs font-medium">
-                        &copy; {{ date('Y') }} PT. INDOTEK PRIMA JAYA. All Rights Reserved.
-                    </div>
-
-                    <!-- Links -->
-                    <div class="flex gap-6 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
-                        <a href="#" class="hover:text-blue-500 transition">Privacy</a>
-                        <a href="#" class="hover:text-blue-500 transition">Terms</a>
-                    </div>
+        <!-- Bottom Bar -->
+        <div class="bg-slate-50 py-8 border-t border-slate-100">
+            <div
+                class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-400 text-[11px] font-bold tracking-wider uppercase">
+                    &copy; {{ date('Y') }} PT. Indotek Prima Jaya. All Rights Reserved.
+                </div>
+                <div class="flex items-center gap-6">
+                    <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-6 w-auto grayscale opacity-30"
+                        alt="">
+                    <div class="h-4 w-[1px] bg-slate-200"></div>
+                    <span class="text-[10px] text-slate-400 font-black tracking-[0.3em] uppercase">Pekanbaru,
+                        Riau</span>
                 </div>
             </div>
         </div>
@@ -299,6 +348,13 @@
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('assets/js/iconify-icon.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad',
+        });
+    </script>
 </body>
 
 </html>

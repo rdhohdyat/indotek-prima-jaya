@@ -6,15 +6,24 @@
     <!-- Hero Section -->
     <section class="relative hero-bg pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
         <!-- Optional: Add a subtle overlay to match the sky blend -->
-        <div class="absolute inset-0 bg-linear-to-r from-white/90 to-transparent z-0"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Hero Content -->
-                <div class="lg:col-span-5 space-y-10 ">
+                <div class="lg:col-span-5 space-y-10 relative z-10" data-aos="fade-right">
+                    <!-- Awan putih / gradient kabut -->
+                    <div class="absolute -inset-x-12 -inset-y-10 -z-10 pointer-events-none">
+                        <div class="w-full h-full 
+                                        bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
+                                        blur-2xl">
+                        </div>
+                    </div>
+
                     <div class="space-y-4">
-                        <span class="text-[#0061ff] font-bold tracking-widest text-[13px] uppercase block">SUPPLYING
-                            SOLUTIONS. DELIVERING TRUST.</span>
+                        <span class="text-sky-500 font-bold tracking-widest text-[13px] uppercase block">
+                            SUPPLYING SOLUTIONS. DELIVERING TRUST.
+                        </span>
+
                         <h1 class="text-[54px] lg:text-[72px] font-extrabold text-[#1a202c] leading-[1.05] tracking-tight">
                             Trusted General<br>
                             Supplier for<br>
@@ -30,36 +39,49 @@
 
                     <div class="flex flex-wrap gap-5 pt-2">
                         <a href="#"
-                            class="bg-[#0061ff] hover:bg-blue-700 text-white px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-xl shadow-blue-600/10 group">
+                            class="bg-sky-500 hover:bg-sky-700 text-white px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-xl shadow-sky-600/10 group">
                             Learn More
-                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
+                            <iconify-icon icon="solar:alt-arrow-right-linear"
+                                class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
+
                         <a href="#"
-                            class="bg-white hover:bg-slate-50 text-[#0061ff] border-2 border-[#0061ff] px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-sm group">
+                            class="bg-white hover:bg-slate-50 text-sky-500 border-2 border-sky-500 px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-sm group">
                             Contact Us
-                            <svg class="w-4 h-4 text-[#0061ff] transition-transform group-hover:translate-x-1" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
+                            <iconify-icon icon="solar:alt-arrow-right-linear"
+                                class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+            <!-- Layer 1: Base smooth white transition -->
+            <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
+            
+            <!-- Layer 2: Misty radial clouds for depth -->
+            <div class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90"></div>
+            
+            <!-- Layer 3: Extra blur for softness -->
+            <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
+
+            <!-- Layer 4: Extra Dense Right Corner Cloud -->
+            <div class="absolute bottom-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-3xl opacity-100"></div>
+            
+            <!-- Layer 5: High-position Right Puff -->
+            <div class="absolute -bottom-10 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-3xl opacity-70"></div>
+        </div>
     </section>
 
     <!-- About Us Section -->
     <section class="py-16 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
                 <!-- About Image -->
-                <div class="lg:col-span-4">
+                <div class="lg:col-span-4" data-aos="fade-right">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
                             alt="Indotek Building" class="w-full h-[450px] rounded-2xl shadow-2xl object-cover">
@@ -68,8 +90,8 @@
                 </div>
 
                 <!-- About Content -->
-                <div class="lg:col-span-4 space-y-6">
-                    <h3 class="text-blue-600 font-bold tracking-widest text-xs uppercase">ABOUT US</h3>
+                <div class="lg:col-span-4 space-y-6" data-aos="fade-left">
+                    <h3 class="text-sky-600 font-bold tracking-widest text-xs uppercase">ABOUT US</h3>
                     <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">Your Reliable Partner for
                         Sustainable Growth</h2>
 
@@ -82,12 +104,9 @@
                     </div>
 
                     <a href="#"
-                        class="inline-flex bg-white hover:bg-slate-50 text-blue-600 border border-blue-200 px-6 py-2.5 rounded-md font-bold text-sm transition items-center gap-2 mt-4 shadow-sm">
+                        class="inline-flex bg-white hover:bg-slate-50 text-sky-600 border border-sky-200 px-6 py-2.5 rounded-md font-bold text-sm transition items-center gap-2 mt-4 shadow-sm">
                         Read More About Us
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
+                        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg"></iconify-icon>
                     </a>
                 </div>
 
@@ -98,12 +117,8 @@
                             <!-- Professionalism -->
                             <div class="flex gap-4">
                                 <div
-                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                        </path>
-                                    </svg>
+                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-blue-100">
+                                    <iconify-icon icon="solar:shield-check-linear" class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Professionalism</h4>
@@ -115,11 +130,8 @@
                             <!-- Quality -->
                             <div class="flex gap-4">
                                 <div
-                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
+                                    class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-sky-100">
+                                    <iconify-icon icon="solar:medal-star-linear" class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Quality</h4>
@@ -131,11 +143,8 @@
                             <!-- Innovative Solutions -->
                             <div class="flex gap-4">
                                 <div
-                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                    </svg>
+                                    class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-sky-100">
+                                    <iconify-icon icon="solar:bolt-linear" class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Innovative Solutions</h4>
@@ -147,11 +156,8 @@
                             <!-- Integrity -->
                             <div class="flex gap-4">
                                 <div
-                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                    </svg>
+                                    class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-sky-100">
+                                    <iconify-icon icon="solar:handshake-linear" class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Integrity</h4>
@@ -163,12 +169,9 @@
                             <!-- Trust -->
                             <div class="flex gap-4">
                                 <div
-                                    class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
+                                    class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-sky-100">
+                                    <iconify-icon icon="solar:users-group-two-rounded-linear"
+                                        class="text-2xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Trust</h4>
@@ -185,13 +188,13 @@
 
     <!-- Our Products Section -->
     <section class="py-16 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-[2rem] p-8 lg:p-12 shadow-sm border border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-4xl p-8 lg:p-12 shadow-sm border border-slate-100">
                 <div class="flex flex-col lg:flex-row gap-12">
 
                     <!-- Title -->
                     <div class="lg:w-1/4 space-y-4">
-                        <h3 class="text-blue-600 font-bold tracking-widest text-xs uppercase">OUR PRODUCTS</h3>
+                        <h3 class="text-sky-600 font-bold tracking-widest text-xs uppercase">OUR PRODUCTS</h3>
                         <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Comprehensive Range for Every Need
                         </h2>
                     </div>
@@ -201,66 +204,114 @@
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
 
                             <!-- Product 1 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=200&h=200&fit=crop" alt="Measuring" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="100"
+                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Measuring<br>Instruments</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=200&h=200&fit=crop"
+                                        alt="Measuring"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Measuring<br>Instruments</h4>
                             </div>
 
                             <!-- Product 2 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1544724569-5f546fa602b5?q=80&w=200&h=200&fit=crop" alt="Electrical" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="200"
+                                class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Electrical</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1544724569-5f546fa602b5?q=80&w=200&h=200&fit=crop"
+                                        alt="Electrical"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Electrical</h4>
                             </div>
 
                             <!-- Product 3 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=200&h=200&fit=crop" alt="Valve" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="300"
+                                class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Valve Control<br>& Manual</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=200&h=200&fit=crop"
+                                        alt="Valve"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Valve Control<br>& Manual</h4>
                             </div>
 
                             <!-- Product 4 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=200&h=200&fit=crop" alt="Mechanical" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="400"
+                                class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Mechanical</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=200&h=200&fit=crop"
+                                        alt="Mechanical"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Mechanical</h4>
                             </div>
 
                             <!-- Product 5 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=200&h=200&fit=crop" alt="Computer" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="500"
+                                class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Computer<br>Devices</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=200&h=200&fit=crop"
+                                        alt="Computer"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Computer<br>Devices</h4>
                             </div>
 
                             <!-- Product 6 -->
-                            <div class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                                <div class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=200&h=200&fit=crop" alt="Supplies" class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                            <div data-aos="fade-up" data-aos-delay="600"
+                                class="group relative bg-white border border-slate-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-blue-50/0 to-blue-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 </div>
-                                <h4 class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">Other Industrial<br>Supplies</h4>
+                                <div
+                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=200&h=200&fit=crop"
+                                        alt="Supplies"
+                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
+                                </div>
+                                <h4
+                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
+                                    Other Industrial<br>Supplies</h4>
                             </div>
                         </div>
 
                         <div class="mt-10 flex justify-center lg:justify-start">
-                            <a href="#" class="group/btn inline-flex items-center gap-3 bg-slate-900 text-white px-7 py-3 rounded-xl font-bold text-sm hover:bg-blue-600 transition-all shadow-lg shadow-slate-900/10">
+                            <a href="#"
+                                class="group/btn inline-flex items-center gap-3 bg-slate-900 text-white px-7 py-3 rounded-xl font-bold text-sm hover:bg-sky-600 transition-all shadow-lg shadow-slate-900/10">
                                 View All Products
-                                <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
+                                <iconify-icon icon="solar:alt-arrow-right-linear"
+                                    class="text-xl transition-transform group-hover/btn:translate-x-1"></iconify-icon>
                             </a>
                         </div>
                     </div>
@@ -271,28 +322,24 @@
 
     <!-- Services and Partners Section -->
     <section class="py-12 bg-white border-b border-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                 <!-- Services Title -->
                 <div class="lg:col-span-2 space-y-3 pt-4">
-                    <h3 class="text-blue-600 font-bold tracking-widest text-xs uppercase">OUR SERVICES</h3>
+                    <h3 class="text-sky-600 font-bold tracking-widest text-xs uppercase">OUR SERVICES</h3>
                     <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Solutions Beyond Supply</h2>
                 </div>
 
                 <!-- Services Grid -->
                 <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <!-- Service 1 -->
-                    <div
-                        class="flex gap-4 p-4 border border-transparent hover:border-blue-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="flex-shrink-0">
+                    <div data-aos="fade-up" data-aos-delay="100"
+                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
+                        <div class="shrink-0">
                             <div
-                                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                                    </path>
-                                </svg>
+                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
+                                <iconify-icon icon="solar:verified-check-linear" class="text-2xl"></iconify-icon>
                             </div>
                         </div>
                         <div>
@@ -303,15 +350,12 @@
                     </div>
 
                     <!-- Service 2 -->
-                    <div
-                        class="flex gap-4 p-4 border border-transparent hover:border-blue-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="flex-shrink-0">
+                    <div data-aos="fade-up" data-aos-delay="200"
+                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
+                        <div class="shrink-0">
                             <div
-                                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
+                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
+                                <iconify-icon icon="solar:bolt-linear" class="text-2xl"></iconify-icon>
                             </div>
                         </div>
                         <div>
@@ -322,18 +366,12 @@
                     </div>
 
                     <!-- Service 3 -->
-                    <div
-                        class="flex gap-4 p-4 border border-transparent hover:border-blue-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="flex-shrink-0">
+                    <div data-aos="fade-up" data-aos-delay="300"
+                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
+                        <div class="shrink-0">
                             <div
-                                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                                    </path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
+                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
+                                <iconify-icon icon="solar:settings-linear" class="text-2xl"></iconify-icon>
                             </div>
                         </div>
                         <div>
@@ -344,16 +382,12 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div
-                        class="flex gap-4 p-4 border border-transparent hover:border-blue-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="flex-shrink-0">
+                    <div data-aos="fade-up" data-aos-delay="400"
+                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
+                        <div class="shrink-0">
                             <div
-                                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.407 2.67 1M12 8V7m0 1v1m0 8v1m0-1c-1.11 0-2.08-.407-2.67-1M12 16v-1m0 1v-1m3.5-3h.5m-11 0h.5m10 5l1.5 1.5m-11.5-11.5l1.5 1.5m10 0l-1.5 1.5m-11.5 11.5l-1.5 1.5">
-                                    </path>
-                                </svg>
+                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
+                                <iconify-icon icon="solar:dollar-minimalistic-linear" class="text-2xl"></iconify-icon>
                             </div>
                         </div>
                         <div>
@@ -366,45 +400,42 @@
 
                 <!-- Trusted Partners -->
                 <div class="lg:col-span-4 bg-[#f8fafc] rounded-2xl p-6 border border-slate-100 flex flex-col h-full">
-                    <h4 class="text-blue-600 font-bold tracking-widest text-[10px] uppercase mb-6">OUR TRUSTED PARTNERS</h4>
-                    <div class="grid grid-cols-3 gap-3 flex-grow">
+                    <h4 class="text-sky-600 font-bold tracking-widest text-[10px] uppercase mb-6">OUR TRUSTED PARTNERS</h4>
+                    <div class="grid grid-cols-3 gap-3 grow">
                         <!-- Partners Logos -->
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="100"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
                             <span class="font-extrabold text-slate-800 text-[10px]">PIEZUS</span>
                         </div>
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="200"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
-                            <span class="font-extrabold text-blue-700 text-[10px]">FineTek</span>
+                            <span class="font-extrabold text-sky-700 text-[10px]">FineTek</span>
                         </div>
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="300"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
                             <div class="flex flex-col items-center leading-none">
-                                <span class="text-[8px] text-blue-800 font-bold">FUJI</span>
+                                <span class="text-[8px] text-sky-800 font-bold">FUJI</span>
                                 <span class="text-[7px] text-slate-500">ELECTRIC</span>
                             </div>
                         </div>
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="400"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
                             <span class="font-extrabold text-emerald-600 text-[10px]">KEMTRAK</span>
                         </div>
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="500"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
-                            <span class="font-extrabold text-blue-900 text-[10px]">ENOTEC</span>
+                            <span class="font-extrabold text-sky-900 text-[10px]">ENOTEC</span>
                         </div>
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="600"
                             class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-center hover:shadow-md transition">
                             <span class="font-extrabold text-red-600 text-[10px]">ABB</span>
                         </div>
                     </div>
                     <div class="mt-6 flex justify-center lg:justify-start">
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-slate-500 text-[11px] font-bold hover:text-blue-600 transition bg-white px-4 py-2 rounded-lg border border-slate-200">
+                            class="inline-flex items-center gap-2 text-slate-500 text-[11px] font-bold hover:text-sky-600 transition bg-white px-4 py-2 rounded-lg border border-slate-200">
                             More Partners
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-sm"></iconify-icon>
                         </a>
                     </div>
                 </div>
@@ -414,56 +445,72 @@
     </section>
 
     <!-- Industries We Serve Section -->
-    <section class="py-16 bg-[#f8fafc]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 bg-[#f8fafc] relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-10">
-                <h3 class="text-blue-600 font-bold tracking-widest text-xs uppercase mb-2">INDUSTRIES WE SERVE</h3>
+                <h3 class="text-sky-600 font-bold tracking-widest text-xs uppercase mb-2">INDUSTRIES WE SERVE</h3>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Industry 1 -->
-                <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&fit=crop" alt="Pulp & Paper" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&fit=crop"
+                        alt="Pulp & Paper"
+                        class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
                     <div class="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 flex flex-col gap-2 w-full">
-                        <div class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <div
+                            class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
+                            <iconify-icon icon="solar:buildings-linear" class="text-xl"></iconify-icon>
                         </div>
                         <h4 class="text-white font-bold text-sm tracking-wide">Pulp & Paper</h4>
                     </div>
                 </div>
 
                 <!-- Industry 2 -->
-                <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
-                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=600&fit=crop" alt="Power Plant" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=600&fit=crop"
+                        alt="Power Plant"
+                        class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
                     <div class="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 flex flex-col gap-2 w-full">
-                        <div class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <div
+                            class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
+                            <iconify-icon icon="solar:bolt-linear" class="text-xl"></iconify-icon>
                         </div>
                         <h4 class="text-white font-bold text-sm tracking-wide">Power Plant</h4>
                     </div>
                 </div>
 
                 <!-- Industry 3 -->
-                <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
-                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&fit=crop" alt="Food & Beverage" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&fit=crop"
+                        alt="Food & Beverage"
+                        class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
                     <div class="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 flex flex-col gap-2 w-full">
-                        <div class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
+                        <div
+                            class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
+                            <iconify-icon icon="solar:cup-linear" class="text-xl"></iconify-icon>
                         </div>
                         <h4 class="text-white font-bold text-sm tracking-wide">Food & Beverage</h4>
                     </div>
                 </div>
 
                 <!-- Industry 4 -->
-                <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&fit=crop" alt="Refinery" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
+                <div data-aos="fade-up" data-aos-delay="400"
+                    class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition duration-500 h-56">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&fit=crop"
+                        alt="Refinery"
+                        class="w-full h-full object-cover group-hover:scale-110 transition transform duration-700">
                     <div class="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 flex flex-col gap-2 w-full">
-                        <div class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        <div
+                            class="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20 text-white">
+                            <iconify-icon icon="solar:test-tube-linear" class="text-xl"></iconify-icon>
                         </div>
                         <h4 class="text-white font-bold text-sm tracking-wide">Refinery</h4>
                     </div>
