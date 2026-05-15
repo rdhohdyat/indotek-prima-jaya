@@ -5,7 +5,22 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@layer base {
+    body {
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+}
+
+.hero-bg {
+    position: relative;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(224, 247, 246, 0.4) 100%), url('../../public/assets/hero.png');
+    background-size: cover;
+    background-position: center;
 }
