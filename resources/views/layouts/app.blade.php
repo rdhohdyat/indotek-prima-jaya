@@ -40,9 +40,9 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex space-x-7 items-center">
                     <a href="{{ url('/') }}"
-                        class="text-sky-600 font-bold text-[11px] tracking-widest uppercase relative after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600 transition-colors">Home</a>
-                    <a href="#"
-                        class="text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">About</a>
+                        class="{{ Request::is('/') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Home</a>
+                    <a href="{{ url('/about') }}"
+                        class="{{ Request::is('about') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">About</a>
 
                     <!-- Products Dropdown -->
                     <div class="relative group">
@@ -144,18 +144,14 @@
                         </div>
                     </div>
 
-                    <!-- Service Dropdown -->
-                    <div class="relative group">
-                        <button
-                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">
-                            Service
-                            <iconify-icon icon="solar:alt-arrow-down-linear"
-                                class="text-xs text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
-                        </button>
-                    </div>
+                    <a href="{{ url('/service') }}"
+                        class="{{ Request::is('service') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Service</a>
 
-                    <a href="#"
-                        class="text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors">Contact
+                    <a href="{{ url('/news') }}"
+                        class="{{ Request::is('news') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">News</a>
+
+                    <a href="{{ url('/contact') }}"
+                        class="{{ Request::is('contact') ? 'text-sky-600 after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-sky-600' : 'text-slate-800 hover:text-sky-600' }} font-bold text-[11px] tracking-widest uppercase relative transition-colors">Contact
                         Us</a>
                 </nav>
 
@@ -173,7 +169,7 @@
                         </button>
                     </div>
 
-                    <a href="#"
+                    <a href="{{ url('/contact') }}"
                         class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-3 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all  shadow-yellow-500/20 flex items-center gap-3">
                         Get a Quote
                         <iconify-icon icon="solar:alt-arrow-right-linear"
@@ -212,7 +208,7 @@
                         <div class="flex items-center gap-3">
                             <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-12 w-auto"
                                 alt="Indotek Logo">
-                            <div class="h-8 w-[2px] bg-amber-400 rounded-full"></div>
+                            <div class="h-8 w-[2px] bg-yellow-400 rounded-full"></div>
                             <span
                                 class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">Indotek<br>Prima
                                 Jaya</span>
@@ -244,13 +240,13 @@
                     <div class="space-y-6">
                         <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h4>
                         <ul class="space-y-4">
-                            <li><a href="#"
+                            <li><a href="{{ url('/') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
                                     Home
                                 </a></li>
-                            <li><a href="#"
+                            <li><a href="{{ url('/about') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
@@ -262,24 +258,30 @@
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
                                     Products
                                 </a></li>
-                            <li><a href="#"
+                            <li><a href="{{ url('/service') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
                                     Service
+                                </a></li>
+                            <li><a href="{{ url('/news') }}"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    News
                                 </a></li>
                         </ul>
                     </div>
                     <div class="space-y-6">
                         <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h4>
                         <ul class="space-y-4">
-                            <li><a href="#"
+                            <li><a href="{{ url('/contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
                                     Contact
                                 </a></li>
-                            <li><a href="#"
+                            <li><a href="{{ url('/contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
@@ -335,9 +337,9 @@
                     &copy; {{ date('Y') }} PT. Indotek Prima Jaya. All Rights Reserved.
                 </div>
                 <div class="flex items-center gap-6">
-                    <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-6 w-auto grayscale opacity-30"
+                    <img src="{{ asset('assets/logo-indotek-prima.png') }}" class="h-6 w-auto"
                         alt="">
-                    <div class="h-4 w-[1px] bg-slate-200"></div>
+                    <div class="h-4 w-px bg-slate-200"></div>
                     <span class="text-[10px] text-slate-400 font-black tracking-[0.3em] uppercase">Pekanbaru,
                         Riau</span>
                 </div>
