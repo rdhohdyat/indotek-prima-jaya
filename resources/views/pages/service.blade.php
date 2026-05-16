@@ -4,7 +4,7 @@
             'title' => 'Transformator Services',
             'subtitle' => 'INSTALLATION & MAINTENANCE',
             'description' => 'Providing end-to-end solutions for industrial transformers, ensuring optimal power distribution and system reliability.',
-            'image' => asset('assets/services/service-transformer.png'),
+            'image' => asset('assets/services/service-transformer.webp'),
             'icon' => 'solar:bolt-bold-duotone',
             'color' => 'sky',
             'features' => [
@@ -19,7 +19,7 @@
             'title' => 'Valve Services',
             'subtitle' => 'REPAIR & CALIBRATION',
             'description' => 'Expert maintenance and repair services for all types of industrial valves, including control valves and safety relief valves.',
-            'image' => asset('assets/services/service-valve.png'),
+            'image' => asset('assets/services/service-valve.webp'),
             'icon' => 'solar:settings-bold-duotone',
             'color' => 'amber',
             'features' => [
@@ -34,7 +34,7 @@
             'title' => 'Pump Services',
             'subtitle' => 'OVERHAUL & ALIGNMENT',
             'description' => 'Comprehensive pump engineering solutions to maximize uptime and energy efficiency of your pumping systems.',
-            'image' => asset('assets/services/service-pump.png'),
+            'image' => asset('assets/services/service-pump.webp'),
             'icon' => 'solar:refresh-bold-duotone',
             'color' => 'emerald',
             'features' => [

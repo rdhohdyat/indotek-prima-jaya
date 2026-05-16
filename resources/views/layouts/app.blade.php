@@ -77,7 +77,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
