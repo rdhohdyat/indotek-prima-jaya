@@ -21,3 +21,7 @@ Route::get('/service', function () {
 Route::get('/news', function () {
     return view('pages.news');
 })->name('news');
+
+Route::get('/news/future-of-industrial-automation', function () {
+    return view('pages.news-detail');
+})->name('news.detail');

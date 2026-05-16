@@ -29,9 +29,9 @@
                         <div class="flex items-center gap-2">
                             <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-10 w-auto"
                                 alt="Indotek Logo">
-                            <div class="h-8 w-[2px] bg-yellow-400 rounded-full"></div>
-                            <span
-                                class="font-black text-slate-900 text-sm tracking-tighter leading-none uppercase">PT. Indotek<br>Prima
+                            <div class="h-8 w-[2px] bg-yellow-500 rounded-full"></div>
+                            <span class="font-black text-slate-900 text-sm tracking-tighter leading-none uppercase">PT.
+                                Indotek<br>Prima
                                 Jaya</span>
                         </div>
                     </a>
@@ -55,98 +55,108 @@
                     <!-- Products Dropdown -->
                     <div class="relative group">
                         <button
+                            aria-label="Toggle Products Menu"
                             class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn">
                             Products
                             <iconify-icon icon="solar:alt-arrow-down-linear"
-                                class="text-xs text-slate-400 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                                class="text-xs text-slate-500 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
                             <span
                                 class="absolute -bottom-2 left-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover/btn:w-full"></span>
                         </button>
-                        <!-- Dropdown Menu -->
+                        <!-- Dropdown Menu (Classic Nested Style) -->
                         <div
-                            class="absolute -left-32 mt-0 pt-6 w-[700px] opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                            class="absolute -left-4 mt-0 pt-6 w-72 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
                             <div
-                                class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-slate-100 grid grid-cols-12 shadow-sky-900/10">
-                                <!-- Left: Categories -->
-                                <div class="col-span-7 p-8 border-r border-slate-100">
-                                    <h4 class="text-[11px] font-black text-slate-400 tracking-widest uppercase mb-6">
-                                        Product Categories</h4>
-                                    <div class="grid grid-cols-1 gap-1">
-                                        <a href="#"
-                                            class="group/item flex items-center gap-4 p-3 rounded-lg hover:bg-slate-50 transition-all">
+                                class="bg-white shadow-2xl rounded-xl overflow-visible border border-slate-100 p-2 shadow-sky-900/10">
+
+                                <!-- Category 1 -->
+                                <div class="relative group/sub1">
+                                    <div
+                                        class="flex items-center justify-between p-3 rounded-lg hover:bg-sky-50 cursor-pointer transition-all">
+                                        <div class="flex items-center gap-3">
                                             <div
-                                                class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
-                                                <iconify-icon icon="solar:reorder-linear"
-                                                    class="text-xl"></iconify-icon>
+                                                class="w-8 h-8 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600">
+                                                <iconify-icon icon="solar:chart-2-linear"
+                                                    class="text-lg"></iconify-icon>
                                             </div>
-                                            <div>
-                                                <span class="block text-[13px] font-bold text-slate-700">Spare
-                                                    Parts</span>
-                                                <span class="block text-[11px] text-slate-500 font-medium">Durable
-                                                    industrial components</span>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
-                                            <div
-                                                class="w-11 h-11 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600 border border-yellow-100 group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors shadow-sm">
-                                                <iconify-icon icon="solar:bolt-linear" class="text-xl"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <span class="block font-bold text-[14px] text-slate-800">Electrical
-                                                    Solutions</span>
-                                                <span class="block text-[11px] text-slate-500 font-medium">Power &
-                                                    control systems</span>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50/50 group/item transition-all">
-                                            <div
-                                                class="w-11 h-11 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shadow-sm">
-                                                <iconify-icon icon="solar:settings-linear"
-                                                    class="text-xl"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <span class="block font-bold text-[14px] text-slate-800">Mechanical
-                                                    Parts</span>
-                                                <span class="block text-[11px] text-slate-500 font-medium">Durable
-                                                    industrial components</span>
-                                            </div>
-                                        </a>
+                                            <span class="text-[13px] font-bold text-slate-700">Analyzer &
+                                                Engineering</span>
+                                        </div>
+                                        <iconify-icon icon="solar:alt-arrow-right-linear"
+                                            class="text-xs text-slate-400"></iconify-icon>
+                                    </div>
+
+                                    <!-- Sub-menu for Category 1 -->
+                                    <div
+                                        class="absolute left-full top-0 ml-2 w-72 opacity-0 scale-95 origin-left pointer-events-none group-hover/sub1:opacity-100 group-hover/sub1:scale-100 group-hover/sub1:pointer-events-auto transition-all duration-300">
+                                        <div
+                                            class="bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-100 p-2 shadow-sky-900/10">
+                                            <a href="#" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Zirconia
+                                                    Analyzer</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: RB
+                                                    Technologies</span>
+                                            </a>
+                                            <a href="#"
+                                                class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Emissions
+                                                    Monitoring</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: Sick</span>
+                                            </a>
+                                            <a href="#"
+                                                class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Water
+                                                    Analyzer</span>
+                                                <span class="block text-[11px] text-slate-400">ECD, Process
+                                                    Instruments</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Right: Featured Brands -->
-                                <div class="col-span-5 bg-slate-50/50 p-8">
-                                    <h4 class="text-[11px] font-black text-slate-400 tracking-widest uppercase mb-6">
-                                        Principal Brands</h4>
-                                    <div class="grid grid-cols-1 gap-4">
-                                        <div class="grid grid-cols-2 gap-3">
-                                            <div
-                                                class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm">
-                                                <span class="text-[10px] font-black text-slate-800">PIEZUS</span>
-                                            </div>
-                                            <div
-                                                class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm">
-                                                <span class="text-[10px] font-black text-sky-700">FineTek</span>
-                                            </div>
-                                            <div
-                                                class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm text-center">
-                                                <span
-                                                    class="text-[8px] font-black text-slate-700 uppercase leading-tight">Fuji
-                                                    Electric</span>
-                                            </div>
-                                            <div
-                                                class="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm">
-                                                <span class="text-[10px] font-black text-emerald-600">KEMTRAK</span>
-                                            </div>
-                                        </div>
 
-                                        <div class="pt-6 mt-6 border-t border-slate-200">
+                                <!-- Category 2 -->
+                                <div class="relative group/sub2 mt-1">
+                                    <div
+                                        class="flex items-center justify-between p-3 rounded-lg hover:bg-amber-50 cursor-pointer transition-all">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600">
+                                                <iconify-icon icon="solar:settings-minimalistic-linear"
+                                                    class="text-lg"></iconify-icon>
+                                            </div>
+                                            <span class="text-[13px] font-bold text-slate-700">Automation &
+                                                Instrumentation</span>
+                                        </div>
+                                        <iconify-icon icon="solar:alt-arrow-right-linear"
+                                            class="text-xs text-slate-500"></iconify-icon>
+                                    </div>
+
+                                    <!-- Sub-menu for Category 2 -->
+                                    <div
+                                        class="absolute left-full top-0 ml-2 w-72 opacity-0 scale-95 origin-left pointer-events-none group-hover/sub2:opacity-100 group-hover/sub2:scale-100 group-hover/sub2:pointer-events-auto transition-all duration-300">
+                                        <div
+                                            class="bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-100 p-2 shadow-sky-900/10">
+                                            <a href="#" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Transmitter</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: PIEZUS</span>
+                                            </a>
                                             <a href="#"
-                                                class="group/btn inline-flex items-center gap-3 bg-sky-600 text-white px-6 py-2.5 rounded-lg font-bold text-[12px] hover:bg-sky-700 transition-all shadow-lg shadow-sky-600/20 w-full justify-center">
-                                                Explorer Full Catalog
-                                                <iconify-icon icon="solar:alt-arrow-right-linear"
-                                                    class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
+                                                class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Control
+                                                    Valve</span>
+                                                <span class="block text-[11px] text-slate-400">RTK - Regeltechnik</span>
+                                            </a>
+                                            <a href="#"
+                                                class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Fittings
+                                                    & Regulator</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: NAI LOK</span>
                                             </a>
                                         </div>
                                     </div>
@@ -163,10 +173,10 @@
                     </a>
 
                     <a href="{{ url('/news') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
                         News
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('news') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('news*') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
 
                     <a href="{{ url('/contact') }}"
@@ -202,6 +212,7 @@
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden items-center">
                     <button type="button"
+                        aria-label="Open Navigation Menu"
                         class="text-slate-900 bg-slate-100 p-3 rounded-lg hover:bg-slate-200 transition-colors">
                         <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
                     </button>
@@ -214,7 +225,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-white text-slate-900 relative overflow-hidden">
+    <footer class="background-footer text-slate-900 relative overflow-hidden">
         <!-- Decoration: Soft Blob -->
         <div
             class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[400px] bg-sky-50/50 rounded-[100%] blur-[120px] -z-10">
@@ -230,9 +241,9 @@
                         <div class="flex items-center gap-3">
                             <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-12 w-auto"
                                 alt="Indotek Logo">
-                            <div class="h-8 w-[2px] bg-yellow-400 rounded-full"></div>
-                            <span
-                                class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">PT. Indotek<br>Prima
+                            <div class="h-8 w-[2px] bg-yellow-500 rounded-full"></div>
+                            <span class="font-black text-slate-900 text-lg tracking-tighter leading-none uppercase">PT.
+                                Indotek<br>Prima
                                 Jaya</span>
                         </div>
                         <p class="text-slate-500 text-[14px] leading-relaxed max-w-sm font-medium">
@@ -243,15 +254,18 @@
 
                     <div class="flex gap-3">
                         <a href="#"
-                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
+                            aria-label="Follow us on Facebook"
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
                             <iconify-icon icon="ri:facebook-fill" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
+                            aria-label="Follow us on Instagram"
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
                             <iconify-icon icon="ri:instagram-line" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
+                            aria-label="Send us an Email"
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
                             <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                         </a>
                     </div>
@@ -260,7 +274,7 @@
                 <!-- Column 2: Quick Links -->
                 <div class="lg:col-span-4 grid grid-cols-2 gap-8">
                     <div class="space-y-6">
-                        <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h4>
+                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ url('/') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
@@ -295,7 +309,7 @@
                         </ul>
                     </div>
                     <div class="space-y-6">
-                        <h4 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h4>
+                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ url('/contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
@@ -322,7 +336,7 @@
                 <!-- Column 3: Contact Summary -->
                 <div class="lg:col-span-4 space-y-8">
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-5">
-                        <h4 class="text-[11px] font-black text-slate-400 tracking-[0.2em] uppercase">Quick Contact</h4>
+                        <h2 class="text-[11px] font-black text-slate-500 tracking-[0.2em] uppercase">Quick Contact</h2>
                         <div class="space-y-4">
                             <div class="flex items-center gap-2 group cursor-pointer">
                                 <div
@@ -352,15 +366,15 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="bg-slate-50 py-8 border-t border-slate-100">
+        <div class="bg-white/20 py-8">
             <div
                 class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-slate-400 text-[11px] font-bold tracking-wider uppercase">
+                <div class="text-slate-500 text-[11px] font-bold tracking-wider uppercase">
                     &copy; {{ date('Y') }} PT. Indotek Prima Jaya. All Rights Reserved.
                 </div>
                 <div class="flex items-center gap-4">
                     <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-6 w-auto" alt="">
-                    <span class="text-[10px] text-slate-400 font-black tracking-[0.3em] uppercase">Pekanbaru,
+                    <span class="text-[10px] text-slate-500 font-black tracking-[0.3em] uppercase">Pekanbaru,
                         Riau</span>
                 </div>
             </div>

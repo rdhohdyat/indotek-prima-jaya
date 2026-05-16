@@ -5,19 +5,11 @@
 @section('content')
     <!-- Hero Section -->
     <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
+             style="background: url('{{ asset('assets/hero/contact.webp') }}'); background-size: cover; background-position: left;">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-8 relative z-10" data-aos="fade-right">
-                    <!-- Awan putih / gradient kabut -->
-                    <div class="absolute -inset-x-12 -inset-y-10 -z-10 pointer-events-none">
-                        <div class="w-full h-full 
-                                        bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
-                                        blur-2xl">
-                        </div>
-                    </div>
-
                     <div class="space-y-3">
                         <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">CONTACT US</span>
                         <h1 class="text-[54px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
@@ -34,7 +26,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+        <div class="absolute -bottom-28 left-0 w-full h-64 pointer-events-none z-[5]">
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90"></div>
             <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
@@ -64,9 +56,9 @@
                                 <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h4 class="text-base font-bold text-slate-900">Email</h4>
+                                <h3 class="text-base font-bold text-slate-900">Email</h3>
                                 <p class="text-slate-600 font-bold text-sm">sales@indotek-pj.com</p>
-                                <p class="text-slate-400 text-xs">We will respond as soon as possible.</p>
+                                <p class="text-slate-500 text-xs">We will respond as soon as possible.</p>
                             </div>
                         </div>
 
@@ -76,9 +68,9 @@
                                 <iconify-icon icon="solar:phone-calling-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h4 class="text-base font-bold text-slate-900">Phone</h4>
+                                <h3 class="text-base font-bold text-slate-900">Phone</h3>
                                 <p class="text-slate-600 font-bold text-sm">0761 8046829</p>
-                                <p class="text-slate-400 text-xs">Mon – Fri (08.00 – 17.00 WIB)</p>
+                                <p class="text-slate-500 text-xs">Mon – Fri (08.00 – 17.00 WIB)</p>
                             </div>
                         </div>
 
@@ -88,11 +80,11 @@
                                 <iconify-icon icon="solar:map-point-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h4 class="text-base font-bold text-slate-900">Address</h4>
+                                <h3 class="text-base font-bold text-slate-900">Address</h3>
                                 <p class="text-slate-600 font-bold text-sm leading-relaxed max-w-xs">
                                     Jl. Arifin Ahmad No.70 C, Sidomulyo Timur, Marpoyan Damai, Pekanbaru, Riau 28289
                                 </p>
-                                <p class="text-slate-400 text-xs">Indonesia</p>
+                                <p class="text-slate-500 text-xs">Indonesia</p>
                             </div>
                         </div>
 
@@ -102,9 +94,9 @@
                                 <iconify-icon icon="solar:global-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h4 class="text-base font-bold text-slate-900">Website</h4>
+                                <h3 class="text-base font-bold text-slate-900">Website</h3>
                                 <p class="text-slate-600 font-bold text-sm">www.indotek-pj.com</p>
-                                <p class="text-slate-400 text-xs">Visit for more information.</p>
+                                <p class="text-slate-500 text-xs">Visit for more information.</p>
                             </div>
                         </div>
                     </div>
@@ -120,34 +112,34 @@
                         <form action="#" class="space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="space-y-1.5">
-                                    <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Your Name <span class="text-red-500">*</span></label>
-                                    <input type="text" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter your name">
+                                    <label for="name" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Your Name <span class="text-red-500">*</span></label>
+                                    <input type="text" id="name" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter your name" required>
                                 </div>
                                 <div class="space-y-1.5">
-                                    <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Company Name <span class="text-red-500">*</span></label>
-                                    <input type="text" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter company name">
+                                    <label for="company" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Company Name <span class="text-red-500">*</span></label>
+                                    <input type="text" id="company" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter company name" required>
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="space-y-1.5">
-                                    <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Email Address <span class="text-red-500">*</span></label>
-                                    <input type="email" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter your email">
+                                    <label for="email" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Email Address <span class="text-red-500">*</span></label>
+                                    <input type="email" id="email" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter your email" required>
                                 </div>
                                 <div class="space-y-1.5">
-                                    <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Phone Number</label>
-                                    <input type="tel" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter phone number">
+                                    <label for="phone" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter phone number">
                                 </div>
                             </div>
 
                             <div class="space-y-1.5">
-                                <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Subject <span class="text-red-500">*</span></label>
-                                <input type="text" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter subject">
+                                <label for="subject" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Subject <span class="text-red-500">*</span></label>
+                                <input type="text" id="subject" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300" placeholder="Enter subject" required>
                             </div>
 
                             <div class="space-y-1.5">
-                                <label class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Message <span class="text-red-500">*</span></label>
-                                <textarea rows="3" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300 resize-none" placeholder="Type your message here..."></textarea>
+                                <label for="message" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Message <span class="text-red-500">*</span></label>
+                                <textarea id="message" rows="3" class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300 resize-none" placeholder="Type your message here..." required></textarea>
                             </div>
 
                             <button type="submit" class="w-full lg:w-auto bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg font-bold text-[12px] transition flex items-center justify-center gap-3 group">
@@ -163,8 +155,9 @@
 
     <!-- Map Section -->
     <section class="relative h-[600px] w-full bg-slate-100 overflow-hidden">
-        <!-- Google Map Placeholder -->
+        <!-- Google Map -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6976648750877!2d101.42416957588102!3d0.4637770995316335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a94042867c0b%3A0xe6796c469b828289!2sJl.%20Arifin%20Ahmad%20No.70%2C%20Sidomulyo%20Tim.%2C%20Kec.%20Marpoyan%20Damai%2C%20Kota%20Pekanbaru%2C%20Riau%2028289!5e0!3m2!1sid!2sid!4v1715777777777" 
+                title="Google Maps Location of PT. Indotek Prima Jaya"
                 class="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-1000 border-0" allowfullscreen="" loading="lazy"></iframe>
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full pointer-events-none">
@@ -174,7 +167,7 @@
                         <div class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600">
                             <iconify-icon icon="solar:map-point-bold" class="text-2xl"></iconify-icon>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-900 uppercase tracking-tight leading-none">PT. Indotek<br>Prima Jaya</h4>
+                        <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight leading-none">PT. Indotek<br>Prima Jaya</h3>
                     </div>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         Jl. Arifin Ahmad No.70 C, Sidomulyo Timur, Marpoyan Damai, Pekanbaru, Riau 28289
@@ -208,29 +201,29 @@
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:chat-round-dots-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 uppercase">Fast Response</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">We respond quickly to every inquiry you send.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">Fast Response</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">We respond quickly to every inquiry you send.</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:users-group-rounded-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 uppercase">Expert Consultation</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Get professional advice from our experienced team.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">Expert Consultation</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">Get professional advice from our experienced team.</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:checklist-minimalistic-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 uppercase">Competitive Solutions</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">We provide the best solutions with competitive pricing.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">Competitive Solutions</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">We provide the best solutions with competitive pricing.</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:hand-shake-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 uppercase">Long-Term Partnership</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">We build lasting relationships with our business partners.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">Long-Term Partnership</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">We build lasting relationships with our business partners.</p>
                         </div>
                     </div>
                 </div>

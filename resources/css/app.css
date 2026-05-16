@@ -7,7 +7,7 @@
 
 @layer base {
     body {
-        font-family: "Barlow", sans-serif;
+        font-family: "Fira Sans", sans-serif;
     }
 
     h1,
@@ -20,14 +20,21 @@
 
 .hero-bg {
     position: relative;
-    background: url("../../public/assets/hero.png");
+    background: url("../../public/assets/hero/home.webp");
     background-size: cover;
     background-position: center;
 }
 
 .background-footer {
     position: relative;
-    background: url("../../public/assets/bg-footer.png");
+    background: url("../../public/assets/background-footer.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.background-vision-mission {
+    position: relative;
+    background: url("../../public/assets/background-vision-mission.png");
     background-size: cover;
     background-position: center;
 }

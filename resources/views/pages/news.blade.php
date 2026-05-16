@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-20 lg:pt-28 lg:pb-32 overflow-hidden bg-white">
+    <section class="relative pt-18 pb-20 lg:pb-32 overflow-hidden bg-white">
         <!-- Mist Effect Top -->
         <div class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-slate-50 to-transparent z-10 pointer-events-none opacity-50"></div>
 
@@ -13,26 +13,37 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
                 
                 <!-- Left: Large Featured Article -->
-                <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
-                    <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
-                        Optimizing Industrial Efficiency with High-Precision Measurement Tools
-                    </h2>
-
-                    <div class="flex items-center gap-4 text-[12px] font-bold">
-                        <span class="text-sky-600 uppercase tracking-widest">Industry</span>
-                        <div class="w-1 h-1 rounded-full bg-slate-300"></div>
-                        <span class="text-slate-400 uppercase tracking-widest">8 minute read</span>
-                    </div>
-
-                    <div class="relative group overflow-hidden rounded-3xl shadow-2xl">
+                <div class="lg:col-span-8 space-y-8" data-aos="fade-up">
+                    <a href="{{ route('news.detail') }}" class="group block relative h-80 lg:h-[500px] overflow-hidden rounded-lg shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
-                             class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured News">
-                        <div class="absolute inset-0 bg-linear-to-t from-slate-900/20 to-transparent"></div>
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured News">
+                        <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                        <div class="absolute bottom-10 left-10 right-10 space-y-4">
+                            <span class="inline-block px-3 py-1 rounded-full bg-sky-600 text-white text-[10px] font-black uppercase tracking-widest">Featured Article</span>
+                            <h2 class="text-3xl lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
+                                The Future of Industrial Automation: Key Trends to Watch
+                            </h2>
+                        </div>
+                    </a>
+                    
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 bg-white p-8 rounded-lg shadow-sm border border-slate-100">
+                        <div class="flex items-center gap-4 text-slate-400 text-xs font-bold uppercase tracking-widest">
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="solar:calendar-linear" class="text-lg text-sky-600"></iconify-icon>
+                                <span>May 15, 2026</span>
+                            </div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
+                            <span>8 min read</span>
+                        </div>
+                        <a href="{{ route('news.detail') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-600 transition-all group/btn shadow-lg shadow-slate-900/10">
+                            Read Full Article
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Right: Small Article List -->
-                <div class="lg:col-span-5 space-y-10" data-aos="fade-left">
+                <div class="lg:col-span-4 space-y-10" data-aos="fade-left">
                     <!-- Small Item 1 -->
                     <a href="#" class="grid grid-cols-12 gap-6 group">
                         <div class="col-span-8 space-y-2">
@@ -48,7 +59,7 @@
                                 <span class="text-slate-400">4 min read</span>
                             </div>
                         </div>
-                        <div class="col-span-4 h-24 overflow-hidden rounded-2xl shadow-md group-hover:shadow-lg transition-all">
+                        <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400" 
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 2">
                         </div>
@@ -69,7 +80,7 @@
                                 <span class="text-slate-400">6 min read</span>
                             </div>
                         </div>
-                        <div class="col-span-4 h-24 overflow-hidden rounded-2xl shadow-md group-hover:shadow-lg transition-all">
+                        <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
                             <img src="https://images.unsplash.com/photo-1542337311-64d17ec23f14?auto=format&fit=crop&q=80&w=400" 
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 3">
                         </div>
@@ -90,7 +101,7 @@
                                 <span class="text-slate-400">2 min read</span>
                             </div>
                         </div>
-                        <div class="col-span-4 h-24 overflow-hidden rounded-2xl shadow-md group-hover:shadow-lg transition-all">
+                        <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
                             <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400" 
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 4">
                         </div>
@@ -148,7 +159,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Article Item -->
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="relative h-56 overflow-hidden rounded-2xl group shadow-lg">
+                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
                             <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
@@ -168,7 +179,7 @@
 
                     <!-- Repeat for more items if needed -->
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative h-56 overflow-hidden rounded-2xl group shadow-lg">
+                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
                             <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
@@ -187,7 +198,7 @@
                     </div>
 
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative h-56 overflow-hidden rounded-2xl group shadow-lg">
+                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
                             <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
@@ -213,19 +224,11 @@
     <section class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8" data-aos="fade-up">
             <div class="space-y-4">
-                <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">Stay Updated</h2>
-                <p class="text-slate-500 font-medium max-w-xl mx-auto">
-                    Subscribe to our newsletter to receive the latest insights, product updates, and industrial news directly in your inbox.
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">Stay Tuned</h2>
+                <p class="text-slate-500 font-medium max-w-xl mx-auto uppercase tracking-wider">
+                    Stay tuned for further updates and information regarding Indotek
                 </p>
             </div>
-            
-            <form action="#" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input type="email" placeholder="Your email address" 
-                       class="flex-1 bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-sky-600 outline-none transition-all font-bold text-slate-900 placeholder:text-slate-300">
-                <button class="bg-sky-600 hover:bg-sky-700 text-white px-10 py-4 rounded-2xl font-black text-[13px] uppercase tracking-widest transition-all shadow-xl shadow-sky-600/20">
-                    Subscribe
-                </button>
-            </form>
         </div>
     </section>
 @endsection
