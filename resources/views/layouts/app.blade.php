@@ -315,17 +315,17 @@
                     <div
                         class="flex items-center bg-slate-100/80 p-0.5 rounded-full border border-slate-200/50 backdrop-blur-sm">
                         <a href="{{ route('lang.switch', 'id') }}" aria-label="Switch to Indonesian"
-                            class="flex items-center justify-center p-1 rounded-full {{ app()->getLocale() == 'id' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
-                            <iconify-icon icon="circle-flags:id" class="text-[14px]"></iconify-icon>
+                            class="flex items-center justify-center w-9 h-9 rounded-full {{ app()->getLocale() == 'id' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
+                            <iconify-icon icon="circle-flags:id" class="text-lg"></iconify-icon>
                         </a>
                         <a href="{{ route('lang.switch', 'en') }}" aria-label="Switch to English"
-                            class="flex items-center justify-center p-1 rounded-full {{ app()->getLocale() == 'en' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
-                            <iconify-icon icon="circle-flags:uk" class="text-[14px]"></iconify-icon>
+                            class="flex items-center justify-center w-9 h-9 rounded-full {{ app()->getLocale() == 'en' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
+                            <iconify-icon icon="circle-flags:uk" class="text-lg"></iconify-icon>
                         </a>
                     </div>
 
                     <a href="{{ url('/contact') }}"
-                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all shadow-sm flex items-center">
+                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-slate-900 px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all shadow-sm flex items-center">
                         {{ __('Get a Quote') }}
                         <iconify-icon icon="solar:alt-arrow-right-linear"
                             class="text-lg transition-transform group-hover:translate-x-1"></iconify-icon>

@@ -33,11 +33,11 @@
                         {{ __('PT. INDOTEK PRIMA JAYA is a general supplier company providing Engineering Tools, Measuring Instruments, Mechanical, Electrical, Computer Devices, and other industrial needs for private and government sectors.') }}
                     </p>
 
-                    <div class="flex flex-wrap gap-5 pt-2">
+                    <div class="flex flex-wrap gap-2 pt-2">
                         <a href="{{ route('about') }}"
                             class="bg-sky-700 hover:bg-sky-800 text-white px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-xl shadow-sky-600/10 group"
                             aria-label="Learn more about our company profile and history">
-                            {{ __('Learn More') }}
+                            {{ __('About Our Company') }}
                             <iconify-icon icon="solar:alt-arrow-right-linear"
                                 class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
