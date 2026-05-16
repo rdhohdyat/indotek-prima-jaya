@@ -29,7 +29,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
             <div
                 class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90">
@@ -134,7 +134,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
             <div
                 class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90">

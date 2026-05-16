@@ -58,7 +58,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
             <!-- Layer 1: Base smooth white transition -->
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
 

@@ -37,7 +37,7 @@
             </div>
 
             <!-- Featured Image -->
-            <div class="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video lg:aspect-[21/9]" data-aos="zoom-in">
+            <div class="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video lg:aspect-21/9" data-aos="zoom-in">
                 <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
                      class="w-full h-full object-cover" alt="Featured Image">
                 <div class="absolute inset-0 bg-linear-to-t from-slate-900/40 to-transparent"></div>
