@@ -42,7 +42,7 @@
 @section('content')
     @if($currentArticle)
     <!-- Article Detail View (Using a consistent premium layout) -->
-    <article class="relative pt-32 pb-24 overflow-hidden bg-white">
+    <article class="relative pt-14 pb-24 overflow-hidden bg-white">
         <div class="absolute top-0 left-0 w-full h-48 bg-linear-to-b from-slate-50 to-transparent z-10 pointer-events-none opacity-60"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div class="flex items-center gap-4 mb-8" data-aos="fade-up">

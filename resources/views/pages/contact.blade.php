@@ -11,17 +11,15 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-8 relative z-10" data-aos="fade-right">
                     <div class="space-y-3">
-                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">CONTACT US</span>
+                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">{{ __('CONTACT US') }}</span>
                         <h1
                             class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
-                            Let's Build Something<br>
-                            Great <span class="text-sky-600">Together</span>
+                            {!! __('Let\'s Build Something<br>Great <span class="text-sky-600">Together</span>') !!}
                         </h1>
                     </div>
 
                     <p class="text-[16px] text-slate-600 leading-relaxed max-w-lg font-medium">
-                        We are ready to support your business with the best products and services. Get in touch with us
-                        today.
+                        {{ __('We are ready to support your business with the best products and services. Get in touch with us today.') }}
                     </p>
                 </div>
             </div>
@@ -51,10 +49,9 @@
                 <!-- Left: Contact Info -->
                 <div class="lg:col-span-6 space-y-10" data-aos="fade-right">
                     <div class="space-y-4">
-                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[11px] uppercase block">GET IN
-                            TOUCH</span>
+                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[11px] uppercase block">{{ __('GET IN TOUCH') }}</span>
                         <h2 class="text-2xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                            We Are Here to Help
+                            {{ __('We Are Here to Help') }}
                         </h2>
                     </div>
 
@@ -66,9 +63,9 @@
                                 <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h3 class="text-base font-bold text-slate-900">Email</h3>
+                                <h3 class="text-base font-bold text-slate-900">{{ __('Email') }}</h3>
                                 <p class="text-slate-600 font-bold text-sm">sales@indotek-pj.com</p>
-                                <p class="text-slate-500 text-xs">We will respond as soon as possible.</p>
+                                <p class="text-slate-500 text-xs">{{ __('We will respond as soon as possible.') }}</p>
                             </div>
                         </div>
 
@@ -79,9 +76,9 @@
                                 <iconify-icon icon="solar:phone-calling-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h3 class="text-base font-bold text-slate-900">Phone</h3>
+                                <h3 class="text-base font-bold text-slate-900">{{ __('Phone') }}</h3>
                                 <p class="text-slate-600 font-bold text-sm">0761 8046829</p>
-                                <p class="text-slate-500 text-xs">Mon – Fri (08.00 – 17.00 WIB)</p>
+                                <p class="text-slate-500 text-xs">{{ __('Mon – Fri (08.00 – 17.00 WIB)') }}</p>
                             </div>
                         </div>
 
@@ -92,11 +89,11 @@
                                 <iconify-icon icon="solar:map-point-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h3 class="text-base font-bold text-slate-900">Address</h3>
+                                <h3 class="text-base font-bold text-slate-900">{{ __('Address') }}</h3>
                                 <p class="text-slate-600 font-bold text-sm leading-relaxed max-w-xs">
                                     Jl. Arifin Ahmad No.70 C, Sidomulyo Timur, Marpoyan Damai, Pekanbaru, Riau 28289
                                 </p>
-                                <p class="text-slate-500 text-xs">Indonesia</p>
+                                <p class="text-slate-500 text-xs">{{ __('Indonesia') }}</p>
                             </div>
                         </div>
 
@@ -107,9 +104,9 @@
                                 <iconify-icon icon="solar:global-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-0.5">
-                                <h3 class="text-base font-bold text-slate-900">Website</h3>
+                                <h3 class="text-base font-bold text-slate-900">{{ __('Website') }}</h3>
                                 <p class="text-slate-600 font-bold text-sm">www.indotek-pj.com</p>
-                                <p class="text-slate-500 text-xs">Visit for more information.</p>
+                                <p class="text-slate-500 text-xs">{{ __('Visit for more information.') }}</p>
                             </div>
                         </div>
                     </div>
@@ -122,57 +119,52 @@
                             class="absolute top-0 right-0 w-40 h-40 bg-sky-50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2">
                         </div>
 
-                        <h3 class="text-2xl font-bold text-slate-900 mb-8">Send Us a Message</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-8">{{ __('Send Us a Message') }}</h3>
 
                         <form action="#" class="space-y-4">
                             <div class="space-y-1.5">
-                                <label for="name" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Your
-                                    Name <span class="text-red-500">*</span></label>
+                                <label for="name" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Your Name <span class="text-red-500">*</span>') !!}</label>
                                 <input type="text" id="name"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
-                                    placeholder="Enter your name" required>
+                                    placeholder="{{ __('Enter your name') }}" required>
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="space-y-1.5">
                                     <label for="email"
-                                        class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Email Address
-                                        <span class="text-red-500">*</span></label>
+                                        class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Email Address <span class="text-red-500">*</span>') !!}</label>
                                     <input type="email" id="email"
                                         class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
-                                        placeholder="Enter your email" required>
+                                        placeholder="{{ __('Enter your email') }}" required>
                                 </div>
                                 <div class="space-y-1.5">
                                     <label for="phone"
-                                        class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Phone
-                                        Number</label>
+                                        class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{{ __('Phone Number') }}</label>
                                     <input type="tel" id="phone"
                                         class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
-                                        placeholder="Enter phone number">
+                                        placeholder="{{ __('Enter phone number') }}">
                                 </div>
                             </div>
 
                             <div class="space-y-1.5">
                                 <label for="subject"
-                                    class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Subject <span
-                                        class="text-red-500">*</span></label>
+                                    class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Subject <span class="text-red-500">*</span>') !!}</label>
                                 <input type="text" id="subject"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
-                                    placeholder="Enter subject" required>
+                                    placeholder="{{ __('Enter subject') }}" required>
                             </div>
 
                             <div class="space-y-1.5">
                                 <label for="message"
-                                    class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Message <span
-                                        class="text-red-500">*</span></label>
+                                    class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Message <span class="text-red-500">*</span>') !!}</label>
                                 <textarea id="message" rows="3"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300 resize-none"
-                                    placeholder="Type your message here..." required></textarea>
+                                    placeholder="{{ __('Type your message here...') }}" required></textarea>
                             </div>
 
                             <button type="submit"
                                 class="w-full lg:w-auto bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg font-bold text-[12px] transition flex items-center justify-center gap-3 group">
-                                Send Message
+                                {{ __('Send Message') }}
                                 <iconify-icon icon="solar:plain-linear"
                                     class="text-base transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
                             </button>
@@ -208,7 +200,7 @@
                     </p>
                     <a href="https://maps.app.goo.gl/b5mPiyC7mvuvcH9x9" target="_blank"
                         class="inline-flex items-center gap-3 text-sky-600 font-bold text-xs uppercase tracking-widest hover:gap-5 transition-all">
-                        View on Google Maps
+                        {{ __('View on Google Maps') }}
                         <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg"></iconify-icon>
                     </a>
                 </div>
@@ -222,13 +214,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-10" data-aos="fade-right">
                     <div class="space-y-4">
-                        <span class="text-yellow-600 font-bold tracking-[0.2em] text-[12px] uppercase block">WHY CONTACT
-                            US?</span>
+                        <span class="text-yellow-600 font-bold tracking-[0.2em] text-[12px] uppercase block">{{ __('WHY CONTACT US?') }}</span>
                         <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
-                            We're Ready to Support<br>Your Business
+                            {!! __('We\'re Ready to Support<br>Your Business') !!}
                         </h2>
                         <p class="text-slate-500 text-[15px] leading-relaxed max-w-md font-medium pt-2">
-                            Our team is ready to provide the right solutions for your needs.
+                            {{ __('Our team is ready to provide the right solutions for your needs.') }}
                         </p>
                     </div>
 
@@ -237,33 +228,29 @@
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:chat-round-dots-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h3 class="text-sm font-bold text-slate-900 uppercase">Fast Response</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">We respond quickly to every inquiry you send.
-                            </p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">{{ __('Fast Response') }}</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">{{ __('We respond quickly to every inquiry you send.') }}</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:users-group-rounded-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h3 class="text-sm font-bold text-slate-900 uppercase">Expert Consultation</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">Get professional advice from our experienced
-                                team.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">{{ __('Expert Consultation') }}</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">{{ __('Get professional advice from our experienced team.') }}</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:checklist-minimalistic-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h3 class="text-sm font-bold text-slate-900 uppercase">Competitive Solutions</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">We provide the best solutions with competitive
-                                pricing.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">{{ __('Competitive Solutions') }}</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">{{ __('We provide the best solutions with competitive pricing.') }}</p>
                         </div>
                         <div class="space-y-3">
                             <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                                 <iconify-icon icon="solar:hand-shake-linear" class="text-2xl"></iconify-icon>
                             </div>
-                            <h3 class="text-sm font-bold text-slate-900 uppercase">Long-Term Partnership</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">We build lasting relationships with our
-                                business partners.</p>
+                            <h3 class="text-sm font-bold text-slate-900 uppercase">{{ __('Long-Term Partnership') }}</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">{{ __('We build lasting relationships with our business partners.') }}</p>
                         </div>
                     </div>
                 </div>

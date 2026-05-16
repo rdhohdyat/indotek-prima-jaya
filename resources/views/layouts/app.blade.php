@@ -103,29 +103,29 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex space-x-7 items-center">
                     <a href="{{ url('/') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('/') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}"
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('/') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
                         {!! Request::is('/') ? 'aria-current="page"' : '' !!}>
-                        Home
+                        {{ __('Home') }}
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
                     <a href="{{ route('about') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}"
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
                         aria-label="About PT. Indotek Prima Jaya" {!! Request::is('about') ? 'aria-current="page"' : '' !!}>
-                        About
+                        {{ __('About') }}
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
 
                     <!-- Products Dropdown -->
                     <div class="relative group">
                         <button aria-label="Toggle Products Menu"
-                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('product*') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}">
-                            Products
+                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('product*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                            {{ __('Products') }}
                             <iconify-icon icon="solar:alt-arrow-down-linear"
-                                class="text-xs {{ Request::is('product*') ? 'text-sky-700' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                                class="text-xs {{ Request::is('product*') ? 'text-sky-600' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
                             <span
-                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('product*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
+                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('product*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
                         </button>
                         <!-- Dropdown Menu (Classic Nested Style) -->
                         <div
@@ -143,8 +143,7 @@
                                                 <iconify-icon icon="solar:chart-2-linear"
                                                     class="text-lg"></iconify-icon>
                                             </div>
-                                            <span class="text-[13px] font-bold text-slate-700">Analyzer &
-                                                Engineering</span>
+                                            <span class="text-[13px] font-bold text-slate-700">{{ __('Analyzer & Engineering') }}</span>
                                         </div>
                                         <iconify-icon icon="solar:alt-arrow-right-linear"
                                             class="text-xs text-slate-400"></iconify-icon>
@@ -158,7 +157,7 @@
                                             <a href="{{ route('product', 'zirconia-analyzer') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Zirconia
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Zirconia
                                                     Analyzer</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: RB
                                                     Technologies</span>
@@ -166,14 +165,14 @@
                                             <a href="{{ route('product', 'emissions-monitoring') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Emissions
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Emissions
                                                     Monitoring</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Sick</span>
                                             </a>
                                             <a href="{{ route('product', 'water-analyzer') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Water
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Water
                                                     Analyzer</span>
                                                 <span class="block text-[11px] text-slate-400">ECD, Process
                                                     Instruments</span>
@@ -192,8 +191,7 @@
                                                 <iconify-icon icon="solar:settings-minimalistic-linear"
                                                     class="text-lg"></iconify-icon>
                                             </div>
-                                            <span class="text-[13px] font-bold text-slate-700">Automation &
-                                                Instrumentation</span>
+                                            <span class="text-[13px] font-bold text-slate-700">{{ __('Automation & Instrumentation') }}</span>
                                         </div>
                                         <iconify-icon icon="solar:alt-arrow-right-linear"
                                             class="text-xs text-slate-500"></iconify-icon>
@@ -207,33 +205,33 @@
                                             <a href="{{ route('product', 'transmitter') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Transmitter</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Transmitter</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: PIEZUS</span>
                                             </a>
 
                                             <a href="{{ route('product', 'fittings-regulator') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Fittings
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Fittings
                                                     & Regulator</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: NAI LOK</span>
                                             </a>
                                             <a href="{{ route('product', 'saxon-probe') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">In-Situ Oxygen Probe</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">In-Situ Oxygen Probe</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Saxon</span>
                                             </a>
                                             <a href="{{ route('product', 'control-valve') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Control Valve</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Control Valve</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: RTK</span>
                                             </a>
                                             <a href="{{ route('product', 'industrial-valve') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Industrial Valve</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Industrial Valve</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Red Valve</span>
                                             </a>
                                         </div>
@@ -246,12 +244,12 @@
                     <!-- Services Dropdown -->
                     <div class="relative group">
                         <button aria-label="Toggle Services Menu"
-                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('service*') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}">
-                            Service
+                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('service*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                            {{ __('Services') }}
                             <iconify-icon icon="solar:alt-arrow-down-linear"
-                                class="text-xs {{ Request::is('service*') ? 'text-sky-700' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                                class="text-xs {{ Request::is('service*') ? 'text-sky-600' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
                             <span
-                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('service*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
+                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('service*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
                         </button>
                         <!-- Dropdown Menu -->
                         <div
@@ -292,17 +290,17 @@
                     <a href="{{ url('/news') }}"
                         class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
                         {!! Request::is('news*') ? 'aria-current="page"' : '' !!}>
-                        News
+                        {{ __('News') }}
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('news*') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('news*') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
 
                     <a href="{{ url('/contact') }}"
                         class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('contact') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
                         {!! Request::is('contact') ? 'aria-current="page"' : '' !!}>
-                        Contact
+                        {{ __('Contact') }}
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('contact') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('contact') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
                 </nav>
 
@@ -310,19 +308,19 @@
                     <!-- Language Switcher Pill (Flags) -->
                     <div
                         class="flex items-center bg-slate-100/80 p-0.5 rounded-full border border-slate-200/50 backdrop-blur-sm">
-                        <button aria-label="Switch to Indonesian"
-                            class="flex items-center justify-center p-1 rounded-full bg-white shadow-sm shadow-sky-900/5 transition-all">
+                        <a href="{{ route('lang.switch', 'id') }}" aria-label="Switch to Indonesian"
+                            class="flex items-center justify-center p-1 rounded-full {{ app()->getLocale() == 'id' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
                             <iconify-icon icon="circle-flags:id" class="text-[14px]"></iconify-icon>
-                        </button>
-                        <button aria-label="Switch to English"
-                            class="flex items-center justify-center p-1 rounded-full opacity-40 hover:opacity-100 transition-all">
+                        </a>
+                        <a href="{{ route('lang.switch', 'en') }}" aria-label="Switch to English"
+                            class="flex items-center justify-center p-1 rounded-full {{ app()->getLocale() == 'en' ? 'bg-white shadow-sm shadow-sky-900/5 opacity-100' : 'opacity-40 hover:opacity-100' }} transition-all">
                             <iconify-icon icon="circle-flags:uk" class="text-[14px]"></iconify-icon>
-                        </button>
+                        </a>
                     </div>
 
                     <a href="{{ url('/contact') }}"
                         class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all shadow-sm flex items-center">
-                        Get a Quote
+                        {{ __('Get a Quote') }}
                         <iconify-icon icon="solar:alt-arrow-right-linear"
                             class="text-lg transition-transform group-hover:translate-x-1"></iconify-icon>
                     </a>
@@ -345,16 +343,18 @@
         class="fixed inset-0 bg-white/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col pt-24 pb-8">
         <nav class="flex flex-col items-start space-y-2 px-6 text-left overflow-y-auto w-full grow pb-10">
             <a href="{{ route('home') }}"
-                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">Home</a>
+                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">{{ __('Home') }}</a>
             <a href="{{ route('about') }}" aria-label="About PT. Indotek Prima Jaya"
-                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">About</a>
+                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">{{ __('About') }}</a>
 
             <!-- Mobile Products (3-Level) -->
             <div class="flex flex-col w-full px-2">
                 <button type="button"
                     class="mobile-dropdown-btn flex items-center justify-between text-lg font-black uppercase tracking-widest py-3 w-full border-b border-slate-100"
                     data-target="mobile-products">
-                    <span>Products</span>
+                    <span class="flex items-center gap-3">
+                        {{ __('Products') }}
+                    </span>
                     <iconify-icon icon="solar:alt-arrow-down-linear"
                         class="text-lg transition-transform duration-300 dropdown-icon"></iconify-icon>
                 </button>
@@ -363,11 +363,11 @@
                     <!-- Level 2: Category 1 -->
                     <div class="flex flex-col w-full">
                         <button type="button"
-                            class="mobile-dropdown-btn flex items-center justify-between text-[11px] font-black uppercase tracking-widest py-3.5 px-6 w-full border-b border-slate-100/50 text-sky-700"
+                            class="mobile-dropdown-btn flex items-center justify-between text-[11px] font-black uppercase tracking-widest py-3.5 px-6 w-full border-b border-slate-100/50 text-sky-600"
                             data-target="mobile-cat-analyzer">
                             <span class="flex items-center gap-3">
                                 <iconify-icon icon="solar:chart-2-linear" class="text-base"></iconify-icon>
-                                Analyzer & Engineering
+                                {{ __('Analyzer & Engineering') }}
                             </span>
                             <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xs transition-transform duration-300 dropdown-icon"></iconify-icon>
                         </button>
@@ -386,7 +386,7 @@
                             data-target="mobile-cat-automation">
                             <span class="flex items-center gap-3">
                                 <iconify-icon icon="solar:settings-linear" class="text-base"></iconify-icon>
-                                Automation & Instrumentation
+                                {{ __('Automation & Instrumentation') }}
                             </span>
                             <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xs transition-transform duration-300 dropdown-icon"></iconify-icon>
                         </button>
@@ -406,7 +406,9 @@
                 <button type="button"
                     class="mobile-dropdown-btn flex items-center justify-between text-lg font-black uppercase tracking-widest py-3 w-full border-b border-slate-100"
                     data-target="mobile-services">
-                    <span>Services</span>
+                    <span class="flex items-center gap-3">
+                        {{ __('Services') }}
+                    </span>
                     <iconify-icon icon="solar:alt-arrow-down-linear"
                         class="text-lg transition-transform duration-300 dropdown-icon"></iconify-icon>
                 </button>
@@ -426,14 +428,13 @@
             </div>
 
             <a href="{{ route('news') }}" aria-label="News PT. Indotek Prima Jaya"
-                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">News</a>
+                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">{{ __('News') }}</a>
             <a href="{{ route('contact') }}" aria-label="Contact PT. Indotek Prima Jaya"
-                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">Contact</a>
+                class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">{{ __('Contact') }}</a>
 
             <div class="pt-6 w-full">
                 <a href="{{ route('contact') }}" aria-label="Get a Quote PT. Indotek Prima Jaya"
-                    class="block bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30">Get
-                    a Quote</a>
+                    class="block bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30 text-center">{{ __('Get a Quote') }}</a>
             </div>
         </nav>
     </div>
@@ -464,8 +465,7 @@
                                 Jaya</span>
                         </div>
                         <p class="text-slate-500 text-[14px] leading-relaxed max-w-sm font-medium">
-                            Premium industrial supplier specializing in high-precision measuring instruments, mechanical
-                            engineering, and electrical solutions for Indonesia's growing industries.
+                            {{ __('Premium industrial supplier specializing in high-precision measuring instruments, mechanical engineering, and electrical solutions for Indonesia\'s growing industries.') }}
                         </p>
                     </div>
 
@@ -479,7 +479,7 @@
                             <iconify-icon icon="ri:instagram-line" class="text-xl"></iconify-icon>
                         </a>
                         <a href="#" aria-label="Send us an Email"
-                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-sky-700 hover:text-white hover:border-sky-700 hover:shadow-lg hover:shadow-sky-700/20 transition-all duration-300">
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-sky-600 hover:text-white hover:border-sky-700 hover:shadow-lg hover:shadow-sky-700/20 transition-all duration-300">
                             <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                         </a>
                     </div>
@@ -488,55 +488,55 @@
                 <!-- Column 2: Quick Links -->
                 <div class="lg:col-span-4 grid grid-cols-2 gap-8">
                     <div class="space-y-6">
-                        <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Navigation</h2>
+                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ route('home') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
-                                    Home
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    {{ __('Home') }}
                                 </a></li>
                             <li><a href="{{ route('about') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group"
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group"
                                     aria-label="Read more about PT. Indotek Prima Jaya's profile">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
-                                    About Us
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    {{ __('About') }}
                                 </a></li>
                             <li><a href="#"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
-                                    Products
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    {{ __('Products') }}
                                 </a></li>
                             <li><a href="{{ route('service') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
-                                    Service
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    {{ __('Services') }}
                                 </a></li>
                             <li><a href="{{ route('news') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
-                                    News
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                    {{ __('News') }}
                                 </a></li>
                         </ul>
                     </div>
                     <div class="space-y-6">
-                        <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Support</h2>
+                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ route('contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
-                                    Contact
+                                    {{ __('Contact') }}
                                 </a></li>
                             <li><a href="{{ route('contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
-                                    Get a Quote
+                                    {{ __('Get a Quote') }}
                                 </a></li>
                             <li><a href="#"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
@@ -571,7 +571,7 @@
                         <div class="pt-2">
                             <a href="{{ route('contact') }}"
                                 class="block text-center bg-slate-900 text-white py-3 rounded-lg font-bold text-[11px] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10">
-                                Contact Our Team
+                                {{ __('Contact Our Team') }}
                             </a>
                         </div>
                     </div>

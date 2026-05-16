@@ -151,23 +151,23 @@
                     <!-- Ambient Glow -->
                     <div class="absolute inset-x-0 -inset-y-10 -z-10 pointer-events-none">
                         <div class="w-full h-full 
-                                            bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
-                                            blur-2xl">
+                                                bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
+                                                blur-2xl">
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block">
+                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">
                             {{ $currentProduct ? $currentProduct['category'] : 'OUR PRODUCTS' }}
                         </span>
                         <h1
                             class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
                             @if($currentProduct)
                                 {{ $currentProduct['title'] }}<br>
-                                <span class="text-sky-700">Solutions</span>
+                                <span class="text-sky-600">Solutions</span>
                             @else
                                 High-Precision<br>
-                                Industrial <span class="text-sky-700">Equipment</span>
+                                Industrial <span class="text-sky-600">Equipment</span>
                             @endif
                         </h1>
                     </div>
@@ -179,7 +179,7 @@
                     @if($currentProduct)
                         <div class="flex flex-wrap items-center gap-6 pt-4">
                             <a href="{{ url('/contact') }}"
-                                class="bg-sky-700 hover:bg-sky-800 text-white px-8 py-4 rounded-xl font-bold text-[14px] transition flex items-center gap-3 shadow-xl shadow-sky-600/20">
+                                class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-bold text-[14px] transition flex items-center gap-3 shadow-xl shadow-sky-600/20">
                                 Get Quote
                                 <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
                             </a>
@@ -239,11 +239,6 @@
                             <img id="mainProductImage" src="{{ $currentProduct['image'] }}"
                                 class="w-full h-full object-contain transition-all duration-500 group-hover:scale-105"
                                 alt="{{ $currentProduct['title'] }}">
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="bg-slate-900/10 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200/50">Featured
-                                    View</span>
-                            </div>
                         </div>
                     </div>
 
@@ -309,7 +304,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
                     @foreach($products as $slug => $product)
-                        <a href="{{ route('product', $slug) }}" class="group relative overflow-hidden aspect-[4/5] bg-slate-50"
+                        <a href="{{ route('product', $slug) }}" class="group relative overflow-hidden aspect-4/5 bg-slate-50"
                             data-aos="fade-up">
 
                             <!-- Main Product Image -->

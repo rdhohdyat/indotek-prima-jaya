@@ -25,3 +25,14 @@ Route::get('/service/{type?}', function ($type = null) {
 Route::get('/news/{slug?}', function ($slug = null) {
     return view('pages.news', compact('slug'));
 })->name('news');
+
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+})->name('lang.switch');
+
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap')->header('Content-Type', 'text/xml');
+})->name('sitemap');

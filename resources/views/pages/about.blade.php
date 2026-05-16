@@ -11,18 +11,17 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-8 relative z-10" data-aos="fade-right">
                     <div class="space-y-3">
-                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">ABOUT US</span>
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">{{ __('ABOUT US') }}</span>
                         <h1
                             class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
-                            About<br>
-                            <span class="text-sky-600">PT. INDOTEK</span><br>
+                            {{ __('About') }}<br>
+                            <span class="text-sky-500">PT. INDOTEK</span><br>
                             PRIMA JAYA
                         </h1>
                     </div>
 
                     <p class="text-[16px] text-slate-600 leading-relaxed max-w-lg font-medium">
-                        We are a general supplier company that provides innovative solutions with a commitment to quality,
-                        integrity, and trust for sustainable business growth.
+                        {{ __('We are a general supplier company that provides innovative solutions with a commitment to quality, integrity, and trust for sustainable business growth.') }}
                     </p>
                 </div>
             </div>
@@ -56,27 +55,20 @@
                 </div>
                 <div class="space-y-8" data-aos="fade-left">
                     <div class="space-y-3">
-                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">WHO WE
-                            ARE</span>
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">{{ __('WHO WE ARE') }}</span>
                         <h2 class="text-2xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
-                            Your Reliable Partner<br>for Sustainable Growth
+                            {!! __('Your Reliable Partner<br>for Sustainable Growth') !!}
                         </h2>
                     </div>
                     <div class="space-y-6 text-slate-600 text-[15px] leading-relaxed font-medium">
                         <p>
-                            PT. INDOTEK PRIMA JAYA is a company engaged in the field of General Suppliers including
-                            Engineering Tools, Measuring Instruments, Mechanical, Electrical, Computer Devices and others
-                            serving medium and large companies for general industry and trade, both private and government.
+                            {{ __('PT. INDOTEK PRIMA JAYA is a company engaged in the field of General Suppliers including Engineering Tools, Measuring Instruments, Mechanical, Electrical, Computer Devices and others serving medium and large companies for general industry and trade, both private and government.') }}
                         </p>
                         <p>
-                            Founded in 2020, we provide innovative business solutions to companies that are our partners,
-                            where we always prioritize quality and trust for a harmonious and sustainable business
-                            continuity.
+                            {{ __('Founded in 2020, we provide innovative business solutions to companies that are our partners, where we always prioritize quality and trust for a harmonious and sustainable business continuity.') }}
                         </p>
                         <p>
-                            Our goal is to be the first choice for our business partners by contributing to each of our
-                            clients more than they expect, through our special services in a professional manner and full
-                            integrity.
+                            {{ __('Our goal is to be the first choice for our business partners by contributing to each of our clients more than they expect, through our special services in a professional manner and full integrity.') }}
                         </p>
                     </div>
                 </div>
@@ -105,11 +97,9 @@
                             <iconify-icon icon="solar:eye-linear" class="text-xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">Our Vision</h2>
+                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">{{ __('Our Vision') }}</h2>
                             <p class="text-base text-slate-600 leading-relaxed font-medium">
-                                To become a leading and trusted partner in industrial supply and business solutions by
-                                delivering high-quality products, professional services, and sustainable value for every
-                                customer and industry we serve.
+                                {{ __('To become a leading and trusted partner in industrial supply and business solutions by delivering high-quality products, professional services, and sustainable value for every customer and industry we serve.') }}
                             </p>
                         </div>
                     </div>
@@ -123,12 +113,9 @@
                             <iconify-icon icon="solar:target-linear" class="text-xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">Our Mission</h2>
+                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">{{ __('Our Mission') }}</h2>
                             <p class="text-base text-slate-600 leading-relaxed font-medium">
-                                To provide reliable and cost-effective industrial products and solutions with a strong
-                                commitment to quality, innovation, and customer satisfaction. We continuously improve our
-                                services and expertise to support the growth and sustainability of our business partners
-                                across various industries.
+                                {{ __('To provide reliable and cost-effective industrial products and solutions with a strong commitment to quality, innovation, and customer satisfaction. We continuously improve our services and expertise to support the growth and sustainability of our business partners across various industries.') }}
                             </p>
                         </div>
                     </div>
@@ -159,9 +146,9 @@
                             <iconify-icon icon="solar:shield-check-linear" class="text-6xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">Integrity</h3>
+                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">{{ __('Integrity') }}</h3>
                             <p class="text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
-                                Upholding the highest ethical standards in every business interaction and decision.
+                                {{ __('Upholding the highest ethical standards in every business interaction and decision.') }}
                             </p>
                         </div>
                     </div>
@@ -173,9 +160,9 @@
                             <iconify-icon icon="solar:bolt-linear" class="text-6xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">Dedication</h3>
+                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">{{ __('Dedication') }}</h3>
                             <p class="text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
-                                Fully committed to providing innovative and effective solutions for our partners.
+                                {{ __('Fully committed to providing innovative and effective solutions for our partners.') }}
                             </p>
                         </div>
                     </div>
@@ -187,9 +174,9 @@
                             <iconify-icon icon="solar:users-group-rounded-linear" class="text-6xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">Loyalty</h3>
+                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">{{ __('Loyalty') }}</h3>
                             <p class="text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
-                                Building long-term, trustworthy partnerships based on reliability and success.
+                                {{ __('Building long-term, trustworthy partnerships based on reliability and success.') }}
                             </p>
                         </div>
                     </div>
@@ -201,9 +188,9 @@
                             <iconify-icon icon="solar:medal-star-linear" class="text-6xl"></iconify-icon>
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">Excellence</h3>
+                            <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">{{ __('Excellence') }}</h3>
                             <p class="text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
-                                Striving for perfection in every product and service we deliver to ensure satisfaction.
+                                {{ __('Striving for perfection in every product and service we deliver to ensure satisfaction.') }}
                             </p>
                         </div>
                     </div>
@@ -219,9 +206,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div class="space-y-12" data-aos="fade-right">
                     <div class="space-y-3">
-                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">OUR JOURNEY</span>
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">{{ __('OUR JOURNEY') }}</span>
                         <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                            A Commitment to Excellence
+                            {{ __('A Commitment to Excellence') }}
                         </h2>
                     </div>
 
@@ -233,10 +220,9 @@
                                 <iconify-icon icon="solar:flag-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <h3 class="text-lg font-bold text-slate-900 uppercase">Company Established</h3>
+                                <h3 class="text-lg font-bold text-slate-900 uppercase">{{ __('Company Established') }}</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed">
-                                    PT. INDOTEK PRIMA JAYA was founded with a vision to become a trusted general supplier in
-                                    Indonesia.
+                                    {{ __('PT. INDOTEK PRIMA JAYA was founded with a vision to become a trusted general supplier in Indonesia.') }}
                                 </p>
                             </div>
                         </div>
@@ -247,10 +233,9 @@
                                 <iconify-icon icon="solar:chart-2-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <h3 class="text-lg font-bold text-slate-900 uppercase">Expanding Solutions</h3>
+                                <h3 class="text-lg font-bold text-slate-900 uppercase">{{ __('Expanding Solutions') }}</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed">
-                                    We expanded our product range and built strong partnerships with reputable brands and
-                                    clients.
+                                    {{ __('We expanded our product range and built strong partnerships with reputable brands and clients.') }}
                                 </p>
                             </div>
                         </div>
@@ -261,10 +246,9 @@
                                 <iconify-icon icon="solar:users-group-rounded-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <h3 class="text-lg font-bold text-slate-900 uppercase">Growing Together</h3>
+                                <h3 class="text-lg font-bold text-slate-900 uppercase">{{ __('Growing Together') }}</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed">
-                                    We continue to improve our services and support various industries with reliable supply
-                                    solutions.
+                                    {{ __('We continue to improve our services and support various industries with reliable supply solutions.') }}
                                 </p>
                             </div>
                         </div>
@@ -275,10 +259,9 @@
                                 <iconify-icon icon="solar:graph-up-linear" class="text-xl"></iconify-icon>
                             </div>
                             <div class="space-y-1">
-                                <h3 class="text-lg font-bold text-slate-900 uppercase">Building the Future</h3>
+                                <h3 class="text-lg font-bold text-slate-900 uppercase">{{ __('Building the Future') }}</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed">
-                                    We are committed to innovation, quality, and long-term partnerships for sustainable
-                                    growth.
+                                    {{ __('We are committed to innovation, quality, and long-term partnerships for sustainable growth.') }}
                                 </p>
                             </div>
                         </div>
@@ -308,12 +291,10 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16" data-aos="fade-up">
                 <div class="space-y-4 max-w-2xl text-left">
-                    <span class="text-yellow-500 font-bold tracking-[0.3em] text-[10px] uppercase block">Market
-                        Sectors</span>
-                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">Industries We <span
-                            class="text-sky-500">Serve</span></h2>
-                    <p class="text-slate-500 font-medium leading-relaxed">Providing world-class technical solutions and
-                        high-precision equipment to support the backbone of Indonesia's industrial landscape.</p>
+                    <span class="text-yellow-500 font-bold tracking-[0.3em] text-[10px] uppercase block">{{ __('Market Sectors') }}</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">{{ __('Industries We ') }}<span
+                            class="text-sky-500">{{ __('Serve') }}</span></h2>
+                    <p class="text-slate-500 font-medium leading-relaxed">{{ __('Providing world-class technical solutions and high-precision equipment to support the backbone of Indonesia\'s industrial landscape.') }}</p>
                 </div>
 
                 <!-- Navigation Buttons (Visible on Mobile for easier scroll) -->
@@ -356,12 +337,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
                                     <span
-                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Manufacturing</span>
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Manufacturing') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Pulp & Paper</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Pulp & Paper') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Supporting sustainable production with advanced monitoring and engineering tools.
+                                    {{ __('Supporting sustainable production with advanced monitoring and engineering tools.') }}
                                 </p>
                             </div>
                         </div>
@@ -387,12 +368,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
                                     <span
-                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Processing') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Refinery</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Refinery') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Delivering high-performance components for complex refining processes.
+                                    {{ __('Delivering high-performance components for complex refining processes.') }}
                                 </p>
                             </div>
                         </div>
@@ -417,12 +398,12 @@
                             <div class="space-y-2">
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
-                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Energy</span>
+                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Energy') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Power Plant</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Power Plant') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Ensuring stability and efficiency for power generation systems nationwide.
+                                    {{ __('Ensuring stability and efficiency for power generation systems nationwide.') }}
                                 </p>
                             </div>
                         </div>
@@ -448,12 +429,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
                                     <span
-                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Agri-Industry</span>
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Agri-Industry') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Palm Oil</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Palm Oil') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Optimizing extraction and processing with precision industrial solutions.
+                                    {{ __('Optimizing extraction and processing with precision industrial solutions.') }}
                                 </p>
                             </div>
                         </div>
@@ -479,12 +460,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
                                     <span
-                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Agriculture</span>
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Agriculture') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Fertilizer</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Fertilizer') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Enhancing production efficiency for agricultural supply chains.
+                                    {{ __('Enhancing production efficiency for agricultural supply chains.') }}
                                 </p>
                             </div>
                         </div>
@@ -510,12 +491,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
                                     <span
-                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Resources</span>
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Resources') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Oil & Gas Upstream</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Oil & Gas Upstream') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Supporting exploration and production with robust technical equipment.
+                                    {{ __('Supporting exploration and production with robust technical equipment.') }}
                                 </p>
                             </div>
                         </div>
@@ -541,12 +522,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
                                     <span
-                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">General</span>
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">{{ __('General') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">General Industry</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('General Industry') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Providing versatile solutions for diverse manufacturing and specialized trading needs.
+                                    {{ __('Providing versatile solutions for diverse manufacturing and specialized trading needs.') }}
                                 </p>
                             </div>
                         </div>
@@ -572,12 +553,12 @@
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
                                     <span
-                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">{{ __('Processing') }}</span>
                                 </div>
-                                <h3 class="text-2xl font-black text-white tracking-tight">Chemical</h3>
+                                <h3 class="text-2xl font-black text-white tracking-tight">{{ __('Chemical') }}</h3>
                                 <p
                                     class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Ensuring safety and high precision in specialized chemical processing and handling.
+                                    {{ __('Ensuring safety and high precision in specialized chemical processing and handling.') }}
                                 </p>
                             </div>
                         </div>
