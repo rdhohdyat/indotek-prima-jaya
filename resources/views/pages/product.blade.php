@@ -5,7 +5,7 @@
             'principal' => 'RB Technologies',
             'category' => 'Analyzer & Engineering',
             'description' => 'High-precision oxygen analysis using advanced zirconia sensor technology for optimized combustion control and emission monitoring.',
-            'image' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/zirconia-analyzer.webp'),
             'icon' => 'solar:chart-2-bold-duotone',
             'color' => 'sky',
             'features' => [
@@ -21,7 +21,7 @@
             'principal' => 'Sick',
             'category' => 'Analyzer & Engineering',
             'description' => 'Continuous Emission Monitoring Systems (CEMS) designed to meet strict environmental regulations with reliable gas analysis.',
-            'image' => 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/emissions-monitoring.webp'),
             'icon' => 'solar:graph-bold-duotone',
             'color' => 'sky',
             'features' => [
@@ -37,7 +37,7 @@
             'principal' => 'ECD, Process Instruments',
             'category' => 'Analyzer & Engineering',
             'description' => 'Comprehensive water quality analysis solutions for pH, conductivity, dissolved oxygen, and turbidity in industrial processes.',
-            'image' => 'https://images.unsplash.com/photo-1543674892-7d64d45df18b?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/water-analyzer.webp'),
             'icon' => 'solar:water-drops-bold-duotone',
             'color' => 'sky',
             'features' => [
@@ -53,7 +53,7 @@
             'principal' => 'PIEZUS',
             'category' => 'Automation & Instrumentation',
             'description' => 'Precision pressure and level transmitters for reliable process monitoring in oil & gas, chemical, and general manufacturing.',
-            'image' => 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/transmitter.webp'),
             'icon' => 'solar:compass-bold-duotone',
             'color' => 'amber',
             'features' => [
@@ -69,7 +69,7 @@
             'principal' => 'RTK - Regeltechnik',
             'category' => 'Automation & Instrumentation',
             'description' => 'High-performance control valves for precise regulation of pressure, temperature, and flow rate in demanding industrial systems.',
-            'image' => 'https://images.unsplash.com/photo-1517089535811-0ce2eb31c9af?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/control-valve.webp'),
             'icon' => 'solar:settings-bold-duotone',
             'color' => 'amber',
             'features' => [
@@ -85,7 +85,7 @@
             'principal' => 'NAI LOK',
             'category' => 'Automation & Instrumentation',
             'description' => 'High-quality instrumentation fittings and pressure regulators ensuring leak-free connections and stable gas/liquid pressure.',
-            'image' => 'https://images.unsplash.com/photo-1580901233033-9c88219b666d?auto=format&fit=crop&q=80&w=1200',
+            'image' => asset('assets/products/fittings-regulator.webp'),
             'icon' => 'solar:widget-bold-duotone',
             'color' => 'amber',
             'features' => [
@@ -108,7 +108,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('{{ $currentProduct ? $currentProduct['image'] : 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000' }}'); background-size: cover; background-position: center;">
+             style="background: url('{{ $currentProduct ? $currentProduct['image'] : asset('assets/office.webp') }}'); background-size: cover; background-position: center;">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

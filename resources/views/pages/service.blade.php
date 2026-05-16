@@ -4,7 +4,7 @@
             'title' => 'Transformator Services',
             'subtitle' => 'INSTALLATION & MAINTENANCE',
             'description' => 'Providing end-to-end solutions for industrial transformers, ensuring optimal power distribution and system reliability.',
-            'image' => 'https://images.unsplash.com/photo-1544724569-5f546fa602b5?auto=format&fit=crop&q=80&w=2000',
+            'image' => asset('assets/services/service-transformer.png'),
             'icon' => 'solar:bolt-bold-duotone',
             'color' => 'sky',
             'features' => [
@@ -19,7 +19,7 @@
             'title' => 'Valve Services',
             'subtitle' => 'REPAIR & CALIBRATION',
             'description' => 'Expert maintenance and repair services for all types of industrial valves, including control valves and safety relief valves.',
-            'image' => 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000',
+            'image' => asset('assets/services/service-valve.png'),
             'icon' => 'solar:settings-bold-duotone',
             'color' => 'amber',
             'features' => [
@@ -34,7 +34,7 @@
             'title' => 'Pump Services',
             'subtitle' => 'OVERHAUL & ALIGNMENT',
             'description' => 'Comprehensive pump engineering solutions to maximize uptime and energy efficiency of your pumping systems.',
-            'image' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000',
+            'image' => asset('assets/services/service-pump.png'),
             'icon' => 'solar:refresh-bold-duotone',
             'color' => 'emerald',
             'features' => [
@@ -57,7 +57,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('{{ $currentService ? $currentService['image'] : 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000' }}'); background-size: cover; background-position: center;">
+             style="background: url('{{ $currentService ? $currentService['image'] : asset('assets/background-service.webp') }}'); background-size: cover; background-position: center;">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

@@ -83,7 +83,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Vision & Mission Section -->
     <section class="py-24 background-vision-mission relative overflow-hidden">
         <!-- Decoration -->
@@ -95,15 +95,15 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
                 <!-- Vision -->
-                <div class="relative group" data-aos="fade-right">
-                    <div class="relative space-y-6">
+                <div class="relative group bg-white p-7 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-500" data-aos="fade-right">
+                    <div class="relative space-y-5">
                         <div
-                            class="w-20 h-20 bg-sky-500 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-sky-600/30 transform group-hover:rotate-6 transition-transform duration-500">
-                            <iconify-icon icon="solar:eye-linear" class="text-4xl"></iconify-icon>
+                            class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-sky-600/20 transform group-hover:rotate-6 transition-transform duration-500">
+                            <iconify-icon icon="solar:eye-linear" class="text-xl"></iconify-icon>
                         </div>
-                        <div class="space-y-4">
-                            <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Our Vision</h2>
-                            <p class="text-xl text-slate-800 leading-relaxed font-medium">
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">Our Vision</h2>
+                            <p class="text-base text-slate-600 leading-relaxed font-medium">
                                 To become a leading and trusted partner in industrial supply and business solutions by
                                 delivering high-quality products, professional services, and sustainable value for every
                                 customer and industry we serve.
@@ -113,15 +113,15 @@
                 </div>
 
                 <!-- Mission -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="relative space-y-6">
+                <div class="relative group bg-white p-7 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-yellow-500/5 transition-all duration-500" data-aos="fade-left">
+                    <div class="relative space-y-5">
                         <div
-                            class="w-20 h-20 bg-yellow-500 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-slate-900/30 transform group-hover:-rotate-6 transition-transform duration-500">
-                            <iconify-icon icon="solar:target-linear" class="text-4xl"></iconify-icon>
+                            class="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-yellow-500/20 transform group-hover:-rotate-6 transition-transform duration-500">
+                            <iconify-icon icon="solar:target-linear" class="text-xl"></iconify-icon>
                         </div>
-                        <div class="space-y-4">
-                            <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Our Mission</h2>
-                            <p class="text-lg text-slate-800 leading-relaxed font-medium">
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">Our Mission</h2>
+                            <p class="text-base text-slate-600 leading-relaxed font-medium">
                                 To provide reliable and cost-effective industrial products and solutions with a strong
                                 commitment to quality, innovation, and customer satisfaction. We continuously improve our
                                 services and expertise to support the growth and sustainability of our business partners
@@ -216,7 +216,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div class="space-y-12" data-aos="fade-right">
                     <div class="space-y-3">
-                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">OUR JOURNEY</span>
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">OUR JOURNEY</span>
                         <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
                             A Commitment to Excellence
                         </h2>
@@ -284,8 +284,8 @@
 
                 <div class="space-y-10" data-aos="fade-left">
                     <div class="relative">
-                        <img src="{{ asset('assets/our_journey.webp') }}" class="rounded-3xl  w-full h-[450px] object-cover object-left"
-                            alt="Our Journey">
+                        <img src="{{ asset('assets/our_journey.webp') }}"
+                            class="rounded-3xl  w-full h-[450px] object-cover object-left" alt="Our Journey">
                     </div>
                 </div>
             </div>
@@ -317,11 +317,13 @@
                 <div class="flex items-center gap-3 lg:hidden">
                     <button
                         onclick="document.getElementById('industry-about-container').scrollBy({left: -320, behavior: 'smooth'})"
+                        aria-label="Scroll left through industries"
                         class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
                         <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
                     </button>
                     <button
                         onclick="document.getElementById('industry-about-container').scrollBy({left: 320, behavior: 'smooth'})"
+                        aria-label="Scroll right through industries"
                         class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
                         <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
                     </button>

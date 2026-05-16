@@ -217,7 +217,7 @@
                     data-aos-delay="0">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/zirconia-analyzer.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Zirconia Analyzer">
                         </div>
@@ -236,7 +236,7 @@
                     data-aos-delay="100">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/emissions-monitoring.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Emissions Monitoring">
                         </div>
@@ -254,7 +254,7 @@
                     data-aos-delay="200">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1517089535811-0ce2eb31c9af?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/control-valve.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Control Valve">
                         </div>
@@ -272,7 +272,7 @@
                 <a href="{{ route('product', 'transmitter') }}" class="group block" data-aos="fade-up" data-aos-delay="300">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/transmitter.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Transmitter">
                         </div>
@@ -291,7 +291,7 @@
                     data-aos-delay="400">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1543674892-7d64d45df18b?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/water-analyzer.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Water Analyzer">
                         </div>
@@ -309,7 +309,7 @@
                     data-aos-delay="500">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="https://images.unsplash.com/photo-1580901233033-9c88219b666d?auto=format&fit=crop&q=80&w=800"
+                            <img src="{{ asset('assets/products/fittings-regulator.webp') }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 alt="Fittings & Regulator">
                         </div>
@@ -516,12 +516,12 @@
                 </div>
 
                 <div class="flex items-center gap-3 lg:hidden">
-                    <button
+                    <button aria-label="Scroll left through industries"
                         onclick="document.getElementById('industry-container').scrollBy({left: -320, behavior: 'smooth'})"
                         class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
                         <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
                     </button>
-                    <button
+                    <button aria-label="Scroll right through industries"
                         onclick="document.getElementById('industry-container').scrollBy({left: 320, behavior: 'smooth'})"
                         class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
                         <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>

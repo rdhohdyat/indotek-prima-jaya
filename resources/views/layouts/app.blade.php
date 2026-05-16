@@ -20,8 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:site_name" content="PT. Indotek Prima Jaya">
-    <meta property="og:title"
-        content="@yield('og_title', 'PT. INDOTEK PRIMA JAYA - Reliable Industrial Partner')">
+    <meta property="og:title" content="@yield('og_title', 'PT. INDOTEK PRIMA JAYA - Reliable Industrial Partner')">
     <meta property="og:description"
         content="@yield('meta_description', 'PT. Indotek Prima Jaya is a premium industrial supplier and business solutions provider in Indonesia.')">
     <meta property="og:image" content="@yield('og_image', asset('assets/og-image.png'))">
@@ -32,8 +31,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title"
-        content="@yield('og_title', 'PT. INDOTEK PRIMA JAYA - Reliable Industrial Partner')">
+    <meta name="twitter:title" content="@yield('og_title', 'PT. INDOTEK PRIMA JAYA - Reliable Industrial Partner')">
     <meta name="twitter:description"
         content="@yield('meta_description', 'PT. Indotek Prima Jaya is a premium industrial supplier and business solutions provider in Indonesia.')">
     <meta name="twitter:image" content="@yield('og_image', asset('assets/og-image.png'))">
@@ -68,6 +66,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
     <link rel="icon" href="{{ asset('assets/favicon/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,9 +110,9 @@
                         <span
                             class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
-                    <a href="{{ url('/about') }}"
+                    <a href="{{ route('about') }}"
                         class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}"
-                        aria-label="Learn more about our company, vision, and mission" {!! Request::is('about') ? 'aria-current="page"' : '' !!}>
+                        aria-label="About PT. Indotek Prima Jaya" {!! Request::is('about') ? 'aria-current="page"' : '' !!}>
                         About
                         <span
                             class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
@@ -344,9 +343,9 @@
     <div id="mobile-menu"
         class="fixed inset-0 bg-white/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col pt-24 pb-8">
         <nav class="flex flex-col items-center space-y-6 px-6 text-center overflow-y-auto w-full grow pb-10">
-            <a href="{{ url('/') }}"
+            <a href="{{ route('home') }}"
                 class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">Home</a>
-            <a href="{{ url('/about') }}"
+            <a href="{{ route('about') }}" aria-label="About PT. Indotek Prima Jaya"
                 class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">About</a>
 
             <!-- Mobile Products -->
@@ -403,14 +402,14 @@
                 </div>
             </div>
 
-            <a href="{{ url('/news') }}"
+            <a href="{{ route('news') }}" aria-label="News PT. Indotek Prima Jaya"
                 class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">News</a>
-            <a href="{{ url('/contact') }}"
+            <a href="{{ route('contact') }}" aria-label="Contact PT. Indotek Prima Jaya"
                 class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">Contact</a>
 
             <div class="pt-6 w-full">
-                <a href="{{ url('/contact') }}"
-                    class="block bg-yellow-500 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30">Get
+                <a href="{{ route('contact') }}" aria-label="Get a Quote PT. Indotek Prima Jaya"
+                    class="block bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30">Get
                     a Quote</a>
             </div>
         </nav>
@@ -468,13 +467,13 @@
                     <div class="space-y-6">
                         <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Navigation</h2>
                         <ul class="space-y-4">
-                            <li><a href="{{ url('/') }}"
+                            <li><a href="{{ route('home') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Home
                                 </a></li>
-                            <li><a href="{{ url('/about') }}"
+                            <li><a href="{{ route('about') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group"
                                     aria-label="Read more about PT. Indotek Prima Jaya's profile">
                                     <span
@@ -487,13 +486,13 @@
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Products
                                 </a></li>
-                            <li><a href="{{ url('/service') }}"
+                            <li><a href="{{ route('service') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Service
                                 </a></li>
-                            <li><a href="{{ url('/news') }}"
+                            <li><a href="{{ route('news') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
@@ -504,13 +503,13 @@
                     <div class="space-y-6">
                         <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Support</h2>
                         <ul class="space-y-4">
-                            <li><a href="{{ url('/contact') }}"
+                            <li><a href="{{ route('contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
                                     Contact
                                 </a></li>
-                            <li><a href="{{ url('/contact') }}"
+                            <li><a href="{{ route('contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
@@ -575,7 +574,6 @@
 
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('assets/js/iconify-icon.min.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script>
         AOS.init({
             duration: 1000,
