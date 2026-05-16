@@ -14,8 +14,8 @@
                     <!-- Awan putih / gradient kabut -->
                     <div class="absolute -inset-x-12 -inset-y-10 -z-10 pointer-events-none">
                         <div class="w-full h-full 
-                                                    bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
-                                                    blur-2xl">
+                                                        bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
+                                                        blur-2xl">
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@
                             SUPPLYING SOLUTIONS. DELIVERING TRUST.
                         </span>
 
-                        <h1 class="text-[54px] lg:text-[72px] font-extrabold text-[#1a202c] leading-[1.05] tracking-tight">
+                        <h1 class="text-[36px] lg:text-[72px] font-extrabold text-[#1a202c] leading-[1.05] tracking-tight">
                             Trusted General<br>
                             Supplier for<br>
                             Industry & Trade
@@ -45,6 +45,7 @@
                             <iconify-icon icon="solar:alt-arrow-right-linear"
                                 class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
+
 
                         <a href="{{ route('contact') }}"
                             class="bg-white hover:bg-slate-50 text-sky-500 border-2 border-sky-500 px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-sm group">
@@ -196,18 +197,10 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20" data-aos="fade-up">
                 <div class="space-y-4 max-w-2xl text-center lg:text-left">
-                    <span class="text-sky-500 font-black tracking-[0.3em] text-[11px] uppercase block">OUR PRODUCT</span>
+                    <span class="text-yellow-500 font-black tracking-[0.3em] text-[11px] uppercase block">OUR PRODUCT</span>
                     <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight tracking-tight uppercase">
                         Precision Engineered <span class="text-sky-500">Solutions</span>
                     </h2>
-                </div>
-                <div class="hidden lg:block">
-                    <a href="{{ route('product') }}"
-                        class="group inline-flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest border-b-2 border-sky-600 pb-2 hover:text-sky-600 transition-colors">
-                        Explore Full Catalog
-                        <iconify-icon icon="solar:alt-arrow-right-linear"
-                            class="text-xl transition-transform group-hover:translate-x-2"></iconify-icon>
-                    </a>
                 </div>
             </div>
 
@@ -217,16 +210,21 @@
                     data-aos-delay="0">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/zirconia-analyzer.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <img src="{{ asset('assets/products/rb-tech/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Zirconia Analyzer">
                         </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">RB
-                                Technologies</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
-                                Zirconia Analyzer</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">RB
+                                    Technologies</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                    Zirconia Analyzer</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/rbt.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="RB Technologies">
                         </div>
                     </div>
                 </a>
@@ -236,52 +234,46 @@
                     data-aos-delay="100">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/emissions-monitoring.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <img src="{{ asset('assets/products/sick/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Emissions Monitoring">
                         </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Sick</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
-                                Emissions Monitoring</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Sick</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                    Emissions Monitoring</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/sick.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="Sick">
                         </div>
                     </div>
                 </a>
 
-                <!-- 3. Control Valve -->
-                <a href="{{ route('product', 'control-valve') }}" class="group block" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="space-y-6">
-                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/control-valve.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                alt="Control Valve">
-                        </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">RTK -
-                                Regeltechnik</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
-                                Control Valve</h3>
-                        </div>
-                    </div>
-                </a>
+
 
                 <!-- 4. Transmitter -->
                 <a href="{{ route('product', 'transmitter') }}" class="group block" data-aos="fade-up" data-aos-delay="300">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/transmitter.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <img src="{{ asset('assets/products/piezus/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Transmitter">
                         </div>
-                        <div class="space-y-1">
-                            <span
-                                class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">PIEZUS</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
-                                Transmitter</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[10px] font-black text-yellow-500 uppercase tracking-widest block">PIEZUS</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-yellow-500 transition-colors uppercase tracking-tight">
+                                    Transmitter</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/piezus.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="PIEZUS">
                         </div>
                     </div>
                 </a>
@@ -291,15 +283,22 @@
                     data-aos-delay="400">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/water-analyzer.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <img src="{{ asset('assets/products/ecd/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Water Analyzer">
                         </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">ECD, PI</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
-                                Water Analyzer</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">ECD,
+                                    Process
+                                    Instruments</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                    Water Analyzer</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/ecd.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="ECD">
                         </div>
                     </div>
                 </a>
@@ -309,16 +308,92 @@
                     data-aos-delay="500">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/fittings-regulator.webp') }}"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <img src="{{ asset('assets/products/nai-lok/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Fittings & Regulator">
                         </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">NAI
-                                LOK</span>
-                            <h3
-                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
-                                Fittings & Regulator</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-yellow-500 uppercase tracking-widest block">NAI
+                                    LOK</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-yellow-500 transition-colors uppercase tracking-tight">
+                                    Fittings & Regulator</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/nai-lok.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="NAI LOK">
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 7. Saxon Probe -->
+                <a href="{{ route('product', 'saxon-probe') }}" class="group block" data-aos="fade-up" data-aos-delay="600">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="{{ asset('assets/products/saxon/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
+                                alt="Saxon Probe">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Saxon</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                    In-Situ Oxygen Probe</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/saxon.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="Saxon">
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 8. Control Valve -->
+                <a href="{{ route('product', 'control-valve') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="700">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="{{ asset('assets/products/rtk/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
+                                alt="Control Valve">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-yellow-500 uppercase tracking-widest block">RTK -
+                                    Regeltechnik</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-yellow-500 transition-colors uppercase tracking-tight">
+                                    Control Valve</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/rtk.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="RTK">
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 9. Industrial Valve -->
+                <a href="{{ route('product', 'industrial-valve') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="800">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="{{ asset('assets/products/red/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
+                                alt="Industrial Valve">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-yellow-500 uppercase tracking-widest block">Red
+                                    Valve</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-yellow-500 transition-colors uppercase tracking-tight">
+                                    Industrial Valve</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/redvalve.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="Red Valve">
                         </div>
                     </div>
                 </a>
@@ -333,8 +408,12 @@
         </div>
     </section>
 
-    <!-- Our Services Section (Updated) -->
+    <!-- Our Services Section (Updated with Glassmorphism) -->
     <section class="py-24 background-service relative overflow-hidden">
+        <!-- Background Blobs for Glass Effect -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-100 rounded-full blur-[100px] opacity-50 -z-10"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-yellow-50 rounded-full blur-[100px] opacity-30 -z-10"></div>
+
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
@@ -343,27 +422,22 @@
                     <div class="space-y-3">
                         <span class="text-yellow-500 font-black tracking-[0.3em] text-[11px] uppercase block">OUR
                             SERVICES</span>
-                        <h2 class="text-4xl font-black text-slate-900 leading-tight uppercase tracking-tight">Technical
-                            <span class="text-sky-500">Solutions</span> Beyond Supply</h2>
+                        <h2 class="text-2xl lg:text-4xl font-black text-slate-900 leading-tight uppercase tracking-tight">
+                            Technical
+                            <span class="text-sky-500">Solutions</span> Beyond Supply
+                        </h2>
                     </div>
                     <p class="text-slate-500 font-medium leading-relaxed">
                         Our expertise goes beyond distribution. We provide comprehensive technical services to ensure your
                         industrial systems operate at peak performance.
                     </p>
-                    <div class="pt-4">
-                        <a href="{{ url('/service') }}"
-                            class="inline-flex items-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest border border-slate-200 hover:border-sky-600 hover:text-sky-600 transition-all shadow-sm">
-                            View All Services
-                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Services Grid -->
-                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- 1. Transformator Services -->
                     <a href="{{ route('service', 'transformator') }}"
-                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                        class="group bg-white/40 backdrop-blur-xl p-8 rounded-[32px] border border-white/60 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
                         data-aos="fade-up" data-aos-delay="0">
                         <div
                             class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
@@ -376,24 +450,11 @@
                             and oil purification for power transformers.</p>
                     </a>
 
-                    <!-- 2. Valve Services -->
-                    <a href="{{ route('service', 'valve') }}"
-                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-                            <iconify-icon icon="solar:settings-linear" class="text-3xl"></iconify-icon>
-                        </div>
-                        <h3
-                            class="text-lg font-black text-slate-900 mb-3 uppercase tracking-tight group-hover:text-sky-600 transition-colors">
-                            Valve Services</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">Overhaul, calibration, and leak
-                            testing for all types of industrial valves.</p>
-                    </a>
+
 
                     <!-- 3. Pump Services -->
                     <a href="{{ route('service', 'pump') }}"
-                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                        class="group bg-white/40 backdrop-blur-xl p-8 rounded-[32px] border border-white/60 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
                         data-aos="fade-up" data-aos-delay="200">
                         <div
                             class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
@@ -428,26 +489,37 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16 items-center">
-                @php
-                    $clients = [
-                        ['file' => 'Bakrie.webp', 'name' => 'Bakrie'],
-                        ['file' => 'app-sinarmas.webp', 'name' => 'APP Sinar Mas'],
-                        ['file' => 'april.webp', 'name' => 'APRIL'],
-                        ['file' => 'indopalm.webp', 'name' => 'Indopalm'],
-                        ['file' => 'pjb.webp', 'name' => 'PJB'],
-                        ['file' => 'pusri.webp', 'name' => 'Pusri'],
-                        ['file' => 'star-enery.webp', 'name' => 'Star Energy'],
-                        ['file' => 'tel.webp', 'name' => 'TEL']
-                    ];
-                @endphp
-                @foreach($clients as $index => $client)
-                    <div data-aos="fade-up" data-aos-delay="{{ $index * 50 }}" class="flex items-center justify-center group">
-                        <img src="{{ asset('assets/customers/' . $client['file']) }}"
-                            class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
-                            alt="{{ $client['name'] }} Logo">
-                    </div>
-                @endforeach
+            <div class="marquee-container overflow-hidden">
+                <div class="animate-marquee flex items-center gap-16 lg:gap-24 w-max py-4">
+                    @php
+                        $clients = [
+                            ['file' => 'Bakrie.webp', 'name' => 'Bakrie'],
+                            ['file' => 'app-sinarmas.webp', 'name' => 'APP Sinar Mas'],
+                            ['file' => 'april.webp', 'name' => 'APRIL'],
+                            ['file' => 'indopalm.webp', 'name' => 'Indopalm'],
+                            ['file' => 'pjb.webp', 'name' => 'PJB'],
+                            ['file' => 'pusri.webp', 'name' => 'Pusri'],
+                            ['file' => 'star-enery.webp', 'name' => 'Star Energy'],
+                            ['file' => 'tel.webp', 'name' => 'TEL']
+                        ];
+                    @endphp
+                    {{-- First Loop --}}
+                    @foreach($clients as $client)
+                        <div class="flex items-center justify-center group shrink-0">
+                            <img src="{{ asset('assets/customers/' . $client['file']) }}"
+                                class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                                alt="{{ $client['name'] }} Logo">
+                        </div>
+                    @endforeach
+                    {{-- Duplicate Loop for seamless scrolling --}}
+                    @foreach($clients as $client)
+                        <div class="flex items-center justify-center group shrink-0">
+                            <img src="{{ asset('assets/customers/' . $client['file']) }}"
+                                class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                                alt="{{ $client['name'] }} Logo">
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>
@@ -471,27 +543,119 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-                @php
-                    $partners = [
-                        ['file' => 'sick.webp', 'name' => 'SICK'],
-                        ['file' => 'rbt.webp', 'name' => 'RBT'],
-                        ['file' => 'piezus.webp', 'name' => 'Piezus'],
-                        ['file' => 'rtk.webp', 'name' => 'RTK'],
-                        ['file' => 'redvalve.webp', 'name' => 'Red Valve'],
-                        ['file' => 'nai-lok.webp', 'name' => 'Nai-Lok'],
-                        ['file' => 'ecd.webp', 'name' => 'ECD'],
-                        ['file' => 'pi.webp', 'name' => 'PI'],
-                        ['file' => 'saxon.webp', 'name' => 'Saxon'],
-                    ];
-                @endphp
-                @foreach($partners as $index => $partner)
-                    <div data-aos="fade-up" data-aos-delay="{{ $index * 50 }}" class="flex items-center justify-center group">
-                        <img src="{{ asset('assets/distributors/' . $partner['file']) }}"
-                            class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
-                            alt="{{ $partner['name'] }} Logo">
-                    </div>
-                @endforeach
+            <div class="marquee-container overflow-hidden">
+                <div class="animate-marquee-reverse flex items-center gap-16 lg:gap-24 w-max py-4">
+                    @php
+                        $partners = [
+                            ['file' => 'sick.webp', 'name' => 'SICK'],
+                            ['file' => 'rbt.webp', 'name' => 'RBT'],
+                            ['file' => 'piezus.webp', 'name' => 'Piezus'],
+                            ['file' => 'rtk.webp', 'name' => 'RTK'],
+                            ['file' => 'redvalve.webp', 'name' => 'Red Valve'],
+                            ['file' => 'nai-lok.webp', 'name' => 'Nai-Lok'],
+                            ['file' => 'ecd.webp', 'name' => 'ECD'],
+                            ['file' => 'pi.webp', 'name' => 'PI'],
+                            ['file' => 'saxon.webp', 'name' => 'Saxon'],
+                        ];
+                    @endphp
+                    {{-- First Loop --}}
+                    @foreach($partners as $partner)
+                        <div class="flex items-center justify-center group shrink-0">
+                            <img src="{{ asset('assets/distributors/' . $partner['file']) }}"
+                                class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                                alt="{{ $partner['name'] }} Logo">
+                        </div>
+                    @endforeach
+                    {{-- Duplicate Loop --}}
+                    @foreach($partners as $partner)
+                        <div class="flex items-center justify-center group shrink-0">
+                            <img src="{{ asset('assets/distributors/' . $partner['file']) }}"
+                                class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                                alt="{{ $partner['name'] }} Logo">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-28 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16" data-aos="fade-up">
+                <div class="space-y-4">
+                    <span class="text-sky-600 font-black tracking-[0.3em] text-[10px] uppercase block">LATEST UPDATES</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">News & <span
+                            class="text-sky-600">Insights</span></h2>
+                </div>
+                <a href="{{ route('news') }}"
+                    class="group flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest hover:text-sky-600 transition-colors">
+                    View All News
+                    <iconify-icon icon="solar:alt-arrow-right-linear"
+                        class="text-xl transition-transform group-hover:translate-x-2"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News 1 -->
+                <article
+                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('news', 'meet-prinsipal-rusia') }}" class="block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="{{ asset('assets/news/meet-prinsipal-rusia/meet-prinsipal-rusia.webp') }}"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="News 1">
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3
+                                class="text-lg font-bold text-slate-900 leading-tight group-hover:text-sky-600 transition-colors uppercase line-clamp-2">
+                                Meeting with Russian Principal</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed line-clamp-2 font-medium">Strategic
+                                collaboration discussion for advanced industrial automation in Indonesia.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News 2 -->
+                <article
+                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <a href="{{ route('news', 'prima-jaya-berbagi') }}" class="block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="{{ asset('assets/news/prima-jaya-berbagi/1.webp') }}"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="News 2">
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3
+                                class="text-lg font-bold text-slate-900 leading-tight group-hover:text-sky-600 transition-colors uppercase line-clamp-2">
+                                Indotek Prima Jaya Berbagi</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed line-clamp-2 font-medium">Annual charity event
+                                supporting local communities and social welfare.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News 3 -->
+                <article
+                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <a href="{{ route('news', 'sponsor-sekolah-bola-RSS') }}" class="block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="{{ asset('assets/news/sponsor-sekolah-bola-RSS/1.webp') }}"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="News 3">
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3
+                                class="text-lg font-bold text-slate-900 leading-tight group-hover:text-sky-600 transition-colors uppercase line-clamp-2">
+                                Sponsoring RSS Soccer School</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed line-clamp-2 font-medium">Empowering local
+                                youth talent through sports sponsorship and development.</p>
+                        </div>
+                    </a>
+                </article>
             </div>
         </div>
     </section>

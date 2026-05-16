@@ -13,7 +13,7 @@
                     <div class="space-y-3">
                         <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">ABOUT US</span>
                         <h1
-                            class="text-[54px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
+                            class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
                             About<br>
                             <span class="text-sky-600">PT. INDOTEK</span><br>
                             PRIMA JAYA
@@ -58,7 +58,7 @@
                     <div class="space-y-3">
                         <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">WHO WE
                             ARE</span>
-                        <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                        <h2 class="text-2xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
                             Your Reliable Partner<br>for Sustainable Growth
                         </h2>
                     </div>
@@ -88,14 +88,17 @@
     <section class="py-24 background-vision-mission relative overflow-hidden">
         <!-- Decoration -->
         <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-50/50 rounded-full blur-3xl -z-10">
+            class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-50/60 rounded-full blur-3xl -z-10">
+        </div>
+        <div
+            class="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-50/40 rounded-full blur-3xl -z-10">
         </div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
                 <!-- Vision -->
-                <div class="relative group bg-white p-7 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-500" data-aos="fade-right">
+                <div class="relative group bg-white/40 backdrop-blur-xl p-7 rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-500" data-aos="fade-right">
                     <div class="relative space-y-5">
                         <div
                             class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-sky-600/20 transform group-hover:rotate-6 transition-transform duration-500">
@@ -113,7 +116,7 @@
                 </div>
 
                 <!-- Mission -->
-                <div class="relative group bg-white p-7 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-yellow-500/5 transition-all duration-500" data-aos="fade-left">
+                <div class="relative group bg-white/40 backdrop-blur-xl p-7 rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:shadow-yellow-500/5 transition-all duration-500" data-aos="fade-left">
                     <div class="relative space-y-5">
                         <div
                             class="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-yellow-500/20 transform group-hover:-rotate-6 transition-transform duration-500">

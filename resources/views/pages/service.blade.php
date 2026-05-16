@@ -5,44 +5,39 @@
             'subtitle' => 'INSTALLATION & MAINTENANCE',
             'description' => 'Providing end-to-end solutions for industrial transformers, ensuring optimal power distribution and system reliability.',
             'image' => asset('assets/services/service-transformer.webp'),
+            'banner' => asset('assets/services/service-tranfor-banner.webp'),
             'icon' => 'solar:bolt-bold-duotone',
             'color' => 'sky',
-            'features' => [
-                'Installation and Commissioning',
-                'Periodic Maintenance & Oil Testing',
-                'Transformer Repair & Refurbishment',
-                'Emergency Troubleshooting',
-                'Power Quality Analysis'
+            'gallery' => [
+                asset('assets/services/transform/1.webp'),
+                asset('assets/services/transform/2.webp'),
+                asset('assets/services/transform/3.webp'),
+                asset('assets/services/transform/4.webp'),
+                asset('assets/services/transform/5.webp'),
+                asset('assets/services/transform/6.webp'),
+                asset('assets/services/transform/7.webp'),
+                asset('assets/services/transform/8.webp'),
             ]
         ],
-        'valve' => [
-            'title' => 'Valve Services',
-            'subtitle' => 'REPAIR & CALIBRATION',
-            'description' => 'Expert maintenance and repair services for all types of industrial valves, including control valves and safety relief valves.',
-            'image' => asset('assets/services/service-valve.webp'),
-            'icon' => 'solar:settings-bold-duotone',
-            'color' => 'amber',
-            'features' => [
-                'In-situ Repair and Refurbishment',
-                'Testing & Calibration with Certification',
-                'Valve Management & Diagnostics',
-                'Supply of High-Quality Spare Parts',
-                'Leak Detection & Prevention'
-            ]
-        ],
+
         'pump' => [
             'title' => 'Pump Services',
             'subtitle' => 'OVERHAUL & ALIGNMENT',
             'description' => 'Comprehensive pump engineering solutions to maximize uptime and energy efficiency of your pumping systems.',
             'image' => asset('assets/services/service-pump.webp'),
+            'banner' => asset('assets/services/service-pump-banner.webp'),
             'icon' => 'solar:refresh-bold-duotone',
-            'color' => 'emerald',
-            'features' => [
-                'Precision Laser Alignment',
-                'Complete Overhaul & Component Repair',
-                'Performance Analysis & Optimization',
-                'Vibration Analysis & Diagnostics',
-                'Mechanical Seal Replacement'
+            'color' => 'sky',
+            'gallery' => [
+                asset('assets/services/pump/1.webp'),
+                asset('assets/services/pump/2.webp'),
+                asset('assets/services/pump/3.webp'),
+                asset('assets/services/pump/4.webp'),
+                asset('assets/services/pump/5.webp'),
+                asset('assets/services/pump/6.webp'),
+                asset('assets/services/pump/7.webp'),
+                asset('assets/services/pump/8.webp'),
+                asset('assets/services/pump/9.webp'),
             ]
         ]
     ];
@@ -57,7 +52,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('{{ $currentService ? $currentService['image'] : asset('assets/background-service.webp') }}'); background-size: cover; background-position: center;">
+             style="background: url('{{ $currentService ? ($currentService['banner'] ?? $currentService['image']) : asset('assets/background-service.webp') }}'); background-size: cover; background-position: center;">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -74,7 +69,7 @@
                         <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block">
                             {{ $currentService ? $currentService['subtitle'] : 'OUR SERVICES' }}
                         </span>
-                        <h1 class="text-[54px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
+                        <h1 class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
                             @if($currentService)
                                 {!! str_replace(' Services', '<br><span class="text-sky-700">Services</span>', $currentService['title']) !!}
                             @else
@@ -156,142 +151,56 @@
         </div>
     </section>
     @else
-    <!-- Specific Service Detail Section -->
-    <section class="py-24 bg-white overflow-hidden relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative" data-aos="fade-right">
-                    <div class="aspect-square rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200">
-                        <img src="{{ $currentService['image'] }}" class="w-full h-full object-cover" alt="{{ $currentService['title'] }}">
-                    </div>
-                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-{{ $currentService['color'] }}-600/10 rounded-full blur-3xl"></div>
-                </div>
-                <div class="space-y-8" data-aos="fade-left">
-                    <div class="space-y-4">
-                        <div class="w-16 h-16 rounded-2xl bg-{{ $currentService['color'] }}-600 flex items-center justify-center text-white shadow-xl shadow-{{ $currentService['color'] }}-600/20">
-                            <iconify-icon icon="{{ $currentService['icon'] }}" class="text-3xl"></iconify-icon>
-                        </div>
-                        <h2 class="text-4xl font-black text-slate-900 tracking-tight uppercase">Service Details</h2>
-                        <p class="text-slate-500 text-lg leading-relaxed font-medium">
-                            Our {{ strtolower($currentService['title']) }} are designed to meet the highest industry standards, combining technical expertise with state-of-the-art equipment.
-                        </p>
-                    </div>
 
-                    <div class="space-y-4">
-                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest">Key Capabilities</h4>
-                        <div class="grid grid-cols-1 gap-4">
-                            @foreach($currentService['features'] as $feature)
-                                <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-{{ $currentService['color'] }}-500 transition-colors">
-                                    <div class="w-8 h-8 rounded-full bg-{{ $currentService['color'] }}-100 flex items-center justify-center text-{{ $currentService['color'] }}-600 shrink-0">
-                                        <iconify-icon icon="solar:check-circle-bold" class="text-lg"></iconify-icon>
-                                    </div>
-                                    <span class="text-slate-700 font-bold text-sm">{{ $feature }}</span>
-                                </div>
-                            @endforeach
-                        </div>
+
+    <!-- Project Gallery Section -->
+    <section class="py-24 bg-slate-50 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16" data-aos="fade-up">
+                <div class="space-y-3">
+                    <span class="text-{{ $currentService['color'] }}-600 font-black tracking-[0.2em] text-[11px] uppercase block">PROJECT SHOWCASE</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight uppercase">Recent <span class="text-{{ $currentService['color'] }}-600">Work</span></h2>
+                </div>
+                <p class="text-slate-500 font-medium max-w-md text-sm">A visual representation of our expertise and the quality of work we deliver to our clients.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up">
+                @foreach($currentService['gallery'] as $index => $img)
+                <div class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-{{ $currentService['color'] }}-600/20" 
+                     data-aos="zoom-in" data-aos-delay="{{ $index * 50 }}">
+                    <img src="{{ $img }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery Image {{ $index + 1 }}">
+                    <div class="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white font-bold text-xs uppercase tracking-widest">Project Detail</span>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
     @endif
 
-    <!-- Our Service Process Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">HOW WE WORK</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Our Service Process</h2>
-            </div>
 
-            <div class="relative">
-                <!-- Dotted Line Connector -->
-                <div class="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-slate-200 -z-10"></div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    <!-- Step 1 -->
-                    <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="0">
-                        <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
-                                <iconify-icon icon="solar:chat-round-dots-linear" class="text-4xl"></iconify-icon>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">1</div>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 uppercase">Consultation</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed">We listen to your needs and understand your business requirements.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
-                                <iconify-icon icon="solar:box-linear" class="text-4xl"></iconify-icon>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">2</div>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 uppercase">Product Sourcing</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed">We source the best products from trusted brands that meet your specifications.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
-                                <iconify-icon icon="solar:delivery-linear" class="text-4xl"></iconify-icon>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">3</div>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 uppercase">Delivery & Support</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed">We ensure timely delivery and provide full technical support for your operations.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
-                                <iconify-icon icon="solar:hand-shake-linear" class="text-4xl"></iconify-icon>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">4</div>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 uppercase">Long-Term Partnership</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed">We build lasting relationships and grow together with your business success.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-[#0f172a] rounded-[40px] p-12 lg:p-20 relative overflow-hidden text-center lg:text-left shadow-2xl shadow-slate-900/40" data-aos="fade-up">
-                <!-- Abstract Glow -->
-                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+    <!-- CTA Section (Sleeker & More Compact) -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-[32px] p-10 lg:p-12 relative overflow-hidden shadow-2xl shadow-slate-900/20" data-aos="fade-up">
+                <!-- Soft Gradient Glow -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-sky-500/20 rounded-full blur-[80px]"></div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-                    <div class="lg:col-span-8 space-y-6">
-                        <div class="flex items-center gap-4 justify-center lg:justify-start">
-                            <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white">
-                                <iconify-icon icon="solar:user-speak-bold-duotone" class="text-4xl"></iconify-icon>
-                            </div>
-                            <h2 class="text-3xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">Need the Right Solution<br>for Your Business?</h2>
-                        </div>
-                        <p class="text-slate-400 text-lg lg:text-xl font-medium max-w-2xl">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+                    <div class="space-y-4 text-center lg:text-left">
+                        <h2 class="text-2xl lg:text-3xl font-black text-white leading-tight uppercase tracking-tight">
+                            Need the Right Solution <span class="text-sky-400">for Your Business?</span>
+                        </h2>
+                        <p class="text-slate-400 text-sm font-medium max-w-xl">
                             Our team is ready to provide the best products and services to support your operations.
                         </p>
                     </div>
-                    <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                        <a href="{{ url('/contact') }}" class="group bg-white hover:bg-sky-700 text-[#0f172a] hover:text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-4">
+                    <div class="shrink-0">
+                        <a href="{{ url('/contact') }}" class="group inline-flex items-center gap-3 bg-sky-600 hover:bg-white text-white hover:text-slate-900 px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-sky-600/20">
                             Contact Our Team
-                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-2xl transition-transform group-hover:translate-x-2"></iconify-icon>
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
                     </div>
                 </div>

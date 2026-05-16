@@ -22,10 +22,6 @@ Route::get('/service/{type?}', function ($type = null) {
     return view('pages.service', compact('type'));
 })->name('service');
 
-Route::get('/news', function () {
-    return view('pages.news');
+Route::get('/news/{slug?}', function ($slug = null) {
+    return view('pages.news', compact('slug'));
 })->name('news');
-
-Route::get('/news/future-of-industrial-automation', function () {
-    return view('pages.news-detail');
-})->name('news.detail');

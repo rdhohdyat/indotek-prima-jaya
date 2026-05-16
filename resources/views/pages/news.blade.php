@@ -1,226 +1,176 @@
+@php
+    $articles = [
+        'meet-prinsipal-rusia' => [
+            'title' => 'PT. Indotek Prima Jaya Meeting with Russian Principal for Strategic Collaboration',
+            'date' => 'June 12, 2026',
+            'category' => 'Strategic Partnership',
+            'excerpt' => 'PT. Indotek Prima Jaya recently hosted a high-level meeting with our esteemed Russian principals to discuss the future of industrial automation.',
+            'content' => 'In a significant step towards strengthening international industrial ties, PT. Indotek Prima Jaya hosted a comprehensive strategic meeting with our Russian principals. The discussion focused on the introduction of next-generation analytical equipment and the expansion of technical support services for the Indonesian market.',
+            'image' => asset('assets/news/meet-prinsipal-rusia/meet-prinsipal-rusia.webp'),
+            'read_time' => '8 min read',
+            'gallery' => [asset('assets/news/meet-prinsipal-rusia/meet-prinsipal-rusia.webp')]
+        ],
+        'prima-jaya-berbagi' => [
+            'title' => 'Indotek Prima Jaya Berbagi: A Social Responsibility Initiative',
+            'date' => 'May 25, 2026',
+            'category' => 'Social Responsibility',
+            'excerpt' => 'Our annual community sharing event was successfully held to support local communities and foster togetherness.',
+            'content' => 'Corporate Social Responsibility is at the heart of our values. Through our "Prima Jaya Berbagi" program, we conducted a charity event aimed at supporting underprivileged communities near our operational areas.',
+            'image' => asset('assets/news/prima-jaya-berbagi/1.webp'),
+            'read_time' => '4 min read',
+            'gallery' => [asset('assets/news/prima-jaya-berbagi/1.webp'), asset('assets/news/prima-jaya-berbagi/2.webp'), asset('assets/news/prima-jaya-berbagi/3.webp')]
+        ],
+        'sponsor-sekolah-bola-RSS' => [
+            'title' => 'Supporting Youth: Indotek Prima Jaya Sponsors RSS Soccer School',
+            'date' => 'April 18, 2026',
+            'category' => 'Sponsorship',
+            'excerpt' => 'Investing in the next generation of Indonesian athletes and promoting a healthy lifestyle.',
+            'content' => 'We are proud to announce our official sponsorship of the RSS Soccer School, providing improved training facilities and equipment for young athletes.',
+            'image' => asset('assets/news/sponsor-sekolah-bola-RSS/1.webp'),
+            'read_time' => '6 min read',
+            'gallery' => [asset('assets/news/sponsor-sekolah-bola-RSS/1.webp'), asset('assets/news/sponsor-sekolah-bola-RSS/2.webp')]
+        ]
+    ];
+
+    $currentArticle = $slug && isset($articles[$slug]) ? $articles[$slug] : null;
+@endphp
+
 @extends('layouts.app')
 
-@section('title', 'News & Updates - PT. Indotek Prima Jaya')
+@section('title', $currentArticle ? $currentArticle['title'] . ' - News' : 'News & Updates - PT. Indotek Prima Jaya')
 
 @section('content')
-    <!-- Hero Section -->
+    @if($currentArticle)
+    <!-- Article Detail View (Using a consistent premium layout) -->
+    <article class="relative pt-32 pb-24 overflow-hidden bg-white">
+        <div class="absolute top-0 left-0 w-full h-48 bg-linear-to-b from-slate-50 to-transparent z-10 pointer-events-none opacity-60"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <div class="flex items-center gap-4 mb-8" data-aos="fade-up">
+                <a href="{{ route('news') }}" class="text-xs font-black text-slate-400 hover:text-sky-600 transition-colors uppercase tracking-widest">News</a>
+                <div class="w-1 h-1 rounded-full bg-slate-300"></div>
+                <span class="text-xs font-black text-sky-600 uppercase tracking-widest">{{ $currentArticle['category'] }}</span>
+            </div>
+            <h1 class="text-2xl lg:text-6xl font-black text-slate-900 leading-tight tracking-tight mb-8" data-aos="fade-up">{{ $currentArticle['title'] }}</h1>
+            <div class="mb-12" data-aos="fade-up">
+                <!-- Spacing only -->
+            </div>
+            <div class="aspect-video rounded-[40px] overflow-hidden shadow-2xl mb-12" data-aos="zoom-in">
+                <img src="{{ $currentArticle['image'] }}" class="w-full h-full object-cover" alt="{{ $currentArticle['title'] }}">
+            </div>
+            <div class="prose prose-lg max-w-none text-slate-600 font-medium leading-relaxed mb-16" data-aos="fade-up">
+                <p class="text-lg lg:text-xl text-slate-900 font-bold mb-8">{{ $currentArticle['excerpt'] }}</p>
+                <p>{{ $currentArticle['content'] }}</p>
+            </div>
+            @if(count($currentArticle['gallery']) > 1)
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+                @foreach($currentArticle['gallery'] as $img)
+                <div class="aspect-video rounded-3xl overflow-hidden shadow-lg">
+                    <img src="{{ $img }}" class="w-full h-full object-cover" alt="Gallery">
+                </div>
+                @endforeach
+            </div>
+            @endif
+            <div class="mt-20 pt-10 border-t border-slate-100">
+                <a href="{{ route('news') }}" class="inline-flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest hover:text-sky-600 transition-colors">
+                    <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
+                    Back to All News
+                </a>
+            </div>
+        </div>
+    </article>
+    @else
+    <!-- Reverting to Original Layout Structure -->
     <section class="relative pt-18 pb-20 lg:pb-32 overflow-hidden bg-white">
-        <!-- Mist Effect Top -->
         <div class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-slate-50 to-transparent z-10 pointer-events-none opacity-50"></div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <!-- Top Grid Layout -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
                 
-                <!-- Left: Large Featured Article -->
+                <!-- Left: Large Featured Article (Russian Principal) -->
+                @php $featured = $articles['meet-prinsipal-rusia']; @endphp
                 <div class="lg:col-span-8 space-y-8" data-aos="fade-up">
-                    <a href="{{ route('news.detail') }}" class="group block relative h-80 lg:h-[500px] overflow-hidden rounded-lg shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
+                    <a href="{{ route('news', 'meet-prinsipal-rusia') }}" class="group block relative h-80 lg:h-[500px] overflow-hidden rounded-lg shadow-2xl">
+                        <img src="{{ $featured['image'] }}" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured News">
                         <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-10 left-10 right-10 space-y-4">
                             <span class="inline-block px-3 py-1 rounded-full bg-sky-700 text-white text-[10px] font-black uppercase tracking-widest">Featured Article</span>
-                            <h1 class="text-3xl lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
-                                The Future of Industrial Automation: Key Trends to Watch
-                            </h1>
+                            <h2 class="text-lg lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
+                                {{ $featured['title'] }}
+                            </h2>
                         </div>
                     </a>
                     
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 bg-white p-8 rounded-lg shadow-sm border border-slate-100">
                         <div class="flex items-center gap-4 text-slate-400 text-xs font-bold uppercase tracking-widest">
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="solar:calendar-linear" class="text-lg text-sky-700"></iconify-icon>
-                                <span>May 15, 2026</span>
-                            </div>
-                            <div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
-                            <span>8 min read</span>
+                            <span class="text-sky-700">{{ $featured['category'] }}</span>
                         </div>
-                        <a href="{{ route('news.detail') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-700 transition-all group/btn shadow-lg shadow-slate-900/10">
+                        <a href="{{ route('news', 'meet-prinsipal-rusia') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-700 transition-all group/btn shadow-lg shadow-slate-900/10">
                             Read Full Article
                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
                         </a>
                     </div>
                 </div>
 
-                <!-- Right: Small Article List -->
+                <!-- Right: Small Article List (Charity & Sponsorship) -->
                 <div class="lg:col-span-4 space-y-10" data-aos="fade-left">
-                    <!-- Small Item 1 -->
-                    <a href="#" class="grid grid-cols-12 gap-6 group">
+                    @foreach(['prima-jaya-berbagi', 'sponsor-sekolah-bola-RSS'] as $slug)
+                    @php $item = $articles[$slug]; @endphp
+                    <a href="{{ route('news', $slug) }}" class="grid grid-cols-12 gap-6 group">
                         <div class="col-span-8 space-y-2">
                             <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
-                                PT. Indotek Prima Jaya Expands Strategic Partnership with Fuji Electric
+                                {{ $item['title'] }}
                             </h3>
                             <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
-                                The collaboration aims to bring advanced automation solutions to the Indonesian manufacturing sector...
+                                {{ $item['excerpt'] }}
                             </p>
                             <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-700">Company</span>
-                                <div class="w-1 h-1 rounded-full bg-slate-200"></div>
-                                <span class="text-slate-400">4 min read</span>
+                                <span class="text-sky-700">{{ $item['category'] }}</span>
                             </div>
                         </div>
                         <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 2">
+                            <img src="{{ $item['image'] }}" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News Image">
                         </div>
                     </a>
-
-                    <!-- Small Item 2 -->
-                    <a href="#" class="grid grid-cols-12 gap-6 group">
-                        <div class="col-span-8 space-y-2">
-                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
-                                New Safety Standards for Refinery Maintenance in 2024
-                            </h3>
-                            <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
-                                Understanding the latest regulations to ensure zero-accident operations in high-risk industrial environments...
-                            </p>
-                            <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-700">Safety</span>
-                                <div class="w-1 h-1 rounded-full bg-slate-200"></div>
-                                <span class="text-slate-400">6 min read</span>
-                            </div>
-                        </div>
-                        <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
-                            <img src="https://images.unsplash.com/photo-1542337311-64d17ec23f14?auto=format&fit=crop&q=80&w=400" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 3">
-                        </div>
-                    </a>
-
-                    <!-- Small Item 3 -->
-                    <a href="#" class="grid grid-cols-12 gap-6 group">
-                        <div class="col-span-8 space-y-2">
-                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
-                                How IoT is Transforming Supply Chain Management
-                            </h3>
-                            <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
-                                Real-time tracking and predictive analytics are becoming essential for modern logistics...
-                            </p>
-                            <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-700">Technology</span>
-                                <div class="w-1 h-1 rounded-full bg-slate-200"></div>
-                                <span class="text-slate-400">2 min read</span>
-                            </div>
-                        </div>
-                        <div class="col-span-4 h-24 overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="News 4">
-                        </div>
-                    </a>
+                    @endforeach
                 </div>
             </div>
 
-            <!-- Middle Row: Overlay Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                <!-- Overlay Card 1 -->
-                <a href="#" class="group relative h-[350px] overflow-hidden rounded-[32px] shadow-2xl" data-aos="zoom-in" data-aos-delay="0">
-                    <img src="https://images.unsplash.com/photo-1521791136366-3e206e00072b?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Overlay 1">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-10 left-10 right-10 space-y-4">
-                        <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/80">
-                            <span>Industry</span>
-                            <div class="w-1 h-1 rounded-full bg-white/30"></div>
-                            <span>24 hours ago</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white leading-tight">
-                            The Future of Sustainable Power Generation in Southeast Asia
-                        </h3>
-                    </div>
-                </a>
-
-                <!-- Overlay Card 2 -->
-                <a href="#" class="group relative h-[350px] overflow-hidden rounded-[32px] shadow-2xl" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Overlay 2">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-10 left-10 right-10 space-y-4">
-                        <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/80">
-                            <span>Automation</span>
-                            <div class="w-1 h-1 rounded-full bg-white/30"></div>
-                            <span>24 hours ago</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white leading-tight">
-                            Implementing Advanced Robotics for Precise Manufacturing
-                        </h3>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Bottom Section: Latest Articles -->
+            <!-- Bottom Section: Latest Articles Grid -->
             <div class="space-y-12 mb-20">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-6" data-aos="fade-up">
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Lastest Articles</h2>
-                    <a href="#" class="group flex items-center gap-2 text-[12px] font-black uppercase tracking-widest text-sky-600">
-                        Show More
-                        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover:translate-x-1"></iconify-icon>
-                    </a>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Latest Articles</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Article Item -->
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Industry</span>
+                    @foreach($articles as $slug => $article)
+                    <div class="space-y-6" data-aos="fade-up">
+                        <a href="{{ route('news', $slug) }}" class="block space-y-6 group">
+                            <div class="relative h-56 overflow-hidden rounded-lg shadow-lg">
+                                <img src="{{ $article['image'] }}" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">{{ $article['category'] }}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="space-y-3">
-                            <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 15, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
-                                Key Benefits of Regular Maintenance for Industrial Boilers
-                            </h4>
-                            <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                                Ensuring longevity and safety by following a rigorous scheduled maintenance plan for steam boilers...
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Repeat for more items if needed -->
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=600" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Business</span>
+                            <div class="space-y-3">
+                                <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
+                                    {{ $article['title'] }}
+                                </h4>
+                                <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                                    {{ $article['excerpt'] }}
+                                </p>
                             </div>
-                        </div>
-                        <div class="space-y-3">
-                            <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 12, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
-                                Building Trust Through Reliable Supply Chains
-                            </h4>
-                            <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                                How integrity and quality assurance form the foundation of successful supplier partnerships...
-                            </p>
-                        </div>
+                        </a>
                     </div>
-
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative h-56 overflow-hidden rounded-lg group shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=600" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Support</span>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 10, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
-                                Enhancing Customer Experience with Expert Support
-                            </h4>
-                            <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                                Why technical consultation is key to helping clients choose the right tools for their operations...
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section (Clean Version) -->
+    <!-- Newsletter Section -->
     <section class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8" data-aos="fade-up">
             <div class="space-y-4">
@@ -231,4 +181,5 @@
             </div>
         </div>
     </section>
+    @endif
 @endsection
