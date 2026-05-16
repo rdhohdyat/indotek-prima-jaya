@@ -121,19 +121,19 @@
 
                         <h3 class="text-2xl font-bold text-slate-900 mb-8">{{ __('Send Us a Message') }}</h3>
 
-                        <form action="#" class="space-y-4">
+                        <form id="contactFormEmail" class="space-y-4">
                             <div class="space-y-1.5">
-                                <label for="name" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Your Name <span class="text-red-500">*</span>') !!}</label>
-                                <input type="text" id="name"
+                                <label for="contactName" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Your Name <span class="text-red-500">*</span>') !!}</label>
+                                <input type="text" id="contactName"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
                                     placeholder="{{ __('Enter your name') }}" required>
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="space-y-1.5">
-                                    <label for="email"
+                                    <label for="contactEmail"
                                         class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Email Address <span class="text-red-500">*</span>') !!}</label>
-                                    <input type="email" id="email"
+                                    <input type="email" id="contactEmail"
                                         class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
                                         placeholder="{{ __('Enter your email') }}" required>
                                 </div>
@@ -147,17 +147,17 @@
                             </div>
 
                             <div class="space-y-1.5">
-                                <label for="subject"
+                                <label for="contactSubject"
                                     class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Subject <span class="text-red-500">*</span>') !!}</label>
-                                <input type="text" id="subject"
+                                <input type="text" id="contactSubject"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300"
                                     placeholder="{{ __('Enter subject') }}" required>
                             </div>
 
                             <div class="space-y-1.5">
-                                <label for="message"
+                                <label for="contactMessage"
                                     class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">{!! __('Message <span class="text-red-500">*</span>') !!}</label>
-                                <textarea id="message" rows="3"
+                                <textarea id="contactMessage" rows="3"
                                     class="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-2 focus:ring-2 focus:ring-sky-600 focus:bg-white outline-none transition-all font-medium text-slate-900 text-sm placeholder:text-slate-300 resize-none"
                                     placeholder="{{ __('Type your message here...') }}" required></textarea>
                             </div>
@@ -209,7 +209,7 @@
     </section>
 
     <!-- Why Contact Us Section -->
-    <section class="relative py-24 bg-white overflow-hidden">
+    <section@endsection class="relative py-24 bg-white overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-10" data-aos="fade-right">
@@ -256,11 +256,37 @@
                 </div>
 
                 <div class="relative" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=1200"
-                        class="rounded-lg shadow-2xl w-full h-[600px] object-cover" alt="Customer Support">
+                    <img src="{{ asset('assets/customer-support.webp') }}"
+                        class="w-full h-[600px] object-contain" alt="Customer Support">
                     <div class="absolute -bottom-8 -left-8 w-48 h-48 rounded-lg -z-10 blur-3xl opacity-20"></div>
                 </div>
             </div>
         </div>
     </section>
+    @push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactFormEmail');
+            if(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('contactName').value;
+                    const email = document.getElementById('contactEmail').value;
+                    const subject = document.getElementById('contactSubject').value;
+                    const message = document.getElementById('contactMessage').value;
+                    
+                    const emailTo = "sales@indotek-pj.com";
+                    
+                    // Format isi body email
+                    const emailBody = `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`;
+                    
+                    // Buat link dan buka Web Gmail di tab baru
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailTo}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                    window.open(gmailUrl, '_blank');
+                });
+            }
+        });
+    </script>
+    @endpush
 @endsection

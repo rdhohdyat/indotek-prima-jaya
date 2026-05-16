@@ -29,7 +29,7 @@
                         </h1>
                     </div>
 
-                    <p class="text-[15px] text-slate-500 leading-relaxed max-w-md font-medium">
+                    <p class="text-[15px] text-slate-600 leading-relaxed max-w-md font-medium">
                         {{ __('PT. INDOTEK PRIMA JAYA is a general supplier company providing Engineering Tools, Measuring Instruments, Mechanical, Electrical, Computer Devices, and other industrial needs for private and government sectors.') }}
                     </p>
 
@@ -55,7 +55,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
+        <div class="absolute -bottom-24 left-0 w-full h-40 lg:h-64 pointer-events-none z-10">
             <!-- Layer 1: Base smooth white transition -->
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
 
@@ -65,16 +65,16 @@
             </div>
 
             <!-- Layer 3: Extra blur for softness -->
-            <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
+            <div class="absolute -bottom-10 left-0 w-full h-24 lg:h-40 bg-white blur-[100px] opacity-60"></div>
 
             <!-- Layer 4: Extra Dense Right Corner Cloud -->
             <div
-                class="absolute bottom-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-3xl opacity-100">
+                class="absolute bottom-0 right-0 w-full lg:w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-2xl lg:blur-3xl opacity-100">
             </div>
 
             <!-- Layer 5: High-position Right Puff -->
             <div
-                class="absolute -bottom-10 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-3xl opacity-70">
+                class="absolute -bottom-10 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-2xl lg:blur-3xl opacity-70">
             </div>
         </div>
     </section>
@@ -387,13 +387,6 @@
                     </div>
                 </a>
             </div>
-
-            <div class="mt-20 text-center lg:hidden">
-                <a href="{{ route('product') }}"
-                    class="inline-flex bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-slate-900/20">
-                    {{ __('Explore All Products') }}
-                </a>
-            </div>
         </div>
     </section>
 
@@ -564,24 +557,25 @@
     <!-- Latest News Section -->
     <section class="py-28 bg-slate-50 relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16" data-aos="fade-up">
-                <div class="space-y-4">
+            <div class="flex flex-row justify-between items-end gap-4 mb-10 md:mb-16" data-aos="fade-up">
+                <div class="space-y-2 md:space-y-4">
                     <span class="text-sky-500 font-black tracking-[0.3em] text-[10px] uppercase block">{{ __('LATEST UPDATES') }}</span>
-                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">{{ __('News & ') }}<span
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">{{ __('News & ') }}<span
                             class="text-sky-500">{{ __('Insights') }}</span></h2>
                 </div>
                 <a href="{{ route('news') }}"
-                    class="group flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest hover:text-sky-600 transition-colors">
-                    {{ __('View All News') }}
+                    class="group flex items-center gap-2 text-slate-900 font-black text-[10px] md:text-xs uppercase tracking-widest hover:text-sky-600 transition-colors shrink-0 mb-1">
+                    <span class="hidden sm:block">{{ __('View All News') }}</span>
+                    <span class="block sm:hidden">{{ __('View All') }}</span>
                     <iconify-icon icon="solar:alt-arrow-right-linear"
-                        class="text-xl transition-transform group-hover:translate-x-2"></iconify-icon>
+                        class="text-base md:text-xl transition-transform group-hover:translate-x-2"></iconify-icon>
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex md:grid overflow-x-auto md:overflow-visible gap-6 md:gap-8 pb-8 md:pb-0 no-scrollbar snap-x snap-mandatory md:grid-cols-3">
                 <!-- News 1 -->
                 <article
-                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    class="flex-none w-[300px] sm:w-[350px] md:w-auto snap-center group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
                     data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('news', 'meet-prinsipal-rusia') }}" class="block">
                         <div class="aspect-video overflow-hidden">
@@ -600,7 +594,7 @@
 
                 <!-- News 2 -->
                 <article
-                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    class="flex-none w-[300px] sm:w-[350px] md:w-auto snap-center group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
                     data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('news', 'prima-jaya-berbagi') }}" class="block">
                         <div class="aspect-video overflow-hidden">
@@ -619,7 +613,7 @@
 
                 <!-- News 3 -->
                 <article
-                    class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                    class="flex-none w-[300px] sm:w-[350px] md:w-auto snap-center group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
                     data-aos="fade-up" data-aos-delay="200">
                     <a href="{{ route('news', 'sponsor-sekolah-bola-RSS') }}" class="block">
                         <div class="aspect-video overflow-hidden">

@@ -36,3 +36,7 @@ Route::get('/lang/{locale}', function ($locale) {
 Route::get('/sitemap.xml', function () {
     return response()->view('sitemap')->header('Content-Type', 'text/xml');
 })->name('sitemap');
+
+Route::get('/privacy-policy', function () {
+    return view('pages.privacy-policy');
+})->name('privacy-policy');

@@ -51,8 +51,8 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('{{ $currentService ? ($currentService['banner'] ?? $currentService['image']) : asset('assets/background-service.webp') }}'); background-size: cover; background-position: center;">
+    <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden bg-cover bg-[80%_center] lg:bg-center" 
+             style="background-image: url('{{ $currentService ? ($currentService['banner'] ?? $currentService['image']) : asset('assets/background-service.webp') }}');">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -95,12 +95,27 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
+        <div class="absolute -bottom-24 left-0 w-full h-40 lg:h-64 pointer-events-none z-10">
+            <!-- Layer 1: Base smooth white transition -->
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90"></div>
-            <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
-            <div class="absolute bottom-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-3xl opacity-100"></div>
-            <div class="absolute -bottom-10 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-3xl opacity-70"></div>
+
+            <!-- Layer 2: Misty radial clouds for depth -->
+            <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90">
+            </div>
+
+            <!-- Layer 3: Extra blur for softness -->
+            <div class="absolute -bottom-10 left-0 w-full h-24 lg:h-40 bg-white blur-[100px] opacity-60"></div>
+
+            <!-- Layer 4: Extra Dense Right Corner Cloud -->
+            <div
+                class="absolute bottom-0 right-0 w-full lg:w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-2xl lg:blur-3xl opacity-100">
+            </div>
+
+            <!-- Layer 5: High-position Right Puff -->
+            <div
+                class="absolute -bottom-10 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-2xl lg:blur-3xl opacity-70">
+            </div>
         </div>
     </section>
 

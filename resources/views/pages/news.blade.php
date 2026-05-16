@@ -1,31 +1,31 @@
 @php
     $articles = [
         'meet-prinsipal-rusia' => [
-            'title' => 'PT. Indotek Prima Jaya Meeting with Russian Principal for Strategic Collaboration',
+            'title' => __('PT. Indotek Prima Jaya Meeting with Russian Principal for Strategic Collaboration'),
             'date' => 'June 12, 2026',
-            'category' => 'Strategic Partnership',
-            'excerpt' => 'PT. Indotek Prima Jaya recently hosted a high-level meeting with our esteemed Russian principals to discuss the future of industrial automation.',
-            'content' => 'In a significant step towards strengthening international industrial ties, PT. Indotek Prima Jaya hosted a comprehensive strategic meeting with our Russian principals. The discussion focused on the introduction of next-generation analytical equipment and the expansion of technical support services for the Indonesian market.',
+            'category' => __('Strategic Partnership'),
+            'excerpt' => __('PT. Indotek Prima Jaya recently hosted a high-level meeting with our esteemed Russian principals to discuss the future of industrial automation.'),
+            'content' => __('In a significant step towards strengthening international industrial ties, PT. Indotek Prima Jaya hosted a comprehensive strategic meeting with our Russian principals. The discussion focused on the introduction of next-generation analytical equipment and the expansion of technical support services for the Indonesian market.'),
             'image' => asset('assets/news/meet-prinsipal-rusia/meet-prinsipal-rusia.webp'),
             'read_time' => '8 min read',
             'gallery' => [asset('assets/news/meet-prinsipal-rusia/meet-prinsipal-rusia.webp')]
         ],
         'prima-jaya-berbagi' => [
-            'title' => 'Indotek Prima Jaya Berbagi: A Social Responsibility Initiative',
+            'title' => __('Indotek Prima Jaya Berbagi: A Social Responsibility Initiative'),
             'date' => 'May 25, 2026',
-            'category' => 'Social Responsibility',
-            'excerpt' => 'Our annual community sharing event was successfully held to support local communities and foster togetherness.',
-            'content' => 'Corporate Social Responsibility is at the heart of our values. Through our "Prima Jaya Berbagi" program, we conducted a charity event aimed at supporting underprivileged communities near our operational areas.',
+            'category' => __('Social Responsibility'),
+            'excerpt' => __('Our annual community sharing event was successfully held to support local communities and foster togetherness.'),
+            'content' => __('Corporate Social Responsibility is at the heart of our values. Through our "Prima Jaya Berbagi" program, we conducted a charity event aimed at supporting underprivileged communities near our operational areas.'),
             'image' => asset('assets/news/prima-jaya-berbagi/1.webp'),
             'read_time' => '4 min read',
             'gallery' => [asset('assets/news/prima-jaya-berbagi/1.webp'), asset('assets/news/prima-jaya-berbagi/2.webp'), asset('assets/news/prima-jaya-berbagi/3.webp')]
         ],
         'sponsor-sekolah-bola-RSS' => [
-            'title' => 'Supporting Youth: Indotek Prima Jaya Sponsors RSS Soccer School',
+            'title' => __('Supporting Youth: Indotek Prima Jaya Sponsors RSS Soccer School'),
             'date' => 'April 18, 2026',
-            'category' => 'Sponsorship',
-            'excerpt' => 'Investing in the next generation of Indonesian athletes and promoting a healthy lifestyle.',
-            'content' => 'We are proud to announce our official sponsorship of the RSS Soccer School, providing improved training facilities and equipment for young athletes.',
+            'category' => __('Sponsorship'),
+            'excerpt' => __('Investing in the next generation of Indonesian athletes and promoting a healthy lifestyle.'),
+            'content' => __('We are proud to announce our official sponsorship of the RSS Soccer School, providing improved training facilities and equipment for young athletes.'),
             'image' => asset('assets/news/sponsor-sekolah-bola-RSS/1.webp'),
             'read_time' => '6 min read',
             'gallery' => [asset('assets/news/sponsor-sekolah-bola-RSS/1.webp'), asset('assets/news/sponsor-sekolah-bola-RSS/2.webp')]
@@ -37,7 +37,7 @@
 
 @extends('layouts.app')
 
-@section('title', $currentArticle ? $currentArticle['title'] . ' - News' : 'News & Updates - PT. Indotek Prima Jaya')
+@section('title', $currentArticle ? $currentArticle['title'] . ' - ' . __('News') : __('News & Updates - PT. Indotek Prima Jaya'))
 
 @section('content')
     @if($currentArticle)
@@ -46,7 +46,7 @@
         <div class="absolute top-0 left-0 w-full h-48 bg-linear-to-b from-slate-50 to-transparent z-10 pointer-events-none opacity-60"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div class="flex items-center gap-4 mb-8" data-aos="fade-up">
-                <a href="{{ route('news') }}" class="text-xs font-black text-slate-400 hover:text-sky-600 transition-colors uppercase tracking-widest">News</a>
+                <a href="{{ route('news') }}" class="text-xs font-black text-slate-400 hover:text-sky-600 transition-colors uppercase tracking-widest">{{ __('News') }}</a>
                 <div class="w-1 h-1 rounded-full bg-slate-300"></div>
                 <span class="text-xs font-black text-sky-600 uppercase tracking-widest">{{ $currentArticle['category'] }}</span>
             </div>
@@ -73,7 +73,7 @@
             <div class="mt-20 pt-10 border-t border-slate-100">
                 <a href="{{ route('news') }}" class="inline-flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest hover:text-sky-600 transition-colors">
                     <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
-                    Back to All News
+                    {{ __('Back to All News') }}
                 </a>
             </div>
         </div>
@@ -94,7 +94,7 @@
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured News">
                         <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-10 left-10 right-10 space-y-4">
-                            <span class="inline-block px-3 py-1 rounded-full bg-sky-700 text-white text-[10px] font-black uppercase tracking-widest">Featured Article</span>
+                            <span class="inline-block px-3 py-1 rounded-full bg-sky-700 text-white text-[10px] font-black uppercase tracking-widest">{{ __('Featured Article') }}</span>
                             <h2 class="text-lg lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
                                 {{ $featured['title'] }}
                             </h2>
@@ -106,7 +106,7 @@
                             <span class="text-sky-700">{{ $featured['category'] }}</span>
                         </div>
                         <a href="{{ route('news', 'meet-prinsipal-rusia') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-700 transition-all group/btn shadow-lg shadow-slate-900/10">
-                            Read Full Article
+                            {{ __('Read Full Article') }}
                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
                         </a>
                     </div>
@@ -140,12 +140,12 @@
             <!-- Bottom Section: Latest Articles Grid -->
             <div class="space-y-12 mb-20">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-6" data-aos="fade-up">
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Latest Articles</h2>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">{{ __('Latest Articles') }}</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="flex md:grid overflow-x-auto md:overflow-visible gap-6 md:gap-10 pb-8 md:pb-0 no-scrollbar snap-x snap-mandatory md:grid-cols-2 lg:grid-cols-3">
                     @foreach($articles as $slug => $article)
-                    <div class="space-y-6" data-aos="fade-up">
+                    <div class="flex-none w-[300px] sm:w-[350px] md:w-auto snap-center space-y-6" data-aos="fade-up">
                         <a href="{{ route('news', $slug) }}" class="block space-y-6 group">
                             <div class="relative h-56 overflow-hidden rounded-lg shadow-lg">
                                 <img src="{{ $article['image'] }}" 
@@ -174,9 +174,9 @@
     <section class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8" data-aos="fade-up">
             <div class="space-y-4">
-                <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">Stay Tuned</h2>
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">{{ __('Stay Tuned') }}</h2>
                 <p class="text-slate-500 font-medium max-w-xl mx-auto uppercase tracking-wider">
-                    Stay tuned for further updates and information regarding Indotek
+                    {{ __('Stay tuned for further updates and information regarding Indotek') }}
                 </p>
             </div>
         </div>

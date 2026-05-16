@@ -1,11 +1,11 @@
 @php
     $products = [
         'zirconia-analyzer' => [
-            'title' => 'Zirconia Analyzer',
+            'title' => __('Zirconia Analyzer'),
             'principal' => 'RB Technologies',
             'brand_logo' => asset('assets/distributors/rbt.webp'),
-            'category' => 'Analyzer & Engineering',
-            'description' => 'High-precision oxygen analysis using advanced zirconia sensor technology for optimized combustion control and emission monitoring.',
+            'category' => __('Analyzer & Engineering'),
+            'description' => __('High-precision oxygen analysis using advanced zirconia sensor technology for optimized combustion control and emission monitoring.'),
             'image' => asset('assets/products/rb-tech/1.webp'),
             'banner' => asset('assets/products/rb-tech-banner.webp'),
             'icon' => 'solar:chart-2-bold-duotone',
@@ -20,11 +20,11 @@
             ]
         ],
         'emissions-monitoring' => [
-            'title' => 'Emissions Monitoring',
+            'title' => __('Emissions Monitoring'),
             'principal' => 'Sick',
             'brand_logo' => asset('assets/distributors/sick.webp'),
-            'category' => 'Analyzer & Engineering',
-            'description' => 'Continuous Emission Monitoring Systems (CEMS) designed to meet strict environmental regulations with reliable gas analysis.',
+            'category' => __('Analyzer & Engineering'),
+            'description' => __('Continuous Emission Monitoring Systems (CEMS) designed to meet strict environmental regulations with reliable gas analysis.'),
             'image' => asset('assets/products/sick/1.webp'),
             'banner' => asset('assets/products/sick-banner.webp'),
             'icon' => 'solar:graph-bold-duotone',
@@ -36,11 +36,11 @@
             ]
         ],
         'water-analyzer' => [
-            'title' => 'Water Analyzer',
+            'title' => __('Water Analyzer'),
             'principal' => 'ECD, Process Instruments',
             'brand_logo' => asset('assets/distributors/ecd.webp'),
-            'category' => 'Analyzer & Engineering',
-            'description' => 'Comprehensive water quality analysis solutions for pH, conductivity, dissolved oxygen, and turbidity in industrial processes.',
+            'category' => __('Analyzer & Engineering'),
+            'description' => __('Comprehensive water quality analysis solutions for pH, conductivity, dissolved oxygen, and turbidity in industrial processes.'),
             'image' => asset('assets/products/ecd/1.webp'),
             'banner' => asset('assets/products/ecd-banner.webp'),
             'icon' => 'solar:water-drops-bold-duotone',
@@ -55,11 +55,11 @@
             ]
         ],
         'transmitter' => [
-            'title' => 'Transmitter',
+            'title' => __('Transmitter'),
             'principal' => 'PIEZUS',
             'brand_logo' => asset('assets/distributors/piezus.webp'),
-            'category' => 'Automation & Instrumentation',
-            'description' => 'Precision pressure and level transmitters for reliable process monitoring in oil & gas, chemical, and general manufacturing.',
+            'category' => __('Automation & Instrumentation'),
+            'description' => __('Precision pressure and level transmitters for reliable process monitoring in oil & gas, chemical, and general manufacturing.'),
             'image' => asset('assets/products/piezus/1.webp'),
             'banner' => asset('assets/products/piezus-banner.webp'),
             'icon' => 'solar:compass-bold-duotone',
@@ -71,11 +71,11 @@
             ]
         ],
         'fittings-regulator' => [
-            'title' => 'Fittings & Regulator',
+            'title' => __('Fittings & Regulator'),
             'principal' => 'NAI LOK',
             'brand_logo' => asset('assets/distributors/nai-lok.webp'),
-            'category' => 'Automation & Instrumentation',
-            'description' => 'High-quality instrumentation fittings and pressure regulators ensuring leak-free connections and stable gas/liquid pressure.',
+            'category' => __('Automation & Instrumentation'),
+            'description' => __('High-quality instrumentation fittings and pressure regulators ensuring leak-free connections and stable gas/liquid pressure.'),
             'image' => asset('assets/products/nai-lok/1.webp'),
             'banner' => asset('assets/products/nai-lok-banner.webp'),
             'icon' => 'solar:widget-bold-duotone',
@@ -86,11 +86,11 @@
             ]
         ],
         'saxon-probe' => [
-            'title' => 'In-Situ Oxygen Probe',
+            'title' => __('In-Situ Oxygen Probe'),
             'principal' => 'Saxon',
             'brand_logo' => asset('assets/distributors/saxon.webp'),
-            'category' => 'Analyzer & Engineering',
-            'description' => 'Robust in-situ oxygen probes for direct measurement in flue gas, providing fast and accurate control for combustion processes.',
+            'category' => __('Analyzer & Engineering'),
+            'description' => __('Robust in-situ oxygen probes for direct measurement in flue gas, providing fast and accurate control for combustion processes.'),
             'image' => asset('assets/products/saxon/1.webp'),
             'banner' => asset('assets/products/saxon-banner.webp'),
             'icon' => 'solar:accumulator-bold-duotone',
@@ -102,11 +102,11 @@
             ]
         ],
         'control-valve' => [
-            'title' => 'Control Valve',
+            'title' => __('Control Valve'),
             'principal' => 'RTK - Regeltechnik',
             'brand_logo' => asset('assets/distributors/rtk.webp'),
-            'category' => 'Automation & Instrumentation',
-            'description' => 'High-performance control valves for precise regulation of pressure, temperature, and flow rate in demanding industrial systems.',
+            'category' => __('Automation & Instrumentation'),
+            'description' => __('High-performance control valves for precise regulation of pressure, temperature, and flow rate in demanding industrial systems.'),
             'image' => asset('assets/products/rtk/1.webp'),
             'banner' => asset('assets/products/rtk-banner.webp'),
             'icon' => 'solar:settings-bold-duotone',
@@ -117,11 +117,11 @@
             ]
         ],
         'industrial-valve' => [
-            'title' => 'Industrial Valve',
+            'title' => __('Industrial Valve'),
             'principal' => 'Red Valve',
             'brand_logo' => asset('assets/distributors/redvalve.webp'),
-            'category' => 'Automation & Instrumentation',
-            'description' => 'Durable industrial valves designed for harsh conditions, providing reliable flow control and long service life.',
+            'category' => __('Automation & Instrumentation'),
+            'description' => __('Durable industrial valves designed for harsh conditions, providing reliable flow control and long service life.'),
             'image' => asset('assets/products/red/1.webp'),
             'banner' => asset('assets/products/read-valpet-banner.webp'),
             'icon' => 'solar:widget-add-bold-duotone',
@@ -138,53 +138,52 @@
 
 @extends('layouts.app')
 
-@section('title', $currentProduct ? $currentProduct['title'] . ' - PT. Indotek Prima Jaya' : 'Our Products - PT. Indotek Prima Jaya')
+@section('title', $currentProduct ? $currentProduct['title'] . ' - PT. Indotek Prima Jaya' : __('Our Products - PT. Indotek Prima Jaya'))
 
 @section('content')
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden"
-        style="background: url('{{ $currentProduct ? ($currentProduct['banner'] ?? $currentProduct['image']) : asset('assets/hero/product.webp') }}'); background-size: cover; background-position: center;">
+    <section class="relative pt-10 pb-16 lg:pt-32 lg:pb-40 overflow-hidden bg-cover bg-[80%_center] lg:bg-center"
+        style="background-image: url('{{ $currentProduct ? ($currentProduct['banner'] ?? $currentProduct['image']) : asset('assets/hero/product.webp') }}');">
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-8 space-y-8 relative z-10" data-aos="fade-right">
+                <div class="lg:col-span-8 space-y-6 lg:space-y-8 relative z-10" data-aos="fade-right">
                     <!-- Ambient Glow -->
                     <div class="absolute inset-x-0 -inset-y-10 -z-10 pointer-events-none">
                         <div class="w-full h-full 
-                                                bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
-                                                blur-2xl">
+                                                    bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
+                                                    blur-2xl">
                         </div>
                     </div>
 
                     <div class="space-y-3">
                         <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">
-                            {{ $currentProduct ? $currentProduct['category'] : 'OUR PRODUCTS' }}
+                            {{ $currentProduct ? $currentProduct['category'] : __('OUR PRODUCTS') }}
                         </span>
                         <h1
-                            class="text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
+                            class="text-[28px] sm:text-[36px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.1] lg:leading-[1.05] tracking-tight uppercase">
                             @if($currentProduct)
                                 {{ $currentProduct['title'] }}<br>
-                                <span class="text-sky-600">Solutions</span>
+                                {!! __('Solutions') !!}</span>
                             @else
-                                High-Precision<br>
-                                Industrial <span class="text-sky-600">Equipment</span>
+                                {!! __('High-Precision<br>Industrial <span class="text-sky-600">Equipment</span>') !!}
                             @endif
                         </h1>
                     </div>
 
-                    <p class="text-[16px] text-slate-600 leading-relaxed max-w-2xl font-medium">
-                        {{ $currentProduct ? $currentProduct['description'] : 'We provide a wide range of high-quality industrial products from world-renowned principals, ensuring reliability and efficiency for your technical operations.' }}
+                    <p class="text-[14px] lg:text-[16px] text-slate-600 leading-relaxed max-w-2xl font-medium">
+                        {{ $currentProduct ? $currentProduct['description'] : __('We provide a wide range of high-quality industrial products from world-renowned principals, ensuring reliability and efficiency for your technical operations.') }}
                     </p>
 
                     @if($currentProduct)
                         <div class="flex flex-wrap items-center gap-6 pt-4">
                             <a href="{{ url('/contact') }}"
-                                class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-bold text-[14px] transition flex items-center gap-3 shadow-xl shadow-sky-600/20">
-                                Get Quote
+                                class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-bold text-[13px] lg:text-[14px] transition flex items-center gap-2 lg:gap-3 shadow-xl shadow-sky-600/20">
+                                {{ __('Get Quote') }}
                                 <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
                             </a>
                             <div
-                                class="flex items-center gap-6 p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/50 shadow-sm">
+                                class="flex items-center gap-4 lg:gap-6 p-3 lg:p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/50 shadow-sm">
                                 <div class="w-20 h-10 flex items-center justify-center">
                                     <img src="{{ $currentProduct['brand_logo'] }}"
                                         class="max-w-full max-h-full object-contain mix-blend-multiply"
@@ -192,7 +191,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <span
-                                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Principal</span>
+                                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{{ __('Principal') }}</span>
                                     <span class="text-sm font-black text-slate-900">{{ $currentProduct['principal'] }}</span>
                                 </div>
                             </div>
@@ -203,7 +202,7 @@
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
+        <div class="absolute -bottom-24 left-0 w-full h-40 lg:h-64 pointer-events-none z-10">
             <!-- Layer 1: Base smooth white transition -->
             <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
 
@@ -213,16 +212,16 @@
             </div>
 
             <!-- Layer 3: Extra blur for softness -->
-            <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
+            <div class="absolute -bottom-10 left-0 w-full h-24 lg:h-40 bg-white blur-[100px] opacity-60"></div>
 
             <!-- Layer 4: Extra Dense Right Corner Cloud -->
             <div
-                class="absolute bottom-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-3xl opacity-100">
+                class="absolute bottom-0 right-0 w-full lg:w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-2xl lg:blur-3xl opacity-100">
             </div>
 
             <!-- Layer 5: High-position Right Puff -->
             <div
-                class="absolute -bottom-10 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-3xl opacity-70">
+                class="absolute -bottom-10 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)] blur-2xl lg:blur-3xl opacity-70">
             </div>
         </div>
     </section>
@@ -297,9 +296,10 @@
         <section class="py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-2xl lg:text-4xl font-black text-slate-900 tracking-tight">Our Product Portfolio</h2>
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Explore our range of industrial solutions from leading
-                        global brands.</p>
+                    <h2 class="text-2xl lg:text-4xl font-black text-slate-900 tracking-tight">{{ __('Our Product Portfolio') }}
+                    </h2>
+                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                        {{ __('Explore our range of industrial solutions from leading global brands.') }}</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
@@ -334,7 +334,7 @@
                                     <div class="pt-4">
                                         <span
                                             class="inline-flex items-center gap-2 text-sky-400 font-black text-[11px] uppercase tracking-widest border-b-2 border-sky-400 pb-1">
-                                            Explore Solution
+                                            {{ __('Explore Solution') }}
                                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg"></iconify-icon>
                                         </span>
                                     </div>
@@ -366,17 +366,16 @@
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
                     <div class="space-y-4 text-center lg:text-left">
                         <h2 class="text-xl lg:text-3xl font-black text-white leading-tight uppercase tracking-tight">
-                            Ready to <span class="text-sky-400">Optimize Operations?</span>
+                            {!! __('Ready to <span class="text-sky-400">Optimize Operations?</span>') !!}
                         </h2>
                         <p class="text-slate-400 text-sm font-medium max-w-xl">
-                            Consult with our technical experts to find the perfect product solution for your specific
-                            industrial needs.
+                            {{ __('Consult with our technical experts to find the perfect product solution for your specific industrial needs.') }}
                         </p>
                     </div>
                     <div class="shrink-0">
                         <a href="{{ url('/contact') }}"
                             class="group inline-flex items-center gap-3 bg-white hover:bg-sky-600 text-slate-900 hover:text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-black/20">
-                            Get Expert Consultation
+                            {{ __('Get Expert Consultation') }}
                             <iconify-icon icon="solar:alt-arrow-right-linear"
                                 class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
                         </a>
