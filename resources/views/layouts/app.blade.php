@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'PT. Indotek Prima Jaya')</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <meta name="description"
+        content="PT. Indotek Prima Jaya is a premium industrial supplier and business solutions provider in Indonesia. We specialize in high-precision measuring instruments, mechanical engineering, and electrical solutions for various industrial sectors.">
+    <meta name="keywords"
+        content="Indotek Prima Jaya, industrial supplier Indonesia, measuring instruments, mechanical engineering, electrical solutions, business solutions">
+    <title>@yield('title', 'PT. INDOTEK PRIMA JAYA - Reliable Industrial Partner')</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+    <link rel="icon" href="{{ asset('assets/favicon/favicon.ico') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,14 +26,15 @@
 
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen overflow-x-hidden">
 
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="shrink-0">
-                    <a href="{{ url('/') }}" class="flex items-center group">
+                    <a href="{{ url('/') }}" class="flex items-center group"
+                        aria-label="PT. Indotek Prima Jaya Homepage">
                         <div class="flex items-center gap-2">
                             <img src="{{ asset('assets/logo-indotek-prima.webp') }}" class="h-10 w-auto"
                                 alt="Indotek Logo">
@@ -40,28 +49,29 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex space-x-7 items-center">
                     <a href="{{ url('/') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('/') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('/') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}"
+                        {!! Request::is('/') ? 'aria-current="page"' : '' !!}>
                         Home
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('/') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
                     <a href="{{ url('/about') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('about') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}"
+                        aria-label="Learn more about our company, vision, and mission" {!! Request::is('about') ? 'aria-current="page"' : '' !!}>
                         About
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('about') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
 
                     <!-- Products Dropdown -->
                     <div class="relative group">
-                        <button
-                            aria-label="Toggle Products Menu"
-                            class="flex items-center gap-1 text-slate-800 hover:text-sky-600 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn">
+                        <button aria-label="Toggle Products Menu"
+                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('product*') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}">
                             Products
                             <iconify-icon icon="solar:alt-arrow-down-linear"
-                                class="text-xs text-slate-500 group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                                class="text-xs {{ Request::is('product*') ? 'text-sky-700' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
                             <span
-                                class="absolute -bottom-2 left-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover/btn:w-full"></span>
+                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('product*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
                         </button>
                         <!-- Dropdown Menu (Classic Nested Style) -->
                         <div
@@ -91,24 +101,24 @@
                                         class="absolute left-full top-0 ml-2 w-72 opacity-0 scale-95 origin-left pointer-events-none group-hover/sub1:opacity-100 group-hover/sub1:scale-100 group-hover/sub1:pointer-events-auto transition-all duration-300">
                                         <div
                                             class="bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-100 p-2 shadow-sky-900/10">
-                                            <a href="#" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
+                                            <a href="{{ route('product', 'zirconia-analyzer') }}" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Zirconia
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Zirconia
                                                     Analyzer</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: RB
                                                     Technologies</span>
                                             </a>
-                                            <a href="#"
+                                            <a href="{{ route('product', 'emissions-monitoring') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Emissions
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Emissions
                                                     Monitoring</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Sick</span>
                                             </a>
-                                            <a href="#"
+                                            <a href="{{ route('product', 'water-analyzer') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Water
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Water
                                                     Analyzer</span>
                                                 <span class="block text-[11px] text-slate-400">ECD, Process
                                                     Instruments</span>
@@ -120,10 +130,10 @@
                                 <!-- Category 2 -->
                                 <div class="relative group/sub2 mt-1">
                                     <div
-                                        class="flex items-center justify-between p-3 rounded-lg hover:bg-amber-50 cursor-pointer transition-all">
+                                        class="flex items-center justify-between p-3 rounded-lg hover:bg-yellow-50 cursor-pointer transition-all">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600">
+                                                class="w-8 h-8 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600">
                                                 <iconify-icon icon="solar:settings-minimalistic-linear"
                                                     class="text-lg"></iconify-icon>
                                             </div>
@@ -139,22 +149,22 @@
                                         class="absolute left-full top-0 ml-2 w-72 opacity-0 scale-95 origin-left pointer-events-none group-hover/sub2:opacity-100 group-hover/sub2:scale-100 group-hover/sub2:pointer-events-auto transition-all duration-300">
                                         <div
                                             class="bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-100 p-2 shadow-sky-900/10">
-                                            <a href="#" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
+                                            <a href="{{ route('product', 'transmitter') }}" class="block p-3 rounded-lg hover:bg-slate-50 transition-all">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Transmitter</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Transmitter</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: PIEZUS</span>
                                             </a>
-                                            <a href="#"
+                                            <a href="{{ route('product', 'control-valve') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Control
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Control
                                                     Valve</span>
                                                 <span class="block text-[11px] text-slate-400">RTK - Regeltechnik</span>
                                             </a>
-                                            <a href="#"
+                                            <a href="{{ route('product', 'fittings-regulator') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Fittings
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-700 transition-colors">Fittings
                                                     & Regulator</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: NAI LOK</span>
                                             </a>
@@ -165,25 +175,70 @@
                         </div>
                     </div>
 
-                    <a href="{{ url('/service') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('service') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
-                        Service
-                        <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('service') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
-                    </a>
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button aria-label="Toggle Services Menu"
+                            class="flex items-center gap-1 font-bold text-[11px] tracking-widest uppercase transition-colors relative group/btn {{ Request::is('service*') ? 'text-sky-700' : 'text-slate-800 hover:text-sky-700' }}">
+                            Service
+                            <iconify-icon icon="solar:alt-arrow-down-linear"
+                                class="text-xs {{ Request::is('service*') ? 'text-sky-700' : 'text-slate-500' }} group-hover:rotate-180 transition-transform duration-300"></iconify-icon>
+                            <span
+                                class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('service*') ? 'w-full' : 'w-0 group-hover/btn:w-full' }}"></span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute -left-4 mt-0 pt-6 w-72 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                            <div
+                                class="bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-100 p-2 shadow-sky-900/10">
+                                
+                                <a href="{{ route('service', 'transformator') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-sky-50 transition-all group/item">
+                                    <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                        <iconify-icon icon="solar:bolt-linear" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[13px] font-bold text-slate-700">Transformator Services</span>
+                                        <span class="text-[10px] text-slate-400">Installation & Maintenance</span>
+                                    </div>
+                                </a>
+
+                                <a href="{{ route('service', 'valve') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-yellow-50 transition-all group/item border-t border-slate-50">
+                                    <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600 group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors">
+                                        <iconify-icon icon="solar:settings-linear" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[13px] font-bold text-slate-700">Valve Services</span>
+                                        <span class="text-[10px] text-slate-400">Repair & Calibration</span>
+                                    </div>
+                                </a>
+
+                                <a href="{{ route('service', 'pump') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-emerald-50 transition-all group/item border-t border-slate-50">
+                                    <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors">
+                                        <iconify-icon icon="solar:refresh-linear" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[13px] font-bold text-slate-700">Pump Services</span>
+                                        <span class="text-[10px] text-slate-400">Overhaul & Alignment</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
 
                     <a href="{{ url('/news') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('news*') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
+                        {!! Request::is('news*') ? 'aria-current="page"' : '' !!}>
                         News
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('news*') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('news*') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
 
                     <a href="{{ url('/contact') }}"
-                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('contact') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}">
+                        class="font-bold text-[11px] tracking-widest uppercase relative transition-colors group {{ Request::is('contact') ? 'text-sky-600' : 'text-slate-800 hover:text-sky-600' }}"
+                        {!! Request::is('contact') ? 'aria-current="page"' : '' !!}>
                         Contact
                         <span
-                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-600 transition-all duration-300 {{ Request::is('contact') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                            class="absolute -bottom-2 left-0 h-[2px] bg-sky-700 transition-all duration-300 {{ Request::is('contact') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
                 </nav>
 
@@ -191,18 +246,18 @@
                     <!-- Language Switcher Pill (Flags) -->
                     <div
                         class="flex items-center bg-slate-100/80 p-0.5 rounded-full border border-slate-200/50 backdrop-blur-sm">
-                        <button
+                        <button aria-label="Switch to Indonesian"
                             class="flex items-center justify-center p-1 rounded-full bg-white shadow-sm shadow-sky-900/5 transition-all">
                             <iconify-icon icon="circle-flags:id" class="text-[14px]"></iconify-icon>
                         </button>
-                        <button
+                        <button aria-label="Switch to English"
                             class="flex items-center justify-center p-1 rounded-full opacity-40 hover:opacity-100 transition-all">
                             <iconify-icon icon="circle-flags:uk" class="text-[14px]"></iconify-icon>
                         </button>
                     </div>
 
                     <a href="{{ url('/contact') }}"
-                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all  shadow-yellow-500/20 flex items-center">
+                        class="group/cta bg-yellow-500 hover:bg-yellow-600 text-white px-7 py-2.5 rounded-lg font-bold text-[12px] tracking-widest uppercase transition-all shadow-sm flex items-center">
                         Get a Quote
                         <iconify-icon icon="solar:alt-arrow-right-linear"
                             class="text-lg transition-transform group-hover:translate-x-1"></iconify-icon>
@@ -211,15 +266,58 @@
 
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden items-center">
-                    <button type="button"
-                        aria-label="Open Navigation Menu"
-                        class="text-slate-900 bg-slate-100 p-3 rounded-lg hover:bg-slate-200 transition-colors">
-                        <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
+                    <button type="button" id="mobile-menu-btn" aria-label="Open Navigation Menu"
+                        class="text-slate-900 bg-slate-100 w-9 h-9 flex items-center justify-center rounded-lg hover:bg-slate-200 transition-colors">
+                        <iconify-icon id="mobile-menu-icon" icon="solar:hamburger-menu-linear" class="text-xl flex items-center justify-center"></iconify-icon>
                     </button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col pt-24 pb-8">
+        <nav class="flex flex-col items-center space-y-6 px-6 text-center overflow-y-auto w-full flex-grow pb-10">
+            <a href="{{ url('/') }}" class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">Home</a>
+            <a href="{{ url('/about') }}" class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">About</a>
+            
+            <!-- Mobile Products -->
+            <div class="flex flex-col items-center w-full">
+                <button type="button" class="mobile-dropdown-btn flex items-center justify-center gap-2 text-xl font-black  uppercase tracking-widest py-2 w-full" data-target="mobile-products">
+                    Products
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-lg transition-transform duration-300 dropdown-icon"></iconify-icon>
+                </button>
+                <div id="mobile-products" class="hidden flex-col items-center space-y-4 bg-slate-50 w-full py-6 mt-4 rounded-2xl border border-slate-100">
+                    <a href="{{ route('product', 'zirconia-analyzer') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Zirconia Analyzer</a>
+                    <a href="{{ route('product', 'emissions-monitoring') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Emissions Monitoring</a>
+                    <a href="{{ route('product', 'water-analyzer') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Water Analyzer</a>
+                    <a href="{{ route('product', 'transmitter') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Transmitter</a>
+                    <a href="{{ route('product', 'control-valve') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Control Valve</a>
+                    <a href="{{ route('product', 'fittings-regulator') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Fittings & Regulator</a>
+                </div>
+            </div>
+
+            <!-- Mobile Services -->
+            <div class="flex flex-col items-center w-full">
+                <button type="button" class="mobile-dropdown-btn flex items-center justify-center gap-2 text-xl font-black  uppercase tracking-widest py-2 w-full" data-target="mobile-services">
+                    Services
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-lg transition-transform duration-300 dropdown-icon"></iconify-icon>
+                </button>
+                <div id="mobile-services" class="hidden flex-col items-center space-y-4 bg-slate-50 w-full py-6 mt-4 rounded-2xl border border-slate-100">
+                    <a href="{{ route('service', 'transformator') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Transformator Services</a>
+                    <a href="{{ route('service', 'valve') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Valve Services</a>
+                    <a href="{{ route('service', 'pump') }}" class="text-[11px] font-bold text-slate-700 uppercase tracking-widest hover:text-sky-600">Pump Services</a>
+                </div>
+            </div>
+
+            <a href="{{ url('/news') }}" class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">News</a>
+            <a href="{{ url('/contact') }}" class="text-xl font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors">Contact</a>
+            
+            <div class="pt-6 w-full">
+                <a href="{{ url('/contact') }}" class="block bg-yellow-500 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30">Get a Quote</a>
+            </div>
+        </nav>
+    </div>
 
     <main class="grow">
         @yield('content')
@@ -253,19 +351,16 @@
                     </div>
 
                     <div class="flex gap-3">
-                        <a href="#"
-                            aria-label="Follow us on Facebook"
+                        <a href="#" aria-label="Follow us on Facebook"
                             class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] hover:shadow-lg hover:shadow-[#1877F2]/20 transition-all duration-300">
                             <iconify-icon icon="ri:facebook-fill" class="text-xl"></iconify-icon>
                         </a>
-                        <a href="#"
-                            aria-label="Follow us on Instagram"
+                        <a href="#" aria-label="Follow us on Instagram"
                             class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] hover:shadow-lg hover:shadow-[#E4405F]/20 transition-all duration-300">
                             <iconify-icon icon="ri:instagram-line" class="text-xl"></iconify-icon>
                         </a>
-                        <a href="#"
-                            aria-label="Send us an Email"
-                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-sky-600 hover:text-white hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/20 transition-all duration-300">
+                        <a href="#" aria-label="Send us an Email"
+                            class="w-11 h-11 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-sky-700 hover:text-white hover:border-sky-700 hover:shadow-lg hover:shadow-sky-700/20 transition-all duration-300">
                             <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
                         </a>
                     </div>
@@ -274,42 +369,43 @@
                 <!-- Column 2: Quick Links -->
                 <div class="lg:col-span-4 grid grid-cols-2 gap-8">
                     <div class="space-y-6">
-                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Navigation</h2>
+                        <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Navigation</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ url('/') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Home
                                 </a></li>
                             <li><a href="{{ url('/about') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group"
+                                    aria-label="Read more about PT. Indotek Prima Jaya's profile">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     About Us
                                 </a></li>
                             <li><a href="#"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Products
                                 </a></li>
                             <li><a href="{{ url('/service') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     Service
                                 </a></li>
                             <li><a href="{{ url('/news') }}"
-                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
+                                    class="text-[13px] font-bold text-slate-600 hover:text-sky-700 transition-colors flex items-center gap-2 group">
                                     <span
-                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-600 transition-colors"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-sky-700 transition-colors"></span>
                                     News
                                 </a></li>
                         </ul>
                     </div>
                     <div class="space-y-6">
-                        <h2 class="text-[11px] font-black text-sky-600 tracking-[0.2em] uppercase">Support</h2>
+                        <h2 class="text-[11px] font-black text-sky-700 tracking-[0.2em] uppercase">Support</h2>
                         <ul class="space-y-4">
                             <li><a href="{{ url('/contact') }}"
                                     class="text-[13px] font-bold text-slate-600 hover:text-sky-600 transition-colors flex items-center gap-2 group">
@@ -354,14 +450,13 @@
                             </div>
                         </div>
                         <div class="pt-2">
-                            <a href="#"
-                                class="block text-center bg-sky-600 text-white py-3 rounded-lg font-bold text-[12px] uppercase tracking-widest hover:bg-sky-700 transition-all">
+                            <a href="{{ route('contact') }}"
+                                class="block text-center bg-slate-900 text-white py-3 rounded-lg font-bold text-[11px] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10">
                                 Contact Our Team
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -389,6 +484,77 @@
             duration: 1000,
             once: true,
             easing: 'ease-out-quad',
+        });
+
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            
+            if(btn && menu && icon) {
+                btn.addEventListener('click', () => {
+                    const isOpen = !menu.classList.contains('translate-x-full');
+                    if(isOpen) {
+                        menu.classList.add('translate-x-full');
+                        document.body.classList.remove('overflow-hidden');
+                        icon.setAttribute('icon', 'solar:hamburger-menu-linear');
+                        
+                        // Reset dropdowns when closing
+                        document.querySelectorAll('.mobile-dropdown-btn').forEach(dBtn => {
+                            const targetId = dBtn.getAttribute('data-target');
+                            const targetMenu = document.getElementById(targetId);
+                            const icon = dBtn.querySelector('.dropdown-icon');
+                            if(targetMenu) {
+                                targetMenu.classList.add('hidden');
+                                targetMenu.classList.remove('flex');
+                                if(icon) icon.classList.remove('rotate-180');
+                            }
+                        });
+                    } else {
+                        menu.classList.remove('translate-x-full');
+                        document.body.classList.add('overflow-hidden');
+                        icon.setAttribute('icon', 'solar:close-circle-linear');
+                    }
+                });
+            }
+
+            // Mobile Dropdown Accordion Logic
+            const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+            dropdownBtns.forEach(dBtn => {
+                dBtn.addEventListener('click', (e) => {
+                    const targetId = dBtn.getAttribute('data-target');
+                    const targetMenu = document.getElementById(targetId);
+                    const icon = dBtn.querySelector('.dropdown-icon');
+                    
+                    if (targetMenu) {
+                        const isHidden = targetMenu.classList.contains('hidden');
+                        
+                        // Close other open dropdowns (optional, uncomment if you want exclusive accordions)
+                        // dropdownBtns.forEach(otherBtn => {
+                        //     if(otherBtn !== dBtn) {
+                        //         const otherTarget = document.getElementById(otherBtn.getAttribute('data-target'));
+                        //         const otherIcon = otherBtn.querySelector('.dropdown-icon');
+                        //         if(otherTarget) {
+                        //             otherTarget.classList.add('hidden');
+                        //             otherTarget.classList.remove('flex');
+                        //             if(otherIcon) otherIcon.classList.remove('rotate-180');
+                        //         }
+                        //     }
+                        // });
+
+                        if (isHidden) {
+                            targetMenu.classList.remove('hidden');
+                            targetMenu.classList.add('flex');
+                            if(icon) icon.classList.add('rotate-180');
+                        } else {
+                            targetMenu.classList.add('hidden');
+                            targetMenu.classList.remove('flex');
+                            if(icon) icon.classList.remove('rotate-180');
+                        }
+                    }
+                });
+            });
         });
     </script>
 </body>

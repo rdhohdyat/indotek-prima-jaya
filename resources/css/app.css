@@ -32,9 +32,16 @@
     background-position: center;
 }
 
-.background-vision-mission {
+.background-service {
     position: relative;
-    background: url("../../public/assets/background-vision-mission.png");
+    background: url("../../public/assets/background-service.webp");
     background-size: cover;
     background-position: center;
+}
+
+.background-vision-mission {
+    position: relative;
+    background: url("../../public/assets/background-vision-mission.webp");
+    background-size: cover;
+    background-position: bottom;
 }

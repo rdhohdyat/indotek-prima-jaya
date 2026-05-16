@@ -14,8 +14,8 @@
                     <!-- Awan putih / gradient kabut -->
                     <div class="absolute -inset-x-12 -inset-y-10 -z-10 pointer-events-none">
                         <div class="w-full h-full 
-                                            bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
-                                            blur-2xl">
+                                                    bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0.95)_38%,rgba(255,255,255,0.7)_58%,rgba(255,255,255,0)_78%)]
+                                                    blur-2xl">
                         </div>
                     </div>
 
@@ -38,8 +38,9 @@
                     </p>
 
                     <div class="flex flex-wrap gap-5 pt-2">
-                        <a href="#"
-                            class="bg-sky-500 hover:bg-sky-700 text-white px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-xl shadow-sky-600/10 group">
+                        <a href="{{ route('about') }}"
+                            class="bg-sky-700 hover:bg-sky-800 text-white px-9 py-4 rounded-md font-bold text-[14px] transition flex items-center gap-4 shadow-xl shadow-sky-600/10 group"
+                            aria-label="Learn more about our company profile and history">
                             Learn More
                             <iconify-icon icon="solar:alt-arrow-right-linear"
                                 class="text-xl transition-transform group-hover:translate-x-1"></iconify-icon>
@@ -88,8 +89,8 @@
                 <!-- About Image -->
                 <div class="lg:col-span-4" data-aos="fade-right" data-aos-duration="1000">
                     <div class="relative group">
-                        <img src="{{ asset('assets/office.webp') }}"
-                            alt="Indotek Building" class="w-full h-[450px] rounded-2xl shadow-2xl object-cover object-left transition-transform duration-700 group-hover:scale-105">
+                        <img src="{{ asset('assets/office.webp') }}" alt="Indotek Building"
+                            class="w-full h-[450px] rounded-2xl shadow-2xl object-cover object-left transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-slate-900/10 shadow-inner"></div>
                     </div>
                 </div>
@@ -97,13 +98,16 @@
                 <!-- About Content -->
                 <div class="lg:col-span-4 space-y-8" data-aos="fade-up" data-aos-delay="200">
                     <div class="space-y-4">
-                        <span class="text-sky-600 font-black tracking-[0.2em] text-[11px] uppercase block" data-aos="fade-up" data-aos-delay="300">ABOUT US</span>
-                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight" data-aos="fade-up" data-aos-delay="400">
+                        <span class="text-yellow-500 font-black tracking-[0.2em] text-[11px] uppercase block"
+                            data-aos="fade-up" data-aos-delay="300">ABOUT US</span>
+                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight"
+                            data-aos="fade-up" data-aos-delay="400">
                             Your Reliable Partner for Sustainable Growth
                         </h2>
                     </div>
 
-                    <div class="space-y-4 text-slate-500 text-sm leading-relaxed font-medium" data-aos="fade-up" data-aos-delay="500">
+                    <div class="space-y-4 text-slate-500 text-sm leading-relaxed font-medium" data-aos="fade-up"
+                        data-aos-delay="500">
                         <p>Founded in 2020, PT. INDOTEK PRIMA JAYA has grown to become a trusted general supplier for
                             various industries in Indonesia.</p>
                         <p>We provide innovative business solutions and high-quality products that meet industry standards.
@@ -113,7 +117,8 @@
 
                     <div data-aos="fade-up" data-aos-delay="600">
                         <a href="{{ route('about') }}"
-                            class="inline-flex bg-slate-900 hover:bg-sky-600 text-white px-8 py-4 rounded-xl font-black text-[11px] uppercase tracking-widest transition-all items-center gap-3 shadow-xl shadow-slate-900/10 hover:shadow-sky-600/20">
+                            class="inline-flex bg-slate-900 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-black text-[11px] uppercase tracking-widest transition-all items-center gap-3 shadow-xl shadow-slate-900/10 hover:shadow-sky-700/20"
+                            aria-label="Explore our story and corporate journey">
                             Explore Our Story
                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg"></iconify-icon>
                         </a>
@@ -125,50 +130,58 @@
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 gap-6">
                             <!-- Integrity -->
-                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group" data-aos="fade-left" data-aos-delay="400">
+                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group"
+                                data-aos="fade-left" data-aos-delay="400">
                                 <div
-                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
                                     <iconify-icon icon="solar:shield-check-linear" class="text-3xl"></iconify-icon>
                                 </div>
                                 <div class="space-y-1">
                                     <h3 class="font-black text-slate-900 text-lg uppercase tracking-tight">Integrity</h3>
-                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Upholding the highest ethical standards in every business interaction.</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Upholding the highest
+                                        ethical standards in every business interaction.</p>
                                 </div>
                             </div>
 
                             <!-- Dedication -->
-                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group" data-aos="fade-left" data-aos-delay="500">
+                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group"
+                                data-aos="fade-left" data-aos-delay="500">
                                 <div
-                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
                                     <iconify-icon icon="solar:bolt-linear" class="text-3xl"></iconify-icon>
                                 </div>
                                 <div class="space-y-1">
                                     <h3 class="font-black text-slate-900 text-lg uppercase tracking-tight">Dedication</h3>
-                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Fully committed to providing innovative and effective solutions.</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Fully committed to
+                                        providing innovative and effective solutions.</p>
                                 </div>
                             </div>
 
                             <!-- Loyalty -->
-                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group" data-aos="fade-left" data-aos-delay="600">
+                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group"
+                                data-aos="fade-left" data-aos-delay="600">
                                 <div
-                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
                                     <iconify-icon icon="solar:users-group-rounded-linear" class="text-3xl"></iconify-icon>
                                 </div>
                                 <div class="space-y-1">
                                     <h3 class="font-black text-slate-900 text-lg uppercase tracking-tight">Loyalty</h3>
-                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Building long-term, trustworthy partnerships with our clients.</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Building long-term,
+                                        trustworthy partnerships with our clients.</p>
                                 </div>
                             </div>
 
                             <!-- Excellence -->
-                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group" data-aos="fade-left" data-aos-delay="700">
+                            <div class="flex gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group"
+                                data-aos="fade-left" data-aos-delay="700">
                                 <div
-                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                                    class="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
                                     <iconify-icon icon="solar:medal-star-linear" class="text-3xl"></iconify-icon>
                                 </div>
                                 <div class="space-y-1">
                                     <h3 class="font-black text-slate-900 text-lg uppercase tracking-tight">Excellence</h3>
-                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Striving for perfection in every product and service we deliver.</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">Striving for perfection in
+                                        every product and service we deliver.</p>
                                 </div>
                             </div>
                         </div>
@@ -178,298 +191,343 @@
         </div>
     </section>
 
-    <!-- Our Products Section -->
-    <section class="py-16 bg-slate-50">
+    <!-- Our Products Section (Clean Gallery) -->
+    <section class="py-28 bg-white relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-4xl p-8 lg:p-12 shadow-sm border border-slate-100">
-                <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20" data-aos="fade-up">
+                <div class="space-y-4 max-w-2xl text-center lg:text-left">
+                    <span class="text-sky-500 font-black tracking-[0.3em] text-[11px] uppercase block">OUR PRODUCT</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight tracking-tight uppercase">
+                        Precision Engineered <span class="text-sky-500">Solutions</span>
+                    </h2>
+                </div>
+                <div class="hidden lg:block">
+                    <a href="{{ route('product') }}"
+                        class="group inline-flex items-center gap-3 text-slate-900 font-black text-xs uppercase tracking-widest border-b-2 border-sky-600 pb-2 hover:text-sky-600 transition-colors">
+                        Explore Full Catalog
+                        <iconify-icon icon="solar:alt-arrow-right-linear"
+                            class="text-xl transition-transform group-hover:translate-x-2"></iconify-icon>
+                    </a>
+                </div>
+            </div>
 
-                    <!-- Title -->
-                    <div class="lg:w-1/4 space-y-4">
-                        <span class="text-sky-600 font-bold tracking-widest text-xs uppercase block">OUR PRODUCTS</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Comprehensive Range for Every Need
-                        </h2>
-                    </div>
-
-                    <!-- Products Grid -->
-                    <div class="lg:w-3/4">
-                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
-
-                            <!-- Product 1 -->
-                            <div data-aos="fade-up" data-aos-delay="100"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=200&h=200&fit=crop"
-                                        alt="Measuring"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Measuring<br>Instruments</h4>
-                            </div>
-
-                            <!-- Product 2 -->
-                            <div data-aos="fade-up" data-aos-delay="200"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1544724569-5f546fa602b5?q=80&w=200&h=200&fit=crop"
-                                        alt="Electrical"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Electrical</h4>
-                            </div>
-
-                            <!-- Product 3 -->
-                            <div data-aos="fade-up" data-aos-delay="300"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=200&h=200&fit=crop"
-                                        alt="Valve"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Valve Control<br>& Manual</h4>
-                            </div>
-
-                            <!-- Product 4 -->
-                            <div data-aos="fade-up" data-aos-delay="400"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=200&h=200&fit=crop"
-                                        alt="Mechanical"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Mechanical</h4>
-                            </div>
-
-                            <!-- Product 5 -->
-                            <div data-aos="fade-up" data-aos-delay="500"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=200&h=200&fit=crop"
-                                        alt="Computer"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Computer<br>Devices</h4>
-                            </div>
-
-                            <!-- Product 6 -->
-                            <div data-aos="fade-up" data-aos-delay="600"
-                                class="group relative bg-white border border-slate-100 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-600/5 transition-all duration-500 rounded-2xl p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-sky-50/0 to-sky-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                </div>
-                                <div
-                                    class="relative w-full aspect-square mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden group-hover:bg-white transition-colors">
-                                    <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=200&h=200&fit=crop"
-                                        alt="Supplies"
-                                        class="w-16 h-16 object-contain group-hover:scale-110 transition transform duration-500">
-                                </div>
-                                <h4
-                                    class="relative text-[13px] font-bold text-slate-800 leading-tight group-hover:text-sky-600 transition-colors">
-                                    Other Industrial<br>Supplies</h4>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                <!-- 1. Zirconia Analyzer -->
+                <a href="{{ route('product', 'zirconia-analyzer') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="0">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Zirconia Analyzer">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">RB
+                                Technologies</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                Zirconia Analyzer</h3>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- 2. Emissions Monitoring -->
+                <a href="{{ route('product', 'emissions-monitoring') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Emissions Monitoring">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Sick</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                Emissions Monitoring</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3. Control Valve -->
+                <a href="{{ route('product', 'control-valve') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1517089535811-0ce2eb31c9af?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Control Valve">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">RTK -
+                                Regeltechnik</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
+                                Control Valve</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 4. Transmitter -->
+                <a href="{{ route('product', 'transmitter') }}" class="group block" data-aos="fade-up" data-aos-delay="300">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Transmitter">
+                        </div>
+                        <div class="space-y-1">
+                            <span
+                                class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">PIEZUS</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
+                                Transmitter</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 5. Water Analyzer -->
+                <a href="{{ route('product', 'water-analyzer') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1543674892-7d64d45df18b?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Water Analyzer">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">ECD, PI</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                Water Analyzer</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 6. Fittings & Regulator -->
+                <a href="{{ route('product', 'fittings-regulator') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="https://images.unsplash.com/photo-1580901233033-9c88219b666d?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Fittings & Regulator">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-black text-amber-600 uppercase tracking-widest block">NAI
+                                LOK</span>
+                            <h3
+                                class="text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-tight">
+                                Fittings & Regulator</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-20 text-center lg:hidden">
+                <a href="{{ route('product') }}"
+                    class="inline-flex bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-slate-900/20">
+                    Explore All Products
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Services and Partners Section -->
-    <section class="py-12 bg-white border-b border-slate-50">
+    <!-- Our Services Section (Updated) -->
+    <section class="py-24 background-service relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
                 <!-- Services Title -->
-                <div class="lg:col-span-2 space-y-3 pt-4">
-                    <span class="text-sky-600 font-bold tracking-widest text-xs uppercase block">OUR SERVICES</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Solutions Beyond Supply</h2>
+                <div class="lg:col-span-4 space-y-6" data-aos="fade-right">
+                    <div class="space-y-3">
+                        <span class="text-yellow-500 font-black tracking-[0.3em] text-[11px] uppercase block">OUR
+                            SERVICES</span>
+                        <h2 class="text-4xl font-black text-slate-900 leading-tight uppercase tracking-tight">Technical
+                            <span class="text-sky-500">Solutions</span> Beyond Supply</h2>
+                    </div>
+                    <p class="text-slate-500 font-medium leading-relaxed">
+                        Our expertise goes beyond distribution. We provide comprehensive technical services to ensure your
+                        industrial systems operate at peak performance.
+                    </p>
+                    <div class="pt-4">
+                        <a href="{{ url('/service') }}"
+                            class="inline-flex items-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest border border-slate-200 hover:border-sky-600 hover:text-sky-600 transition-all shadow-sm">
+                            View All Services
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Services Grid -->
-                <div class="lg:col-span-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Service 1 -->
-                    <div data-aos="fade-up" data-aos-delay="100"
-                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
-                                <iconify-icon icon="solar:verified-check-linear" class="text-2xl"></iconify-icon>
-                            </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 1. Transformator Services -->
+                    <a href="{{ route('service', 'transformator') }}"
+                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                        data-aos="fade-up" data-aos-delay="0">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:bolt-circle-linear" class="text-3xl"></iconify-icon>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 mb-1">Procurement Solutions</h3>
-                            <p class="text-[13px] text-slate-500 leading-relaxed">Efficient and reliable procurement
-                                tailored to your needs.</p>
-                        </div>
-                    </div>
+                        <h3
+                            class="text-lg font-black text-slate-900 mb-3 uppercase tracking-tight group-hover:text-sky-600 transition-colors">
+                            Transformator Services</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">Comprehensive maintenance, testing,
+                            and oil purification for power transformers.</p>
+                    </a>
 
-                    <!-- Service 2 -->
-                    <div data-aos="fade-up" data-aos-delay="200"
-                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
-                                <iconify-icon icon="solar:bolt-linear" class="text-2xl"></iconify-icon>
-                            </div>
+                    <!-- 2. Valve Services -->
+                    <a href="{{ route('service', 'valve') }}"
+                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:settings-linear" class="text-3xl"></iconify-icon>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 mb-1">General Supply</h3>
-                            <p class="text-[13px] text-slate-500 leading-relaxed">Comprehensive supply of industrial
-                                products and equipment.</p>
-                        </div>
-                    </div>
+                        <h3
+                            class="text-lg font-black text-slate-900 mb-3 uppercase tracking-tight group-hover:text-sky-600 transition-colors">
+                            Valve Services</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">Overhaul, calibration, and leak
+                            testing for all types of industrial valves.</p>
+                    </a>
 
-                    <!-- Service 3 -->
-                    <div data-aos="fade-up" data-aos-delay="300"
-                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
-                                <iconify-icon icon="solar:settings-linear" class="text-2xl"></iconify-icon>
-                            </div>
+                    <!-- 3. Pump Services -->
+                    <a href="{{ route('service', 'pump') }}"
+                        class="group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:refresh-linear" class="text-3xl"></iconify-icon>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 mb-1">Industrial Support</h3>
-                            <p class="text-[13px] text-slate-500 leading-relaxed">Technical support and after-sales service
-                                you can rely on.</p>
-                        </div>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div data-aos="fade-up" data-aos-delay="400"
-                        class="flex gap-4 p-4 border border-transparent hover:border-sky-50 hover:bg-slate-50/50 rounded-2xl transition group">
-                        <div class="shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition duration-300">
-                                <iconify-icon icon="solar:dollar-minimalistic-linear" class="text-2xl"></iconify-icon>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 mb-1">Business Solutions</h3>
-                            <p class="text-[13px] text-slate-500 leading-relaxed">Innovative solutions to improve efficiency
-                                and productivity.</p>
-                        </div>
-                    </div>
+                        <h3
+                            class="text-lg font-black text-slate-900 mb-3 uppercase tracking-tight group-hover:text-sky-600 transition-colors">
+                            Pump Services</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">Precision alignment, repair, and
+                            performance optimization for industrial pumps.</p>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Clients Section (Logo Cloud) -->
-    <section class="py-24 bg-white overflow-hidden border-b border-slate-100">
+    <section class="py-28 bg-white overflow-hidden relative">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-slate-100 to-transparent">
+        </div>
+
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 space-y-4">
-                <span class="text-sky-600 font-black tracking-[0.2em] text-[11px] uppercase block" data-aos="fade-up">VALUED CLIENTS
-                </span>
+            <div class="flex flex-col items-center text-center mb-20 space-y-4">
+                <span class="text-yellow-500 font-bold tracking-[0.3em] text-[10px] uppercase block" data-aos="fade-up">Our
+                    Cusotmers</span>
                 <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight" data-aos="fade-up"
-                    data-aos-delay="100">Trusted by Industry Leaders</h2>
-                <div class="w-12 h-1 bg-sky-600 mx-auto rounded-full" data-aos="zoom-in" data-aos-delay="200"></div>
+                    data-aos-delay="100">
+                    Trusted by <span class="text-sky-500">Industry Leaders</span>
+                </h2>
+                <p class="text-slate-500 font-medium max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Partnering with Indonesia's largest enterprises to power sustainable industrial growth.
+                </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 items-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16 items-center">
                 @php
                     $clients = [
-                        'Bakrie.webp',
-                        'app-sinarmas.webp',
-                        'april.webp',
-                        'indopalm.webp',
-                        'pjb.webp',
-                        'pusri.webp',
-                        'star-enery.webp',
-                        'tel.webp'
+                        ['file' => 'Bakrie.webp', 'name' => 'Bakrie'],
+                        ['file' => 'app-sinarmas.webp', 'name' => 'APP Sinar Mas'],
+                        ['file' => 'april.webp', 'name' => 'APRIL'],
+                        ['file' => 'indopalm.webp', 'name' => 'Indopalm'],
+                        ['file' => 'pjb.webp', 'name' => 'PJB'],
+                        ['file' => 'pusri.webp', 'name' => 'Pusri'],
+                        ['file' => 'star-enery.webp', 'name' => 'Star Energy'],
+                        ['file' => 'tel.webp', 'name' => 'TEL']
                     ];
                 @endphp
                 @foreach($clients as $index => $client)
-                    <div data-aos="fade-up" data-aos-delay="{{ $index * 100 }}"
-                        class="flex items-center justify-center p-8 rounded-3xl bg-slate-50/50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-900/5 hover:-translate-y-2 transition-all duration-500 group">
-                        <img src="{{ asset('assets/customers/' . $client) }}"
-                            class="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-700"
-                            alt="Client Logo">
+                    <div data-aos="fade-up" data-aos-delay="{{ $index * 50 }}" class="flex items-center justify-center group">
+                        <img src="{{ asset('assets/customers/' . $client['file']) }}"
+                            class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                            alt="{{ $client['name'] }} Logo">
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    <!-- Our Partners Section (Logo Cloud) -->
-    <section class="py-24 bg-slate-50 overflow-hidden border-b border-slate-100">
+    <section class="py-28 bg-white relative overflow-hidden group/partners">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-slate-200 to-transparent">
+        </div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-sky-50 rounded-full blur-[100px] opacity-50 -z-10"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-slate-50 rounded-full blur-[100px] opacity-50 -z-10"></div>
+
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 space-y-4">
-                <span class="text-sky-600 font-black tracking-[0.2em] text-[11px] uppercase block" data-aos="fade-up">GLOBAL
-                    PARTNERSHIPS</span>
-                <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight" data-aos="fade-up"
-                    data-aos-delay="100">Our Strategic Partners</h2>
-                <div class="w-12 h-1 bg-sky-600 mx-auto rounded-full" data-aos="zoom-in" data-aos-delay="200"></div>
+            <div class="flex flex-col items-center text-center mb-20 space-y-6">
+                <h2 class="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Our <span class="text-sky-500">Distributors</span>
+                </h2>
+                <p class="text-slate-500 font-medium max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Collaborating with industry leaders to deliver world-class technical equipment and engineering solutions
+                    across Indonesia.
+                </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                 @php
                     $partners = [
-                        'sick.webp',
-                        'rbt.webp',
-                        'piezus.webp',
-                        'rtk.webp',
-                        'redvalve.webp',
-                        'nai-lok.webp',
-                        'ecd.webp',
-                        'pi.webp',
-                        'saxon.webp'
+                        ['file' => 'sick.webp', 'name' => 'SICK'],
+                        ['file' => 'rbt.webp', 'name' => 'RBT'],
+                        ['file' => 'piezus.webp', 'name' => 'Piezus'],
+                        ['file' => 'rtk.webp', 'name' => 'RTK'],
+                        ['file' => 'redvalve.webp', 'name' => 'Red Valve'],
+                        ['file' => 'nai-lok.webp', 'name' => 'Nai-Lok'],
+                        ['file' => 'ecd.webp', 'name' => 'ECD'],
+                        ['file' => 'pi.webp', 'name' => 'PI'],
+                        ['file' => 'saxon.webp', 'name' => 'Saxon'],
                     ];
                 @endphp
                 @foreach($partners as $index => $partner)
-                    <div data-aos="fade-up" data-aos-delay="{{ $index * 100 }}"
-                        class="flex items-center justify-center p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-2xl hover:shadow-sky-900/5 hover:-translate-y-2 transition-all duration-500 group">
-                        <img src="{{ asset('assets/distributors/' . $partner) }}"
-                            class="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-700"
-                            alt="Partner Logo">
+                    <div data-aos="fade-up" data-aos-delay="{{ $index * 50 }}" class="flex items-center justify-center group">
+                        <img src="{{ asset('assets/distributors/' . $partner['file']) }}"
+                            class="max-h-12 lg:max-h-14 w-auto object-contain scale-100 group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                            alt="{{ $partner['name'] }} Logo">
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    <!-- Industries We Serve Section (Cinematic Redesign) -->
     <section class="py-28 bg-white relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-[100px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-[100px] -z-10 -translate-x-1/2 translate-y-1/2">
+        </div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16" data-aos="fade-up">
                 <div class="space-y-4 max-w-2xl">
-                    <span class="text-yellow-600 font-bold tracking-[0.3em] text-[10px] uppercase block">Market Sectors</span>
-                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight">Industries We <span class="text-sky-500">Serve</span></h2>
-                    <p class="text-slate-500 font-medium leading-relaxed">Providing world-class technical solutions and high-precision equipment to support the backbone of Indonesia's industrial landscape.</p>
+                    <span class="text-yellow-500 font-bold tracking-[0.3em] text-[10px] uppercase block">Our
+                        Capabilities</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">Industries We <span
+                            class="text-sky-500">Serve</span></h2>
+                    <p class="text-slate-500 font-medium leading-relaxed">Providing world-class technical solutions and
+                        high-precision equipment to support the backbone of Indonesia's industrial landscape.</p>
                 </div>
+
+                <div class="flex items-center gap-3 lg:hidden">
+                    <button
+                        onclick="document.getElementById('industry-container').scrollBy({left: -320, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
+                        <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
+                    </button>
+                    <button
+                        onclick="document.getElementById('industry-container').scrollBy({left: 320, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
+                        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
+                    </button>
+                </div>
+
                 <div class="hidden lg:block pb-2">
                     <div class="flex gap-2">
                         <div class="w-12 h-1 bg-sky-600 rounded-full"></div>
@@ -479,27 +537,32 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Pulp & Paper -->
-                <div class="group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ asset('assets/industries/pulp-paper.webp') }}" alt="Pulp & Paper" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    
+            <div id="industry-container"
+                class="flex lg:grid overflow-x-auto lg:overflow-visible gap-6 lg:gap-x-8 lg:gap-y-12 pb-8 lg:pb-0 no-scrollbar snap-x snap-mandatory lg:grid-cols-4 lg:grid-rows-2">
+
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="{{ asset('assets/industries/pulp-paper.webp') }}" alt="Pulp & Paper"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
                     <div class="absolute inset-0 p-8 flex flex-col justify-end">
                         <div class="space-y-6">
-                            <!-- Icon Badge -->
-                            <div class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
-                                <iconify-icon icon="solar:buildings-bold-duotone" class="text-3xl"></iconify-icon>
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:reorder-bold-duotone" class="text-3xl"></iconify-icon>
                             </div>
                             <div class="space-y-2">
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
-                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Manufacturing</span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Manufacturing</span>
                                 </div>
-                                <h4 class="text-2xl font-black text-white tracking-tight">Pulp & Paper</h4>
-                                <p class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                <h3 class="text-2xl font-black text-white tracking-tight">Pulp & Paper</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                                     Supporting sustainable production with advanced monitoring and engineering tools.
                                 </p>
                             </div>
@@ -507,74 +570,30 @@
                     </div>
                 </div>
 
-                <!-- Power Plant -->
-                <div class="group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-8" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{{ asset('assets/industries/power-plan.webp') }}" alt="Power Plant" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    
+                <!-- 2. Refinery -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="{{ asset('assets/industries/refinery.webp') }}" alt="Refinery"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
                     <div class="absolute inset-0 p-8 flex flex-col justify-end">
                         <div class="space-y-6">
-                            <div class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
-                                <iconify-icon icon="solar:bolt-bold-duotone" class="text-3xl"></iconify-icon>
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:fire-bold-duotone" class="text-3xl"></iconify-icon>
                             </div>
                             <div class="space-y-2">
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
-                                    <span class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Energy</span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
                                 </div>
-                                <h4 class="text-2xl font-black text-white tracking-tight">Power Plant</h4>
-                                <p class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Ensuring stability and efficiency for power generation systems nationwide.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Food & Beverage -->
-                <div class="group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50" data-aos="fade-up" data-aos-delay="300">
-                    <img src="{{ asset('assets/industries/food-beverage.webp') }}" alt="Food & Beverage" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                        <div class="space-y-6">
-                            <div class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
-                                <iconify-icon icon="solar:cup-bold-duotone" class="text-3xl"></iconify-icon>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
-                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
-                                </div>
-                                <h4 class="text-2xl font-black text-white tracking-tight">Food & Beverage</h4>
-                                <p class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                    Providing sanitary and precise measurement solutions for food safety.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Refinery -->
-                <div class="group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-8" data-aos="fade-up" data-aos-delay="400">
-                    <img src="{{ asset('assets/industries/refinery.webp') }}" alt="Refinery" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                        <div class="space-y-6">
-                            <div class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
-                                <iconify-icon icon="solar:test-tube-bold-duotone" class="text-3xl"></iconify-icon>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
-                                    <span class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Oil & Gas</span>
-                                </div>
-                                <h4 class="text-2xl font-black text-white tracking-tight">Refinery</h4>
-                                <p class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                <h3 class="text-2xl font-black text-white tracking-tight">Refinery</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                                     Delivering high-performance components for complex refining processes.
                                 </p>
                             </div>
@@ -582,7 +601,203 @@
                     </div>
                 </div>
 
+                <!-- 3. Power Plant -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="{{ asset('assets/industries/power-plan.webp') }}" alt="Power Plant"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:bolt-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Energy</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Power Plant</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Ensuring stability and efficiency for power generation systems nationwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Palm Oil -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <img src="{{ asset('assets/industries/palm_oil.webp') }}" alt="Palm Oil"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:leaf-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Agri-Industry</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Palm Oil</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Optimizing extraction and processing with precision industrial solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Fertilizer -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <img src="{{ asset('assets/industries/fertilizer.webp') }}" alt="Fertilizer"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:box-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Agriculture</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Fertilizer</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Enhancing production efficiency for agricultural supply chains.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Oil & Gas Upstream -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <img src="{{ asset('assets/industries/oil_gas_upstream.webp') }}" alt="Oil & Gas Upstream"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:settings-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Resources</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Oil & Gas Upstream</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Supporting exploration and production with robust technical equipment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. General Industry -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="700">
+                    <img src="{{ asset('assets/industries/general_industry.webp') }}" alt="General Industry"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:buildings-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">General</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">General Industry</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Providing versatile solutions for diverse manufacturing and specialized trading needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Chemical -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="800">
+                    <img src="{{ asset('assets/industries/chemical.webp') }}" alt="Chemical"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:test-tube-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Chemical</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Ensuring safety and high precision in specialized chemical processing and handling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <style>
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
         </div>
     </section>
 @endsection

@@ -14,8 +14,12 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-Route::get('/service', function () {
-    return view('pages.service');
+Route::get('/product/{slug?}', function ($slug = null) {
+    return view('pages.product', compact('slug'));
+})->name('product');
+
+Route::get('/service/{type?}', function ($type = null) {
+    return view('pages.service', compact('type'));
 })->name('service');
 
 Route::get('/news', function () {

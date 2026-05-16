@@ -1,11 +1,63 @@
+@php
+    $services = [
+        'transformator' => [
+            'title' => 'Transformator Services',
+            'subtitle' => 'INSTALLATION & MAINTENANCE',
+            'description' => 'Providing end-to-end solutions for industrial transformers, ensuring optimal power distribution and system reliability.',
+            'image' => 'https://images.unsplash.com/photo-1544724569-5f546fa602b5?auto=format&fit=crop&q=80&w=2000',
+            'icon' => 'solar:bolt-bold-duotone',
+            'color' => 'sky',
+            'features' => [
+                'Installation and Commissioning',
+                'Periodic Maintenance & Oil Testing',
+                'Transformer Repair & Refurbishment',
+                'Emergency Troubleshooting',
+                'Power Quality Analysis'
+            ]
+        ],
+        'valve' => [
+            'title' => 'Valve Services',
+            'subtitle' => 'REPAIR & CALIBRATION',
+            'description' => 'Expert maintenance and repair services for all types of industrial valves, including control valves and safety relief valves.',
+            'image' => 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000',
+            'icon' => 'solar:settings-bold-duotone',
+            'color' => 'amber',
+            'features' => [
+                'In-situ Repair and Refurbishment',
+                'Testing & Calibration with Certification',
+                'Valve Management & Diagnostics',
+                'Supply of High-Quality Spare Parts',
+                'Leak Detection & Prevention'
+            ]
+        ],
+        'pump' => [
+            'title' => 'Pump Services',
+            'subtitle' => 'OVERHAUL & ALIGNMENT',
+            'description' => 'Comprehensive pump engineering solutions to maximize uptime and energy efficiency of your pumping systems.',
+            'image' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000',
+            'icon' => 'solar:refresh-bold-duotone',
+            'color' => 'emerald',
+            'features' => [
+                'Precision Laser Alignment',
+                'Complete Overhaul & Component Repair',
+                'Performance Analysis & Optimization',
+                'Vibration Analysis & Diagnostics',
+                'Mechanical Seal Replacement'
+            ]
+        ]
+    ];
+
+    $currentService = $type && isset($services[$type]) ? $services[$type] : null;
+@endphp
+
 @extends('layouts.app')
 
-@section('title', 'Our Services - PT. Indotek Prima Jaya')
+@section('title', $currentService ? $currentService['title'] . ' - PT. Indotek Prima Jaya' : 'Our Services - PT. Indotek Prima Jaya')
 
 @section('content')
     <!-- Hero Section -->
     <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 overflow-hidden" 
-             style="background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
+             style="background: url('{{ $currentService ? $currentService['image'] : 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000' }}'); background-size: cover; background-position: center;">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -19,23 +71,38 @@
                     </div>
 
                     <div class="space-y-3">
-                        <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">OUR SERVICES</span>
+                        <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block">
+                            {{ $currentService ? $currentService['subtitle'] : 'OUR SERVICES' }}
+                        </span>
                         <h1 class="text-[54px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
-                            Professional Industrial<br>
-                            Supply & Business <span class="text-sky-600">Solutions</span>
+                            @if($currentService)
+                                {!! str_replace(' Services', '<br><span class="text-sky-700">Services</span>', $currentService['title']) !!}
+                            @else
+                                Professional Industrial<br>
+                                Supply & Business <span class="text-sky-700">Solutions</span>
+                            @endif
                         </h1>
                     </div>
 
                     <p class="text-[16px] text-slate-600 leading-relaxed max-w-2xl font-medium">
-                        PT. INDOTEK PRIMA JAYA is a trusted general supplier providing procurement, engineering tools, measuring instruments, mechanical, electrical, computer devices, and related industrial solutions to support your business operations with quality and reliability.
+                        {{ $currentService ? $currentService['description'] : 'PT. INDOTEK PRIMA JAYA is a trusted general supplier providing procurement, engineering tools, measuring instruments, mechanical, electrical, computer devices, and related industrial solutions to support your business operations with quality and reliability.' }}
                     </p>
+
+                    @if($currentService)
+                    <div class="pt-4">
+                        <a href="{{ url('/contact') }}" class="inline-flex bg-sky-700 hover:bg-sky-800 text-white px-8 py-4 rounded-xl font-bold text-[14px] transition items-center gap-3 shadow-xl shadow-sky-600/20">
+                            Request This Service
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
+                        </a>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
 
         <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
-        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-5">
+            <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90"></div>
             <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
             <div class="absolute bottom-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0)_75%)] blur-3xl opacity-100"></div>
@@ -43,18 +110,19 @@
         </div>
     </section>
 
-    <!-- Core Services Section -->
+    @if(!$currentService)
+    <!-- Core Services Section (Only for General Page) -->
     <section class="py-24 bg-white overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">OUR CORE SERVICES</span>
+                <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">OUR CORE SERVICES</span>
                 <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Comprehensive Business Solutions</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Procurement Solutions -->
                 <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-700 mb-8 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300 shadow-sm">
                         <iconify-icon icon="solar:box-minimalistic-linear" class="text-3xl"></iconify-icon>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">Procurement Solutions</h3>
@@ -65,7 +133,7 @@
 
                 <!-- General Supply -->
                 <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-700 mb-8 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300 shadow-sm">
                         <iconify-icon icon="solar:cart-large-linear" class="text-3xl"></iconify-icon>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">General Supply</h3>
@@ -76,7 +144,7 @@
 
                 <!-- Industrial Support -->
                 <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-700 mb-8 group-hover:bg-sky-700 group-hover:text-white transition-all duration-300 shadow-sm">
                         <iconify-icon icon="solar:settings-bold-duotone" class="text-3xl"></iconify-icon>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">Industrial Support</h3>
@@ -84,48 +152,55 @@
                         Technical and operational support to ensure smooth operations and maximize equipment performance.
                     </p>
                 </div>
-
-                <!-- Business Solutions -->
-                <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                        <iconify-icon icon="solar:case-linear" class="text-3xl"></iconify-icon>
+            </div>
+        </div>
+    </section>
+    @else
+    <!-- Specific Service Detail Section -->
+    <section class="py-24 bg-white overflow-hidden relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="aspect-square rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200">
+                        <img src="{{ $currentService['image'] }}" class="w-full h-full object-cover" alt="{{ $currentService['title'] }}">
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">Business Solutions</h3>
-                    <p class="text-slate-500 text-[14px] leading-relaxed">
-                        Innovative business solutions designed to improve efficiency, productivity, and long-term growth for your organization.
-                    </p>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-{{ $currentService['color'] }}-600/10 rounded-full blur-3xl"></div>
                 </div>
-
-                <!-- Technical Consultation -->
-                <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                        <iconify-icon icon="solar:user-speak-linear" class="text-3xl"></iconify-icon>
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-{{ $currentService['color'] }}-600 flex items-center justify-center text-white shadow-xl shadow-{{ $currentService['color'] }}-600/20">
+                            <iconify-icon icon="{{ $currentService['icon'] }}" class="text-3xl"></iconify-icon>
+                        </div>
+                        <h2 class="text-4xl font-black text-slate-900 tracking-tight uppercase">Service Details</h2>
+                        <p class="text-slate-500 text-lg leading-relaxed font-medium">
+                            Our {{ strtolower($currentService['title']) }} are designed to meet the highest industry standards, combining technical expertise with state-of-the-art equipment.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">Technical Consultation</h3>
-                    <p class="text-slate-500 text-[14px] leading-relaxed">
-                        Expert consultation to help you select the right products and solutions for your industrial applications.
-                    </p>
-                </div>
 
-                <!-- After-Sales Service -->
-                <div class="bg-slate-50 p-10 rounded-[32px] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-sky-600/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-sky-600 mb-8 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                        <iconify-icon icon="solar:settings-minimalistic-linear" class="text-3xl"></iconify-icon>
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest">Key Capabilities</h4>
+                        <div class="grid grid-cols-1 gap-4">
+                            @foreach($currentService['features'] as $feature)
+                                <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-{{ $currentService['color'] }}-500 transition-colors">
+                                    <div class="w-8 h-8 rounded-full bg-{{ $currentService['color'] }}-100 flex items-center justify-center text-{{ $currentService['color'] }}-600 shrink-0">
+                                        <iconify-icon icon="solar:check-circle-bold" class="text-lg"></iconify-icon>
+                                    </div>
+                                    <span class="text-slate-700 font-bold text-sm">{{ $feature }}</span>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4 uppercase">After-Sales Service</h3>
-                    <p class="text-slate-500 text-[14px] leading-relaxed">
-                        Reliable after-sales support including maintenance guidance, troubleshooting, and spare part availability.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
+    @endif
 
     <!-- Our Service Process Section -->
     <section class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">HOW WE WORK</span>
+                <span class="text-sky-700 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">HOW WE WORK</span>
                 <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Our Service Process</h2>
             </div>
 
@@ -137,13 +212,13 @@
                     <!-- Step 1 -->
                     <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="0">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
                                 <iconify-icon icon="solar:chat-round-dots-linear" class="text-4xl"></iconify-icon>
                             </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-600 text-white font-black flex items-center justify-center border-4 border-slate-50">1</div>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">1</div>
                         </div>
                         <div class="space-y-2">
-                            <h4 class="text-xl font-bold text-slate-900 uppercase">Consultation</h4>
+                            <h3 class="text-xl font-bold text-slate-900 uppercase">Consultation</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">We listen to your needs and understand your business requirements.</p>
                         </div>
                     </div>
@@ -151,13 +226,13 @@
                     <!-- Step 2 -->
                     <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
                                 <iconify-icon icon="solar:box-linear" class="text-4xl"></iconify-icon>
                             </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-600 text-white font-black flex items-center justify-center border-4 border-slate-50">2</div>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">2</div>
                         </div>
                         <div class="space-y-2">
-                            <h4 class="text-xl font-bold text-slate-900 uppercase">Product Sourcing</h4>
+                            <h3 class="text-xl font-bold text-slate-900 uppercase">Product Sourcing</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">We source the best products from trusted brands that meet your specifications.</p>
                         </div>
                     </div>
@@ -165,13 +240,13 @@
                     <!-- Step 3 -->
                     <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
                                 <iconify-icon icon="solar:delivery-linear" class="text-4xl"></iconify-icon>
                             </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-600 text-white font-black flex items-center justify-center border-4 border-slate-50">3</div>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">3</div>
                         </div>
                         <div class="space-y-2">
-                            <h4 class="text-xl font-bold text-slate-900 uppercase">Delivery & Support</h4>
+                            <h3 class="text-xl font-bold text-slate-900 uppercase">Delivery & Support</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">We ensure timely delivery and provide full technical support for your operations.</p>
                         </div>
                     </div>
@@ -179,129 +254,15 @@
                     <!-- Step 4 -->
                     <div class="text-center space-y-6 group" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-32 h-32 rounded-full bg-white border border-slate-100 flex items-center justify-center text-sky-700 shadow-xl group-hover:scale-110 transition-transform duration-500">
                                 <iconify-icon icon="solar:hand-shake-linear" class="text-4xl"></iconify-icon>
                             </div>
-                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-600 text-white font-black flex items-center justify-center border-4 border-slate-50">4</div>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-sky-700 text-white font-black flex items-center justify-center border-4 border-slate-50">4</div>
                         </div>
                         <div class="space-y-2">
-                            <h4 class="text-xl font-bold text-slate-900 uppercase">Long-Term Partnership</h4>
+                            <h3 class="text-xl font-bold text-slate-900 uppercase">Long-Term Partnership</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">We build lasting relationships and grow together with your business success.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Professional Team -->
-                <div class="flex flex-col items-center text-center space-y-4 p-8 rounded-3xl border border-slate-100 hover:border-sky-600 transition-colors group" data-aos="fade-up" data-aos-delay="0">
-                    <iconify-icon icon="solar:users-group-rounded-linear" class="text-4xl text-sky-600 group-hover:scale-110 transition-transform"></iconify-icon>
-                    <h4 class="text-lg font-bold text-slate-900 uppercase">Professional Team</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Experienced and dedicated team ready to deliver the best solutions for your business.</p>
-                </div>
-
-                <!-- Trusted Quality -->
-                <div class="flex flex-col items-center text-center space-y-4 p-8 rounded-3xl border border-slate-100 hover:border-sky-600 transition-colors group" data-aos="fade-up" data-aos-delay="100">
-                    <iconify-icon icon="solar:shield-check-linear" class="text-4xl text-sky-600 group-hover:scale-110 transition-transform"></iconify-icon>
-                    <h4 class="text-lg font-bold text-slate-900 uppercase">Trusted Quality</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">We provide high-quality products from trusted brands that you can rely on.</p>
-                </div>
-
-                <!-- Fast Response -->
-                <div class="flex flex-col items-center text-center space-y-4 p-8 rounded-3xl border border-slate-100 hover:border-sky-600 transition-colors group" data-aos="fade-up" data-aos-delay="200">
-                    <iconify-icon icon="solar:history-linear" class="text-4xl text-sky-600 group-hover:scale-110 transition-transform"></iconify-icon>
-                    <h4 class="text-lg font-bold text-slate-900 uppercase">Fast Response</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Quick response and reliable service to keep your operations running smoothly.</p>
-                </div>
-
-                <!-- Reliable Partnership -->
-                <div class="flex flex-col items-center text-center space-y-4 p-8 rounded-3xl border border-slate-100 hover:border-sky-600 transition-colors group" data-aos="fade-up" data-aos-delay="300">
-                    <iconify-icon icon="solar:hand-shake-linear" class="text-4xl text-sky-600 group-hover:scale-110 transition-transform"></iconify-icon>
-                    <h4 class="text-lg font-bold text-slate-900 uppercase">Reliable Partnership</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Committed to building long-term partnerships based on trust and integrity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Supporting Your Success Section -->
-    <section class="py-12 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block mb-3">SUPPORTING YOUR SUCCESS</span>
-            </div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <img src="https://images.unsplash.com/photo-1521791136366-3e206e00072b?auto=format&fit=crop&q=80&w=800" class="rounded-2xl h-48 w-full object-cover shadow-lg" data-aos="zoom-in" data-aos-delay="0">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" class="rounded-2xl h-48 w-full object-cover shadow-lg" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=800" class="rounded-2xl h-48 w-full object-cover shadow-lg" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=800" class="rounded-2xl h-48 w-full object-cover shadow-lg" data-aos="zoom-in" data-aos-delay="300">
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries We Support Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-                <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">INDUSTRIES WE SUPPORT</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Supporting Essential Industries</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Pulp & Paper -->
-                <div class="group relative overflow-hidden rounded-3xl h-[300px]" data-aos="zoom-in" data-aos-delay="0">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Pulp & Paper">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg shrink-0">
-                            <iconify-icon icon="solar:reorder-linear" class="text-xl"></iconify-icon>
-                        </div>
-                        <h4 class="text-lg font-bold text-white uppercase tracking-wide">Pulp & Paper</h4>
-                    </div>
-                </div>
-
-                <!-- Power Plant -->
-                <div class="group relative overflow-hidden rounded-3xl h-[300px]" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Power Plant">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg shrink-0">
-                            <iconify-icon icon="solar:bolt-linear" class="text-xl"></iconify-icon>
-                        </div>
-                        <h4 class="text-lg font-bold text-white uppercase tracking-wide">Power Plant</h4>
-                    </div>
-                </div>
-
-                <!-- Food & Beverage -->
-                <div class="group relative overflow-hidden rounded-3xl h-[300px]" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Food & Beverage">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg shrink-0">
-                            <iconify-icon icon="solar:cup-hot-linear" class="text-xl"></iconify-icon>
-                        </div>
-                        <h4 class="text-lg font-bold text-white uppercase tracking-wide">Food & Beverage</h4>
-                    </div>
-                </div>
-
-                <!-- Refinery -->
-                <div class="group relative overflow-hidden rounded-3xl h-[300px]" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1542337311-64d17ec23f14?auto=format&fit=crop&q=80&w=800" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Refinery">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg shrink-0">
-                            <iconify-icon icon="solar:fire-linear" class="text-xl"></iconify-icon>
-                        </div>
-                        <h4 class="text-lg font-bold text-white uppercase tracking-wide">Refinery</h4>
                     </div>
                 </div>
             </div>
@@ -328,7 +289,7 @@
                         </p>
                     </div>
                     <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                        <a href="{{ url('/contact') }}" class="group bg-white hover:bg-sky-500 text-[#0f172a] hover:text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-4">
+                        <a href="{{ url('/contact') }}" class="group bg-white hover:bg-sky-700 text-[#0f172a] hover:text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-4">
                             Contact Our Team
                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-2xl transition-transform group-hover:translate-x-2"></iconify-icon>
                         </a>

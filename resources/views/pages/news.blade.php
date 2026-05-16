@@ -19,23 +19,23 @@
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured News">
                         <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                         <div class="absolute bottom-10 left-10 right-10 space-y-4">
-                            <span class="inline-block px-3 py-1 rounded-full bg-sky-600 text-white text-[10px] font-black uppercase tracking-widest">Featured Article</span>
-                            <h2 class="text-3xl lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
+                            <span class="inline-block px-3 py-1 rounded-full bg-sky-700 text-white text-[10px] font-black uppercase tracking-widest">Featured Article</span>
+                            <h1 class="text-3xl lg:text-5xl font-black text-white tracking-tight leading-tight group-hover:text-sky-400 transition-colors">
                                 The Future of Industrial Automation: Key Trends to Watch
-                            </h2>
+                            </h1>
                         </div>
                     </a>
                     
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 bg-white p-8 rounded-lg shadow-sm border border-slate-100">
                         <div class="flex items-center gap-4 text-slate-400 text-xs font-bold uppercase tracking-widest">
                             <div class="flex items-center gap-2">
-                                <iconify-icon icon="solar:calendar-linear" class="text-lg text-sky-600"></iconify-icon>
+                                <iconify-icon icon="solar:calendar-linear" class="text-lg text-sky-700"></iconify-icon>
                                 <span>May 15, 2026</span>
                             </div>
                             <div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
                             <span>8 min read</span>
                         </div>
-                        <a href="{{ route('news.detail') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-600 transition-all group/btn shadow-lg shadow-slate-900/10">
+                        <a href="{{ route('news.detail') }}" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-md font-black text-[11px] uppercase tracking-widest hover:bg-sky-700 transition-all group/btn shadow-lg shadow-slate-900/10">
                             Read Full Article
                             <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg transition-transform group-hover/btn:translate-x-1"></iconify-icon>
                         </a>
@@ -47,14 +47,14 @@
                     <!-- Small Item 1 -->
                     <a href="#" class="grid grid-cols-12 gap-6 group">
                         <div class="col-span-8 space-y-2">
-                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors line-clamp-2">
+                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
                                 PT. Indotek Prima Jaya Expands Strategic Partnership with Fuji Electric
                             </h3>
                             <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
                                 The collaboration aims to bring advanced automation solutions to the Indonesian manufacturing sector...
                             </p>
                             <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-600">Company</span>
+                                <span class="text-sky-700">Company</span>
                                 <div class="w-1 h-1 rounded-full bg-slate-200"></div>
                                 <span class="text-slate-400">4 min read</span>
                             </div>
@@ -68,14 +68,14 @@
                     <!-- Small Item 2 -->
                     <a href="#" class="grid grid-cols-12 gap-6 group">
                         <div class="col-span-8 space-y-2">
-                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors line-clamp-2">
+                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
                                 New Safety Standards for Refinery Maintenance in 2024
                             </h3>
                             <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
                                 Understanding the latest regulations to ensure zero-accident operations in high-risk industrial environments...
                             </p>
                             <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-600">Safety</span>
+                                <span class="text-sky-700">Safety</span>
                                 <div class="w-1 h-1 rounded-full bg-slate-200"></div>
                                 <span class="text-slate-400">6 min read</span>
                             </div>
@@ -89,14 +89,14 @@
                     <!-- Small Item 3 -->
                     <a href="#" class="grid grid-cols-12 gap-6 group">
                         <div class="col-span-8 space-y-2">
-                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors line-clamp-2">
+                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors line-clamp-2">
                                 How IoT is Transforming Supply Chain Management
                             </h3>
                             <p class="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
                                 Real-time tracking and predictive analytics are becoming essential for modern logistics...
                             </p>
                             <div class="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest">
-                                <span class="text-sky-600">Technology</span>
+                                <span class="text-sky-700">Technology</span>
                                 <div class="w-1 h-1 rounded-full bg-slate-200"></div>
                                 <span class="text-slate-400">2 min read</span>
                             </div>
@@ -163,12 +163,12 @@
                             <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
-                                <span class="bg-sky-600 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Industry</span>
+                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Industry</span>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 15, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors">
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
                                 Key Benefits of Regular Maintenance for Industrial Boilers
                             </h4>
                             <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
@@ -183,12 +183,12 @@
                             <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
-                                <span class="bg-sky-600 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Business</span>
+                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Business</span>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 12, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors">
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
                                 Building Trust Through Reliable Supply Chains
                             </h4>
                             <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
@@ -202,12 +202,12 @@
                             <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=600" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Grid Item">
                             <div class="absolute top-4 left-4">
-                                <span class="bg-sky-600 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Support</span>
+                                <span class="bg-sky-700 text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider shadow-lg">Support</span>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">May 10, 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-600 transition-colors">
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-sky-700 transition-colors">
                                 Enhancing Customer Experience with Expert Support
                             </h4>
                             <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">

@@ -11,7 +11,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-8 relative z-10" data-aos="fade-right">
                     <div class="space-y-3">
-                        <span class="text-yellow-600 font-bold tracking-[0.2em] text-[12px] uppercase block">ABOUT US</span>
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">ABOUT US</span>
                         <h1
                             class="text-[54px] lg:text-[72px] font-extrabold text-slate-900 leading-[1.05] tracking-tight uppercase">
                             About<br>
@@ -50,12 +50,13 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative" data-aos="fade-right">
                     <img src="{{ asset('assets/office.webp') }}"
-                        class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover object-left" alt="Office Building">
+                        class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover object-left"
+                        alt="Office Building">
                     <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-sky-50 rounded-full -z-10 blur-3xl"></div>
                 </div>
                 <div class="space-y-8" data-aos="fade-left">
                     <div class="space-y-3">
-                        <span class="text-yellow-600 font-bold tracking-[0.2em] text-[12px] uppercase block">WHO WE
+                        <span class="text-yellow-500 font-bold tracking-[0.2em] text-[12px] uppercase block">WHO WE
                             ARE</span>
                         <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
                             Your Reliable Partner<br>for Sustainable Growth
@@ -82,6 +83,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Vision & Mission Section -->
     <section class="py-24 background-vision-mission relative overflow-hidden">
         <!-- Decoration -->
@@ -94,17 +96,14 @@
 
                 <!-- Vision -->
                 <div class="relative group" data-aos="fade-right">
-                    <div
-                        class="absolute -inset-4 bg-linear-to-r from-sky-600 to-sky-700 rounded-[40px] opacity-0 group-hover:opacity-5 transition-opacity duration-500">
-                    </div>
                     <div class="relative space-y-6">
                         <div
-                            class="w-20 h-20 bg-sky-600 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-sky-600/30 transform group-hover:rotate-6 transition-transform duration-500">
+                            class="w-20 h-20 bg-sky-500 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-sky-600/30 transform group-hover:rotate-6 transition-transform duration-500">
                             <iconify-icon icon="solar:eye-linear" class="text-4xl"></iconify-icon>
                         </div>
                         <div class="space-y-4">
                             <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Our Vision</h2>
-                            <p class="text-xl text-slate-500 leading-relaxed font-medium">
+                            <p class="text-xl text-slate-800 leading-relaxed font-medium">
                                 To become a leading and trusted partner in industrial supply and business solutions by
                                 delivering high-quality products, professional services, and sustainable value for every
                                 customer and industry we serve.
@@ -115,9 +114,6 @@
 
                 <!-- Mission -->
                 <div class="relative group" data-aos="fade-left">
-                    <div
-                        class="absolute -inset-4 bg-linear-to-r from-sky-600 to-sky-700 rounded-[40px] opacity-0 group-hover:opacity-5 transition-opacity duration-500">
-                    </div>
                     <div class="relative space-y-6">
                         <div
                             class="w-20 h-20 bg-yellow-500 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-slate-900/30 transform group-hover:-rotate-6 transition-transform duration-500">
@@ -125,7 +121,7 @@
                         </div>
                         <div class="space-y-4">
                             <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Our Mission</h2>
-                            <p class="text-lg text-slate-500 leading-relaxed font-medium">
+                            <p class="text-lg text-slate-800 leading-relaxed font-medium">
                                 To provide reliable and cost-effective industrial products and solutions with a strong
                                 commitment to quality, innovation, and customer satisfaction. We continuously improve our
                                 services and expertise to support the growth and sustainability of our business partners
@@ -135,6 +131,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Awan putih bagian bawah (Smooth Mist Effect) -->
+        <div class="absolute -bottom-24 left-0 w-full h-64 pointer-events-none z-[5]">
+            <div class="absolute inset-0 bg-linear-to-t from-white via-white/80 to-transparent"></div>
+            <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,0.8)_40%,rgba(255,255,255,0)_100%)] blur-2xl opacity-90">
+            </div>
+            <div class="absolute -bottom-10 left-0 w-full h-40 bg-white blur-[100px] opacity-60"></div>
         </div>
     </section>
     <!-- Core Values Section (Image Style) -->
@@ -279,88 +284,313 @@
 
                 <div class="space-y-10" data-aos="fade-left">
                     <div class="relative">
-                        <img src="{{ asset('assets/our-journey.png') }}" class="rounded-3xl  w-full h-[450px] object-cover"
-                            alt="Handshake">
+                        <img src="{{ asset('assets/our_journey.webp') }}" class="rounded-3xl  w-full h-[450px] object-cover object-left"
+                            alt="Our Journey">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries We Serve Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
-        <!-- Mist Effect Top -->
-        <div class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-white to-transparent z-10 pointer-events-none">
+    <!-- Industries We Serve Section (Premium Grid) -->
+    <section class="py-28 bg-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-[100px] -z-10 -translate-x-1/2 translate-y-1/2">
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-                <span class="text-sky-600 font-bold tracking-[0.2em] text-[12px] uppercase block">INDUSTRIES WE SERVE</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Supporting Essential Industries
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Pulp & Paper -->
-                <div class="group relative overflow-hidden rounded-3xl h-[400px]" data-aos="zoom-in" data-aos-delay="0">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        alt="Pulp & Paper">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 right-8 space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg">
-                            <iconify-icon icon="solar:reorder-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Pulp & Paper</h3>
-                    </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16" data-aos="fade-up">
+                <div class="space-y-4 max-w-2xl text-left">
+                    <span class="text-yellow-500 font-bold tracking-[0.3em] text-[10px] uppercase block">Market
+                        Sectors</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">Industries We <span
+                            class="text-sky-500">Serve</span></h2>
+                    <p class="text-slate-500 font-medium leading-relaxed">Providing world-class technical solutions and
+                        high-precision equipment to support the backbone of Indonesia's industrial landscape.</p>
                 </div>
 
-                <!-- Power Plant -->
-                <div class="group relative overflow-hidden rounded-3xl h-[400px]" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&q=80&w=800"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        alt="Power Plant">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 right-8 space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg">
-                            <iconify-icon icon="solar:bolt-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Power Plant</h3>
-                    </div>
-                </div>
-
-                <!-- Food & Beverage -->
-                <div class="group relative overflow-hidden rounded-3xl h-[400px]" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80&w=800"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        alt="Food & Beverage">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 right-8 space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg">
-                            <iconify-icon icon="solar:cup-hot-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Food & Beverage</h3>
-                    </div>
-                </div>
-
-                <!-- Refinery -->
-                <div class="group relative overflow-hidden rounded-3xl h-[400px]" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1542337311-64d17ec23f14?auto=format&fit=crop&q=80&w=800"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        alt="Refinery">
-                    <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 right-8 space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-lg">
-                            <iconify-icon icon="solar:fire-linear" class="text-2xl"></iconify-icon>
-                        </div>
-                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Refinery</h3>
-                    </div>
+                <!-- Navigation Buttons (Visible on Mobile for easier scroll) -->
+                <div class="flex items-center gap-3 lg:hidden">
+                    <button
+                        onclick="document.getElementById('industry-about-container').scrollBy({left: -320, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
+                        <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl"></iconify-icon>
+                    </button>
+                    <button
+                        onclick="document.getElementById('industry-about-container').scrollBy({left: 320, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 active:bg-sky-600 active:text-white transition-all shadow-sm">
+                        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl"></iconify-icon>
+                    </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Mist Effect Bottom -->
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-white to-transparent z-10 pointer-events-none">
+            <!-- Industries Container: Horizontal Scroll on Mobile, Staggered Grid on Desktop -->
+            <div id="industry-about-container"
+                class="flex lg:grid overflow-x-auto lg:overflow-visible gap-6 lg:gap-x-8 lg:gap-y-12 pb-8 lg:pb-0 no-scrollbar snap-x snap-mandatory lg:grid-cols-4 lg:grid-rows-2">
+
+                <!-- 1. Pulp & Paper -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="{{ asset('assets/industries/pulp-paper.webp') }}" alt="Pulp & Paper"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:reorder-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Manufacturing</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Pulp & Paper</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Supporting sustainable production with advanced monitoring and engineering tools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Refinery -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="{{ asset('assets/industries/refinery.webp') }}" alt="Refinery"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:fire-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Refinery</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Delivering high-performance components for complex refining processes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Power Plant -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="{{ asset('assets/industries/power-plan.webp') }}" alt="Power Plant"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:bolt-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Energy</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Power Plant</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Ensuring stability and efficiency for power generation systems nationwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Palm Oil -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <img src="{{ asset('assets/industries/palm_oil.webp') }}" alt="Palm Oil"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:leaf-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Agri-Industry</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Palm Oil</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Optimizing extraction and processing with precision industrial solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Fertilizer -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <img src="{{ asset('assets/industries/fertilizer.webp') }}" alt="Fertilizer"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:box-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">Agriculture</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Fertilizer</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Enhancing production efficiency for agricultural supply chains.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Oil & Gas Upstream -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <img src="{{ asset('assets/industries/oil_gas_upstream.webp') }}" alt="Oil & Gas Upstream"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:settings-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Resources</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Oil & Gas Upstream</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Supporting exploration and production with robust technical equipment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. General Industry -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50"
+                    data-aos="fade-up" data-aos-delay="700">
+                    <img src="{{ asset('assets/industries/general_industry.webp') }}" alt="General Industry"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:buildings-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-sky-500 rounded-full"></span>
+                                    <span
+                                        class="text-sky-400 font-bold text-[10px] tracking-widest uppercase">General</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">General Industry</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Providing versatile solutions for diverse manufacturing and specialized trading needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Chemical -->
+                <div class="flex-none w-[300px] sm:w-[350px] lg:w-auto snap-center group relative h-[450px] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/50 mt-0 lg:mt-12"
+                    data-aos="fade-up" data-aos-delay="800">
+                    <img src="{{ asset('assets/industries/chemical.webp') }}" alt="Chemical"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="space-y-6">
+                            <div
+                                class="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white transform group-hover:-translate-y-2 transition-all duration-500">
+                                <iconify-icon icon="solar:test-tube-bold-duotone" class="text-3xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-[2px] bg-yellow-500 rounded-full"></span>
+                                    <span
+                                        class="text-yellow-400 font-bold text-[10px] tracking-widest uppercase">Processing</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white tracking-tight">Chemical</h3>
+                                <p
+                                    class="text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    Ensuring safety and high precision in specialized chemical processing and handling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <style>
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
         </div>
     </section>
 @endsection
