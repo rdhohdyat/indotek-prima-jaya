@@ -1,58 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PT. INDOTEK PRIMA JAYA - Official Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-## About Laravel
+PT. INDOTEK PRIMA JAYA is a premier general supplier and business solutions provider based in Indonesia. This repository contains the official corporate website, designed with a premium, high-end industrial aesthetic to showcase our products and technical services.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The website serves as a digital portal for clients to explore our extensive range of industrial products and specialized technical services. It is built using modern web technologies to ensure a fast, responsive, and professional user experience.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Key Features
+- **Dynamic Product Catalog**: Browse our specialized technical offerings including Analyzers, Automation, and Instrumentation.
+- **Service Portals**: Dedicated sections for Transformator, Valve, and Pump services.
+- **Premium UI/UX**: Modern industrial design using Tailwind CSS with smooth animations (AOS) and interactive elements.
+- **Responsive Navigation**: Fully optimized mobile menu and dropdowns for seamless browsing across all devices.
+- **SEO Optimized**: Built-in SEO best practices with dynamic meta tags and structured heading hierarchy.
 
-## Learning Laravel
+## 🛠 Technology Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Core**: Laravel (PHP Framework)
+- **Frontend**: Tailwind CSS (Styling), Vanilla JS (Interactions)
+- **Icons**: [Solar Icons](https://iconify.design/icon-sets/solar/) via Iconify
+- **Animations**: AOS (Animate On Scroll)
+- **Slider**: Swiper.js
+- **Build Tool**: Vite
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚙️ Installation & Setup
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Follow these steps to set up the project locally:
 
-## Agentic Development
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rdhohdyat/indotek-prima-jaya.git
+   ```
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+2. **Install PHP dependencies:**
+   ```bash
+   composer install
+   ```
 
-```bash
-composer require laravel/boost --dev
+3. **Install NPM dependencies:**
+   ```bash
+   npm install
+   ```
 
-php artisan boost:install
-```
+4. **Environment Setup:**
+   - Copy `.env.example` to `.env`
+   - Generate app key: `php artisan key:generate`
+   - Configure your local database and other environment variables.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+5. **Run Migrations (Optional):**
+   ```bash
+   php artisan migrate
+   ```
 
-## Contributing
+6. **Compiling Assets:**
+   ```bash
+   npm run dev
+   # or for production
+   npm run build
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7. **Start the server:**
+   ```bash
+   php artisan serve
+   ```
 
-## Code of Conduct
+## 🏢 Company Contact
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**PT. INDOTEK PRIMA JAYA**  
+*Your Reliable Partner for Sustainable Growth*
 
-## Security Vulnerabilities
+- **Office**: Pekanbaru, Riau, Indonesia
+- **Email**: sales@indotek-pj.com
+- **Phone**: 0761 8046829
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+© {{ date('Y') }} PT. Indotek Prima Jaya. All Rights Reserved.
