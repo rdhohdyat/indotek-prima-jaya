@@ -33,10 +33,9 @@
             'emissions-monitoring',
             'water-analyzer-ecd',
             'water-analyzer-pi',
-            'flow-meter',
             'transmitter',
             'fittings-regulator',
-            'in-situ-oxygen-probe',
+            'saxon-probe',
             'control-valve',
             'industrial-valve'
         ];
