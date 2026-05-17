@@ -33,11 +33,12 @@
                 asset('assets/products/sick/1.webp'),
                 asset('assets/products/sick/2.webp'),
                 asset('assets/products/sick/3.webp'),
+                asset('assets/products/sick/4.webp'),
             ]
         ],
-        'water-analyzer' => [
-            'title' => __('Water Analyzer'),
-            'principal' => 'ECD, Process Instruments',
+        'water-analyzer-ecd' => [
+            'title' => __('Water Analyzer (ECD)'),
+            'principal' => 'ECD',
             'brand_logo' => asset('assets/distributors/ecd.webp'),
             'category' => __('Analyzer & Engineering'),
             'description' => __('Comprehensive water quality analysis solutions for pH, conductivity, dissolved oxygen, and turbidity in industrial processes.'),
@@ -49,6 +50,19 @@
                 asset('assets/products/ecd/1.webp'),
                 asset('assets/products/ecd/2.webp'),
                 asset('assets/products/ecd/3.webp'),
+            ]
+        ],
+        'water-analyzer-pi' => [
+            'title' => __('Water Analyzer (PI)'),
+            'principal' => 'Process Instruments',
+            'brand_logo' => asset('assets/distributors/pi.webp'),
+            'category' => __('Analyzer & Engineering'),
+            'description' => __('Advanced water quality analyzers and controllers for a wide range of industrial applications.'),
+            'image' => asset('assets/products/pi/1.webp'),
+            'banner' => asset('assets/products/pi-banner.webp'),
+            'icon' => 'solar:water-drops-bold-duotone',
+            'color' => 'sky',
+            'gallery' => [
                 asset('assets/products/pi/1.webp'),
                 asset('assets/products/pi/2.webp'),
                 asset('assets/products/pi/3.webp'),
@@ -86,11 +100,11 @@
             ]
         ],
         'saxon-probe' => [
-            'title' => __('In-Situ Oxygen Probe'),
+            'title' => __('Liquid Analysis'),
             'principal' => 'Saxon',
             'brand_logo' => asset('assets/distributors/saxon.webp'),
             'category' => __('Analyzer & Engineering'),
-            'description' => __('Robust in-situ oxygen probes for direct measurement in flue gas, providing fast and accurate control for combustion processes.'),
+            'description' => __('Advanced liquid analysis solutions including chlorine sensors, dissolved oxygen sensors, and TSS sensors.'),
             'image' => asset('assets/products/saxon/1.webp'),
             'banner' => asset('assets/products/saxon-banner.webp'),
             'icon' => 'solar:accumulator-bold-duotone',
@@ -99,6 +113,7 @@
                 asset('assets/products/saxon/1.webp'),
                 asset('assets/products/saxon/2.webp'),
                 asset('assets/products/saxon/3.webp'),
+                asset('assets/products/saxon/4.webp'),
             ]
         ],
         'control-valve' => [
@@ -117,7 +132,7 @@
             ]
         ],
         'industrial-valve' => [
-            'title' => __('Industrial Valve'),
+            'title' => __('Pinch Valve'),
             'principal' => 'Red Valve',
             'brand_logo' => asset('assets/distributors/redvalve.webp'),
             'category' => __('Automation & Instrumentation'),

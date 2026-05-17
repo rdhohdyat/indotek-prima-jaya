@@ -267,20 +267,18 @@
                     </div>
                 </a>
 
-                <!-- 5. Water Analyzer -->
-                <a href="{{ route('product', 'water-analyzer') }}" class="group block" data-aos="fade-up"
+                <!-- 5. Water Analyzer (ECD) -->
+                <a href="{{ route('product', 'water-analyzer-ecd') }}" class="group block" data-aos="fade-up"
                     data-aos-delay="400">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
                             <img src="{{ asset('assets/products/ecd/1.webp') }}"
                                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
-                                alt="Water Analyzer">
+                                alt="Water Analyzer (ECD)">
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="space-y-1">
-                                <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">ECD,
-                                    Process
-                                    Instruments</span>
+                                <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">ECD</span>
                                 <h3
                                     class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
                                     Water Analyzer</h3>
@@ -288,6 +286,29 @@
                             <img src="{{ asset('assets/distributors/ecd.webp') }}"
                                 class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
                                 alt="ECD">
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 5.5 Water Analyzer (PI) -->
+                <a href="{{ route('product', 'water-analyzer-pi') }}" class="group block" data-aos="fade-up"
+                    data-aos-delay="450">
+                    <div class="space-y-6">
+                        <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
+                            <img src="{{ asset('assets/products/pi/1.webp') }}"
+                                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
+                                alt="Water Analyzer (PI)">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Process Instruments</span>
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
+                                    Water Analyzer</h3>
+                            </div>
+                            <img src="{{ asset('assets/distributors/pi.webp') }}"
+                                class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
+                                alt="Process Instruments">
                         </div>
                     </div>
                 </a>
@@ -330,7 +351,7 @@
                                     class="text-[10px] font-black text-sky-600 uppercase tracking-widest block">Saxon</span>
                                 <h3
                                     class="text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors uppercase tracking-tight">
-                                    In-Situ Oxygen Probe</h3>
+                                    Liquid Analysis</h3>
                             </div>
                             <img src="{{ asset('assets/distributors/saxon.webp') }}"
                                 class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"
@@ -378,7 +399,7 @@
                                     Valve</span>
                                 <h3
                                     class="text-xl font-black text-slate-900 group-hover:text-yellow-500 transition-colors uppercase tracking-tight">
-                                    Industrial Valve</h3>
+                                    Pinch Valve</h3>
                             </div>
                             <img src="{{ asset('assets/distributors/redvalve.webp') }}"
                                 class="h-6 w-auto object-contain mix-blend-multiply opacity-40 group-hover:opacity-100 transition-opacity"

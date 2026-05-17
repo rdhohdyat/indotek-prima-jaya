@@ -170,13 +170,19 @@
                                                     Monitoring</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Sick</span>
                                             </a>
-                                            <a href="{{ route('product', 'water-analyzer') }}"
+                                            <a href="{{ route('product', 'water-analyzer-ecd') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
                                                     class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Water
-                                                    Analyzer</span>
-                                                <span class="block text-[11px] text-slate-400">ECD, Process
-                                                    Instruments</span>
+                                                    Analyzer (ECD)</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: ECD</span>
+                                            </a>
+                                            <a href="{{ route('product', 'water-analyzer-pi') }}"
+                                                class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
+                                                <span
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Water
+                                                    Analyzer (PI)</span>
+                                                <span class="block text-[11px] text-slate-400">Principal: Process Instruments</span>
                                             </a>
                                         </div>
                                     </div>
@@ -221,8 +227,8 @@
                                             <a href="{{ route('product', 'saxon-probe') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">In-Situ
-                                                    Oxygen Probe</span>
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Liquid
+                                                    Analysis</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Saxon</span>
                                             </a>
                                             <a href="{{ route('product', 'control-valve') }}"
@@ -235,7 +241,7 @@
                                             <a href="{{ route('product', 'industrial-valve') }}"
                                                 class="block p-3 rounded-lg hover:bg-slate-50 transition-all border-t border-slate-50">
                                                 <span
-                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Industrial
+                                                    class="block text-[13px] font-bold text-slate-700 hover:text-sky-600 transition-colors">Pinch
                                                     Valve</span>
                                                 <span class="block text-[11px] text-slate-400">Principal: Red
                                                     Valve</span>
@@ -386,12 +392,15 @@
                             <a href="{{ route('product', 'emissions-monitoring') }}"
                                 class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-b border-slate-50 last:border-0">Emissions
                                 Monitoring</a>
-                            <a href="{{ route('product', 'water-analyzer') }}"
+                            <a href="{{ route('product', 'water-analyzer-ecd') }}"
                                 class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-b border-slate-50 last:border-0">Water
-                                Analyzer</a>
+                                Analyzer (ECD)</a>
+                            <a href="{{ route('product', 'water-analyzer-pi') }}"
+                                class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-b border-slate-50 last:border-0">Water
+                                Analyzer (PI)</a>
                             <a href="{{ route('product', 'saxon-probe') }}"
-                                class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest last:border-0">In-Situ
-                                Oxygen Probe</a>
+                                class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest last:border-0">Liquid
+                                Analysis</a>
                         </div>
                     </div>
 
@@ -417,7 +426,7 @@
                                 class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-b border-slate-50 last:border-0">Control
                                 Valve</a>
                             <a href="{{ route('product', 'industrial-valve') }}"
-                                class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest last:border-0">Industrial
+                                class="py-2.5 text-[10px] font-bold text-slate-600 uppercase tracking-widest last:border-0">Pinch
                                 Valve</a>
                         </div>
                     </div>
@@ -456,9 +465,26 @@
             <a href="{{ route('contact') }}" aria-label="Contact PT. Indotek Prima Jaya"
                 class="text-lg font-black text-slate-900 uppercase tracking-widest hover:text-sky-600 transition-colors py-3 w-full border-b border-slate-100 px-2">{{ __('Contact') }}</a>
 
-            <div class="pt-6 w-full">
+            <div class="pt-6 w-full space-y-4">
+                <!-- Mobile Language Switcher -->
+                <div class="flex items-center justify-between bg-slate-50 border border-slate-100 p-2 rounded-xl">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest px-2">{{ __('Language') }}</span>
+                    <div class="flex items-center bg-white p-0.5 rounded-lg border border-slate-100 shadow-sm">
+                        <a href="{{ route('lang.switch', 'id') }}" aria-label="Switch to Indonesian"
+                            class="flex items-center justify-center h-8 rounded-md {{ app()->getLocale() == 'id' ? 'bg-sky-50 text-sky-600 opacity-100' : 'opacity-40 hover:opacity-100 text-slate-500' }} transition-all gap-2 px-3">
+                            <iconify-icon icon="circle-flags:id" class="text-base"></iconify-icon>
+                            <span class="text-[10px] font-bold">ID</span>
+                        </a>
+                        <a href="{{ route('lang.switch', 'en') }}" aria-label="Switch to English"
+                            class="flex items-center justify-center h-8 rounded-md {{ app()->getLocale() == 'en' ? 'bg-sky-50 text-sky-600 opacity-100' : 'opacity-40 hover:opacity-100 text-slate-500' }} transition-all gap-2 px-3">
+                            <iconify-icon icon="circle-flags:uk" class="text-base"></iconify-icon>
+                            <span class="text-[10px] font-bold">EN</span>
+                        </a>
+                    </div>
+                </div>
+
                 <a href="{{ route('contact') }}" aria-label="Get a Quote PT. Indotek Prima Jaya"
-                    class="block bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm shadow-lg shadow-yellow-500/30 text-center">{{ __('Get a Quote') }}</a>
+                    class="block bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold uppercase tracking-widest w-full text-sm  text-center">{{ __('Get a Quote') }}</a>
             </div>
         </nav>
     </div>
@@ -466,6 +492,18 @@
     <main class="grow">
         @yield('content')
     </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285271281019" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center hover:-translate-y-1 transition-all duration-300 group">
+        <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+            <!-- Ping Animation -->
+            <span class="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-40 animate-ping -z-10"></span>
+            
+            <!-- WhatsApp Logo -->
+            <img src="{{ asset('assets/wa.png') }}" alt="WhatsApp" class="w-full h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300 rounded-full">
+        </div>
+    </a>
 
     <footer class="background-footer text-slate-900 relative overflow-hidden">
         <!-- Decoration: Soft Blob -->
@@ -576,6 +614,13 @@
                                 </div>
                                 <span class="text-[13px] font-bold text-slate-700">0761 8046829</span>
                             </div>
+                            <a href="https://wa.me/6285271281019" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group cursor-pointer">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-green-500 shadow-sm group-hover:bg-green-500 group-hover:text-white transition-all">
+                                    <iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon>
+                                </div>
+                                <span class="text-[13px] font-bold text-slate-700">+62 852-7128-1019</span>
+                            </a>
                             <div class="flex items-center gap-2 group cursor-pointer">
                                 <div
                                     class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-600 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition-all">

@@ -82,6 +82,19 @@
                             </div>
                         </div>
 
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6285271281019" target="_blank" rel="noopener noreferrer" class="flex gap-5 group">
+                            <div
+                                class="shrink-0 w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
+                                <iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon>
+                            </div>
+                            <div class="space-y-0.5">
+                                <h3 class="text-base font-bold text-slate-900">{{ __('WhatsApp') }}</h3>
+                                <p class="text-slate-600 font-bold text-sm">+62 852-7128-1019</p>
+                                <p class="text-slate-500 text-xs">{{ __('Chat with us instantly') }}</p>
+                            </div>
+                        </a>
+
                         <!-- Address -->
                         <div class="flex gap-5 group">
                             <div
@@ -185,8 +198,8 @@
             class="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-1000 border-0"
             allowfullscreen="" loading="lazy"></iframe>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full pointer-events-none">
-            <div class="absolute top-1/2 left-8 lg:left-0 -translate-y-1/2 w-full max-w-sm pointer-events-auto">
-                <div class="bg-white p-8 lg:p-10 rounded-xl shadow-2xl border border-slate-100 space-y-6"
+            <div class="absolute top-1/2 left-4 right-4 sm:right-auto sm:left-6 lg:left-8 -translate-y-1/2 sm:w-full max-w-[calc(100%-2rem)] sm:max-w-sm pointer-events-auto">
+                <div class="bg-white p-6 sm:p-8 lg:p-10 rounded-xl shadow-2xl border border-slate-100 space-y-5 lg:space-y-6"
                     data-aos="fade-up">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600">

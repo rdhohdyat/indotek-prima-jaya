@@ -31,7 +31,8 @@
         $products = [
             'zirconia-analyzer',
             'emissions-monitoring',
-            'water-analyzer',
+            'water-analyzer-ecd',
+            'water-analyzer-pi',
             'flow-meter',
             'transmitter',
             'fittings-regulator',
