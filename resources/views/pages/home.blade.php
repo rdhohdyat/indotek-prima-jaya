@@ -248,7 +248,7 @@
                 <a href="{{ route('product', 'transmitter') }}" class="group block" data-aos="fade-up" data-aos-delay="300">
                     <div class="space-y-6">
                         <div class="aspect-video rounded-[32px] overflow-hidden bg-slate-50">
-                            <img src="{{ asset('assets/products/piezus/1.webp') }}"
+                            <img src="{{ asset('assets/products/piezus/Flowmeters/NovaMAG Pro/novamag-pro-9a (1).jpg') }}"
                                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                                 alt="Transmitter">
                         </div>

@@ -74,15 +74,46 @@
             'brand_logo' => asset('assets/distributors/piezus.webp'),
             'category' => __('Automation & Instrumentation'),
             'description' => __('Precision pressure and level transmitters for reliable process monitoring in oil & gas, chemical, and general manufacturing.'),
-            'image' => asset('assets/products/piezus/1.webp'),
+            'image' => asset('assets/products/piezus/Flowmeters/NovaMAG Pro/novamag-pro-9a (1).jpg'), 
             'banner' => asset('assets/products/piezus-banner.webp'),
             'icon' => 'solar:compass-bold-duotone',
             'color' => 'yellow',
-            'gallery' => [
-                asset('assets/products/piezus/1.webp'),
-                asset('assets/products/piezus/2.webp'),
-                asset('assets/products/piezus/3.webp'),
-            ]
+            'gallery' => (function() {
+                $pathsToTry = [
+                    public_path('assets/products'),
+                    isset($_SERVER['DOCUMENT_ROOT']) ? $_SERVER['DOCUMENT_ROOT'] . '/assets/products' : null,
+                    base_path('../public_html/assets/products')
+                ];
+
+                $validPath = null;
+                $targetDir = null;
+
+                foreach ($pathsToTry as $path) {
+                    if ($path && \Illuminate\Support\Facades\File::isDirectory($path)) {
+                        $directories = \Illuminate\Support\Facades\File::directories($path);
+                        foreach ($directories as $dir) {
+                            if (strtolower(basename($dir)) === 'piezus') {
+                                $validPath = $path;
+                                $targetDir = basename($dir);
+                                break 2;
+                            }
+                        }
+                    }
+                }
+
+                if ($validPath && $targetDir) {
+                    return collect(\Illuminate\Support\Facades\File::allFiles($validPath . '/' . $targetDir))
+                        ->filter(function ($file) {
+                            return in_array(strtolower($file->getExtension()), ['jpg', 'jpeg', 'png', 'webp', 'gif']);
+                        })
+                        ->map(function ($file) use ($targetDir) {
+                            return asset('assets/products/' . $targetDir . '/' . str_replace('\\', '/', $file->getRelativePathname()));
+                        })
+                        ->values()
+                        ->toArray();
+                }
+                return [];
+            })()
         ],
         'fittings-regulator' => [
             'title' => __('Fittings & Regulator'),
@@ -258,25 +289,47 @@
 
                     <!-- Gallery Grid (Right) -->
                     <div class="lg:col-span-4" data-aos="fade-left">
-                        <div class="grid grid-cols-2 lg:grid-cols-2 gap-4">
-                            {{-- First thumbnail is the original featured image --}}
-                            <div class="thumbnail-item aspect-square overflow-hidden transition-all duration-500 hover:scale-[1.02] group cursor-pointer border-2 border-sky-600 rounded-xl bg-white p-4"
-                                onclick="switchProductImage(this, '{{ $currentProduct['image'] }}')">
-                                <img src="{{ $currentProduct['image'] }}"
-                                    class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
-                                    alt="Main View">
-                            </div>
+                        <style>
+                            .custom-scrollbar {
+                                scrollbar-width: thin;
+                                scrollbar-color: #cbd5e1 #f8fafc;
+                            }
+                            .custom-scrollbar::-webkit-scrollbar {
+                                width: 6px;
+                            }
+                            .custom-scrollbar::-webkit-scrollbar-track {
+                                background: #f8fafc; 
+                                border-radius: 8px;
+                            }
+                            .custom-scrollbar::-webkit-scrollbar-thumb {
+                                background: #cbd5e1; 
+                                border-radius: 8px;
+                            }
+                            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                                background: #94a3b8; 
+                            }
+                        </style>
+                        <div class="overflow-y-auto pr-2 custom-scrollbar" style="max-height: 500px;">
+                            <div class="grid grid-cols-2 lg:grid-cols-2 gap-4">
+                                {{-- First thumbnail is the original featured image --}}
+                                <div class="thumbnail-item aspect-square overflow-hidden transition-all duration-500 hover:scale-[1.02] group cursor-pointer border-2 border-sky-600 rounded-xl bg-white p-4"
+                                    onclick="switchProductImage(this, '{{ $currentProduct['image'] }}')">
+                                    <img src="{{ $currentProduct['image'] }}"
+                                        class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                                        alt="Main View">
+                                </div>
 
-                            @foreach($currentProduct['gallery'] as $index => $img)
-                                @if($img !== $currentProduct['image'])
-                                    <div class="thumbnail-item aspect-square overflow-hidden transition-all duration-500 hover:scale-[1.02] group cursor-pointer border border-slate-100 rounded-xl bg-white p-4"
-                                        onclick="switchProductImage(this, '{{ $img }}')">
-                                        <img src="{{ $img }}"
-                                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
-                                            alt="Gallery {{ $index + 1 }}">
-                                    </div>
-                                @endif
-                            @endforeach
+                                @foreach($currentProduct['gallery'] as $index => $img)
+                                    @if($img !== $currentProduct['image'])
+                                        <div class="thumbnail-item aspect-square overflow-hidden transition-all duration-500 hover:scale-[1.02] group cursor-pointer border border-slate-100 rounded-xl bg-white p-4"
+                                            onclick="switchProductImage(this, '{{ $img }}')">
+                                            <img src="{{ $img }}"
+                                                class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                                                alt="Gallery {{ $index + 1 }}">
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
                         </div>
                     </div>
 
